@@ -58,7 +58,7 @@ export default function Intro () {
 
 
     return (
-        <section className="introTrigger w-full h-screen bg-[url('/assets/images/bg-building.jpg')] bg-cover bg-center text-white relative">
+        <section id="intro" className="introTrigger w-full h-screen bg-[url('/assets/images/bg-building.jpg')] bg-cover bg-center text-white relative">
             <div className="overlay absolute inset-0 w-full h-full">
                 <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
                     <div className='absolute'>

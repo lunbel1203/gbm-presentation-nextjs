@@ -80,7 +80,7 @@ export default function WorkerCompensation () {
 
     return (
         <>
-            <section className="compensation-section w-full h-screen relative">
+            <section id="worker-compensation" className="compensation-section w-full h-screen relative">
                 <div className="mission-overlay w-full flex items-center px-20 bg-white absolute inset-0">
                     <div className="imagesSection w-[50%] flex flex-wrap items-center gap-6 p-4">
                         <div className="photo-compensation w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">

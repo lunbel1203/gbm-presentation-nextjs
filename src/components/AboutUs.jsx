@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, {useRef} from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
@@ -10,7 +10,6 @@ export default function AboutUs () {
 
     useGSAP(() => {
         const paragraphs = document.querySelectorAll('.paragraph-animation');
-        const employeeCards = document.querySelectorAll('.employee-card');
         
         // Primer párrafo visible por defecto
         gsap.set(paragraphs[0], { x: 0, opacity: 1 });
@@ -21,9 +20,6 @@ export default function AboutUs () {
                 gsap.set(paragraph, { x: '100%', opacity: 0 });
             }
         });
-
-        // Posición inicial del contenedor de empleados
-        gsap.set(picturesRef.current, { x: '-100%', opacity: 1 });
 
         ScrollTrigger.create({
             trigger: '.about-section',
@@ -37,7 +33,6 @@ export default function AboutUs () {
                 
                 // Resetear todos los elementos primero
                 paragraphs.forEach(p => gsap.set(p, { opacity: 0, x: '100%' }));
-                employeeCards.forEach(card => gsap.set(card, { opacity: 0, x: '-100%' }));
                 
                 if (progress < 0.25) {
                     // Primer párrafo visible y sale
@@ -61,27 +56,62 @@ export default function AboutUs () {
                     });
                 }
 
-                // Animar todo el contenedor pictures-employees de izquierda a derecha
-                if (picturesRef.current) {
-                    if (progress >= 0.1) {
-                        // Calcular progreso de la animación (de 10% a 100% del scroll)
-                        const animProgress = Math.min((progress - 0.1) / 0.9, 1);
+                // Animación de tarjetas apareciendo una por una
+                const employeeCards = picturesRef.current?.querySelectorAll('.employee-card');
+                if (employeeCards) {
+                    const totalCards = employeeCards.length; // 7 tarjetas
+                    
+                    employeeCards.forEach((card, index) => {
+                        // Cada tarjeta aparece en diferentes momentos del scroll
+                        const cardStartProgress = (index / totalCards) * 0.75; // Distribuir en el 75% del progress
+                        const cardEndProgress = ((index + 1) / totalCards) * 0.75;
                         
-                        // Mover de -100% a 0%
-                        const xPosition = gsap.utils.interpolate(-100, 0, animProgress);
-                        
-                        gsap.set(picturesRef.current, { 
-                            x: xPosition + '%'
-                        });
-                    }
+                        if (progress >= cardStartProgress && progress <= cardEndProgress) {
+                            // La tarjeta está en su momento de aparecer
+                            const localProgress = (progress - cardStartProgress) / (cardEndProgress - cardStartProgress);
+                            const opacity = gsap.utils.interpolate(0, 1, localProgress);
+                            const yPosition = gsap.utils.interpolate(50, 0, localProgress); // Viene de abajo
+                            
+                            gsap.set(card, {
+                                opacity: opacity,
+                                y: yPosition + 'px',
+                                scale: gsap.utils.interpolate(0.8, 1, localProgress)
+                            });
+                        } else if (progress > cardEndProgress) {
+                            // La tarjeta ya apareció completamente
+                            gsap.set(card, {
+                                opacity: 1,
+                                y: '0px',
+                                scale: 1
+                            });
+                        } else {
+                            // La tarjeta aún no debe aparecer
+                            gsap.set(card, {
+                                opacity: 0,
+                                y: '50px',
+                                scale: 0.8
+                            });
+                        }
+                    });
                 }
+
             }
         });
+
+        // Estado inicial - todas las tarjetas ocultas
+        const employeeCards = picturesRef.current?.querySelectorAll('.employee-card');
+        if (employeeCards) {
+            gsap.set(employeeCards, { 
+                opacity: 0, 
+                y: '50px',
+                scale: 0.8
+            });
+        }
     }, []);
 
     return (
-        <section className="about-section section h-screen py-20 px-8 bg-slate-50 relative">
-            <div className="max-w-6xl mx-auto">
+        <section id="about-us" className="about-section w-full h-screen py-20 px-8 bg-slate-50 relative">
+            <div className="container mx-auto">
                 <div className="text-left mb-16">
                     <h2 className="text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">About Us</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
@@ -101,13 +131,13 @@ export default function AboutUs () {
                 </div>
 
                 {/* Fotos empleados */}
-                <div ref={picturesRef} className="pictures-employees w-full mt-20 relative">
-                    <div className="flex overflow-visible max-w-7xl mx-auto gap-4 px-4">
-                        <div className="employee-card flex-shrink-0 w-80 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                <div ref={picturesRef} className="pictures-employees w-full mt-20 py-8 relative overflow-hidden">
+                    <div className="w-max flex justify-between gap-3">
+                        <div className="employee-card flex-shrink-0 w-72 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
+                                        src="/assets/images/Lindsey-meinert.jpg" 
                                         alt="John Smith" 
                                         className="w-full h-full object-cover"
                                     />
@@ -117,11 +147,11 @@ export default function AboutUs () {
                             <p className="text-sm text-gray-600 text-center">Business Development Manager</p>
                         </div>
 
-                        <div className="employee-card flex-shrink-0 w-80 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1494790108755-2616b612b5c5?w=150&h=150&fit=crop&crop=face" 
+                                        src="/assets/images/Ceverino-Diaz.jpg" 
                                         alt="Sarah Johnson" 
                                         className="w-full h-full object-cover"
                                     />
@@ -131,11 +161,11 @@ export default function AboutUs () {
                             <p className="text-sm text-gray-600 text-center">Project Manager</p>
                         </div>
 
-                        <div className="employee-card flex-shrink-0 w-80 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" 
+                                        src="/assets/images/Rosa-Bagaglio.jpg" 
                                         alt="Mike Rodriguez" 
                                         className="w-full h-full object-cover"
                                     />
@@ -145,11 +175,11 @@ export default function AboutUs () {
                             <p className="text-sm text-gray-600 text-center">Recruitment & Engagement Manager</p>
                         </div>
 
-                        <div className="employee-card flex-shrink-0 w-80 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" 
+                                        src="/assets/images/Amanda-Atchley.jpeg" 
                                         alt="Lisa Chen" 
                                         className="w-full h-full object-cover"
                                     />
@@ -159,25 +189,25 @@ export default function AboutUs () {
                             <p className="text-sm text-gray-600 text-center">Account Executive</p>
                         </div>
 
-                        <div className="employee-card flex-shrink-0 w-80 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" 
+                                        src="/assets/images/Elaine-DeArce.png" 
                                         alt="Lisa Chen" 
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-lg font-bold text-[#194263] mb-1">Elene</h3>
-                            <p className="text-sm text-gray-600 text-center">Account Executive</p>
+                            <h3 className="text-lg font-bold text-[#194263] mb-1">Elaine DeArce</h3>
+                            <p className="text-sm text-gray-600 text-center">Business Development Representative</p>
                         </div>
 
-                        <div className="employee-card flex-shrink-0 w-80 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" 
+                                        src="/assets/images/Silvia-Nicola.jpg" 
                                         alt="Lisa Chen" 
                                         className="w-full h-full object-cover"
                                     />

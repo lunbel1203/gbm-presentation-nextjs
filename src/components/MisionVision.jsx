@@ -104,7 +104,7 @@ export default function MisionVision () {
 
     return (
         <>
-            <section className="missionTrigger w-full h-screen bg-[url('/assets/images/bg-mission.jpg')] bg-cover bg-center text-white relative">
+            <section id="mission" className="missionTrigger w-full h-screen bg-[url('/assets/images/bg-mission.jpg')] bg-cover bg-center text-white relative">
                 <div className="mission-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="mission-section w-full lg:w-3/5 text-center mx-auto">
@@ -120,7 +120,7 @@ export default function MisionVision () {
                 </div>
             </section>
 
-            <section className="visionTrigger w-full h-screen bg-[url('/assets/images/bg-vision.jpg')] bg-cover bg-center text-white relative">
+            <section id="vision" className="visionTrigger w-full h-screen bg-[url('/assets/images/bg-vision.jpg')] bg-cover bg-center text-white relative">
                 <div className="mission-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="vision-section w-full lg:w-3/5 text-center mx-auto">
@@ -136,7 +136,7 @@ export default function MisionVision () {
                 </div>
             </section>
 
-            <section className="valuesTrigger w-full h-screen bg-[url('/assets/images/bg-values.jpg')] bg-cover bg-center text-white relative">
+            <section id="values" className="valuesTrigger w-full h-screen bg-[url('/assets/images/bg-values.jpg')] bg-cover bg-center text-white relative">
                 <div className="mission-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="values-section w-full lg:w-4/5 text-center mx-auto">

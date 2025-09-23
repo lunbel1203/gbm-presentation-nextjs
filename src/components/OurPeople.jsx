@@ -80,7 +80,7 @@ export default function OurPeople () {
 
     return (
         <>
-            <section className="ourPeople-section w-full h-screen bg-[url(''] bg-cover bg-center relative">
+            <section id="our-people" className="ourPeople-section w-full h-screen bg-[url(''] bg-cover bg-center relative">
                 <div className="mission-overlay w-full flex items-center px-20 bg-white absolute inset-0">
                     <div className="title w-[30%] text-left">
                         <h2 className="w-full text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Our Greatest Asset:</h2>
@@ -116,9 +116,9 @@ export default function OurPeople () {
                                 src="/assets/images/Our-People-03.jpg" 
                                 alt="Glaring Clean 2" 
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/Our-People-01.jpg' ? 'opacity-0' : 'opacity-100'
+                                    clickedImageSrc === '/assets/images/Our-People-3.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
-                                onClick={(e) => openLightbox('/assets/images/Our-People-01.jpg', e)}
+                                onClick={(e) => openLightbox('/assets/images/Our-People-03.jpg', e)}
                             />
                         </div>
                     </div>

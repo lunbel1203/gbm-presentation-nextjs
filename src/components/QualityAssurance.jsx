@@ -1,262 +1,255 @@
 import React, { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
+import { RiClipboardLine, RiSearchLine, RiBarChartLine } from '@remixicon/react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function QaulityAssurance () {
     const [lightboxImage, setLightboxImage] = useState(null);
-    const [originPosition, setOriginPosition] = useState({ x: 0, y: 0, width: 0, height: 0 });
     const [clickedImageSrc, setClickedImageSrc] = useState(null);
-    const [isClosing, setIsClosing] = useState(false);
 
     const openLightbox = (imageSrc, event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        setOriginPosition({
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2,
-            width: rect.width,
-            height: rect.height
-        });
+        event.stopPropagation();
         setClickedImageSrc(imageSrc);
         setLightboxImage(imageSrc);
-        setIsClosing(false);
     }
 
     const closeLightbox = () => {
-        setIsClosing(true);
-        // Esperar a que termine completamente la animación
-        setTimeout(() => {
-            setLightboxImage(null);
-            setClickedImageSrc(null);
-            setIsClosing(false);
-        }, 500); // Duración completa de la animación
+        setLightboxImage(null);
+        setClickedImageSrc(null);
     }
 
     useGSAP(() => {
-        // Configuración inicial
-        gsap.set('.qualityAssurance-section .title', { y: 200, opacity: 0 });
-        gsap.set('.qualityAssurance-imagesSection', { y: 1000, opacity: 0 });
+        // Estado inicial - todos los elementos ocultos
+        gsap.set('.quality-title', { y: 100, opacity: 0 });
+        gsap.set('.quality-section', { y: 100, opacity: 0 });
 
         // ScrollTrigger para la sección
         ScrollTrigger.create({
             trigger: '.qualityAssurance-section',
             start: 'top top',
-            end: '+=6000',
-            scrub: 1,
+            end: '+=3500',
+            scrub: 0.4,
             pin: true,
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Animación del H2 (0% - 50%)
-                if (progress <= 0.5) {
-                    const titleProgress = progress / 0.5;
-                    gsap.set('.qualityAssurance-section  .title', {
-                        y: gsap.utils.interpolate(200, -300, titleProgress),
+                // Animación del título (0% - 18%)
+                if (progress <= 0.18) {
+                    const titleProgress = progress / 0.18;
+                    gsap.set('.quality-title', {
+                        y: gsap.utils.interpolate(100, 0, titleProgress),
                         opacity: gsap.utils.interpolate(0, 1, titleProgress)
                     });
                 } else {
-                    gsap.set('.qualityAssurance-section  .title', { y: -300, opacity: 1 });
+                    gsap.set('.quality-title', { y: 0, opacity: 1 });
                 }
 
-                // Animación de toda la sección de imágenes (20% - 100%)
-                if (progress >= 0.2) {
-                    const imagesProgress = (progress - 0.2) / 0.8;
-                    gsap.set('.qualityAssurance-imagesSection', {
-                        y: gsap.utils.interpolate(1000, -1200, imagesProgress),
-                        opacity: gsap.utils.interpolate(0, 1, Math.min(imagesProgress * 3, 1))
-                    });
-                }
+                // Animación de las secciones con mejor timing
+                const sections = document.querySelectorAll('.quality-section');
+                sections.forEach((section, index) => {
+                    const sectionStartProgress = 0.18 + (index * 0.22); // Secciones empiezan desde 18% espaciadas cada 22%
+                    const sectionEndProgress = sectionStartProgress + 0.25; // Cada sección dura 25% del scroll con solapamiento
+
+                    if (progress >= sectionStartProgress && progress <= sectionEndProgress) {
+                        const localProgress = (progress - sectionStartProgress) / 0.25;
+                        const smoothProgress = gsap.utils.interpolate(0, 1, Math.pow(localProgress, 0.75));
+                        gsap.set(section, {
+                            y: gsap.utils.interpolate(80, 0, smoothProgress),
+                            opacity: gsap.utils.interpolate(0, 1, smoothProgress)
+                        });
+                    } else if (progress > sectionEndProgress) {
+                        gsap.set(section, { y: 0, opacity: 1 });
+                    } else {
+                        gsap.set(section, { y: 80, opacity: 0 });
+                    }
+                });
             }
         });
-
     }, []);
 
     return (
         <>
-            <section className="qualityAssurance-section w-full h-screen relative">
-                <div className="qualityAssurance-overlay w-full flex flex-wrap items-center px-20 bg-gray-100 absolute inset-0">
-                    <div className="qualityAssurance-imagesSection w-[50%] flex flex-wrap items-center gap-6 p-4">
-                        <p className='w-full text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold'>Cleaning and maintenance supervisors monitor and inspects constantly to ensure that duties are adequately carried out.</p>
-                        <div className="photo-qualityAssurance w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <img 
-                                src="/assets/images/QualityAssurance.png" 
-                                alt="Glaring Clean 2" 
-                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/QualityAssurance.png' ? 'opacity-0' : 'opacity-100'
-                                }`}
-                                onClick={(e) => openLightbox('/assets/images/QualityAssurance.png', e)}
-                            />
-                        </div>
-                        <div className="photo-qualityAssurance w-[calc(100%/2-50px)] transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                            <img 
-                                src="/assets/images/QualityAssurance-02.png" 
-                                alt="Glaring Clean 1" 
-                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/QualityAssurance-02.png' ? 'opacity-0' : 'opacity-100'
-                                }`}
-                                onClick={(e) => openLightbox('/assets/images/QualityAssurance-02.png', e)}
-                            />
-                        </div>
-                        <h3 className='w-full text-4xl pt-20 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold'>WHAT ARE THESE INSPECTIONS?</h3>
-                        <ul className='w-full text-xl list-disc bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold'>
-                            <li>Cleaning and janitorial inspections.</li>
-                            <li>Safety inspections.</li>
-                            <li>Routine maintenance and corrective actions.</li>
-                            <li>APPA and CIMS cleaning standar inspections.</li>
-                        </ul>
-                        <div className="photo-qualityAssurance w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <img 
-                                src="/assets/images/QualityAssurance-03.jpg" 
-                                alt="Glaring Clean 2" 
-                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/QualityAssurance-03.jpg' ? 'opacity-0' : 'opacity-100'
-                                }`}
-                                onClick={(e) => openLightbox('/assets/images/QualityAssurance-03.jpg', e)}
-                            />
-                        </div>
-                        <div className="leftColumn w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <div className="photo-qualityAssurance w-full transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                                <img 
-                                    src="/assets/images/QualityAssurance-04.jpg" 
-                                    alt="Glaring Clean 1" 
-                                    className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                        clickedImageSrc === '/assets/images/QualityAssurance-04.jpg' ? 'opacity-0' : 'opacity-100'
-                                    }`}
-                                    onClick={(e) => openLightbox('/assets/images/QualityAssurance-04.jpg', e)}
-                                />
+            <section id="quality-assurance" className="qualityAssurance-section w-full min-h-screen bg-gradient-to-br from-gray-50 to-white relative">
+                
+                <div className="w-full flex flex-col items-center px-8 lg:px-20 py-16">
+                    
+                    {/* Título Principal */}
+                    <div className="quality-title text-center mb-16">
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Quality Assurance</h2>
+                        <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
+                    </div>
+
+                    <div className="max-w-6xl w-full space-y-20">
+
+                        {/* 1. SUPERVISIÓN CONSTANTE */}
+                        <div className="quality-section text-center">
+                            <div className="flex items-center justify-center mb-8">
+                                <div className="mr-4">
+                                    <RiClipboardLine size={48} className="text-gbm-green" />
+                                </div>
+                                <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">CONSTANT SUPERVISION</h3>
+                            </div>
+                            <p className="text-xl lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold mb-12 max-w-4xl mx-auto">
+                                Cleaning and maintenance supervisors monitor and inspects constantly to ensure that duties are adequately carried out.
+                            </p>
+                            
+                            {/* Imágenes de supervisión */}
+                            <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
+                                <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full max-w-md">
+                                    <img 
+                                        src="/assets/images/QualityAssurance.png" 
+                                        alt="Quality Assurance 1" 
+                                        className={`w-full h-auto object-contain shadow-xl border-8 border-white rounded-lg ${
+                                            clickedImageSrc === '/assets/images/QualityAssurance.png' ? 'opacity-0' : 'opacity-100'
+                                        }`}
+                                        onClick={(e) => openLightbox('/assets/images/QualityAssurance.png', e)}
+                                    />
+                                </div>
+                                <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full">
+                                    <img 
+                                        src="/assets/images/QualityAssurance-02.png" 
+                                        alt="Quality Assurance 2" 
+                                        className={`w-full h-auto object-contain shadow-xl border-8 border-white rounded-lg ${
+                                            clickedImageSrc === '/assets/images/QualityAssurance-02.png' ? 'opacity-0' : 'opacity-100'
+                                        }`}
+                                        onClick={(e) => openLightbox('/assets/images/QualityAssurance-02.png', e)}
+                                    />
+                                </div>
                             </div>
                         </div>
-                        <h3 className='w-full text-4xl pt-20 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold'>WHY THIS DATA?</h3>
-                        <ul className='w-full text-xl list-disc bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold'>
-                            <li>Identify possible deficiencies.</li>
-                            <li>Identify opportunities for improvement.</li>
-                            <li>Identify where to focus the constant training of our employees.</li>
-                            <li>Key performance indicator KPI.</li>
-                            <li>Bonuses, and annual incentives.</li>
-                        </ul>
-                    </div>
-                    <div className="title w-[50%] text-left pl-10">
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">Quality Assurance</h2>
-                        <div className="w-24 h-1 bg-gbm-green mb-10"></div>
-                    </div>
-                </div>
 
-                {/* Lightbox */}
-                {lightboxImage && (
-                    <div 
-                        className={`fixed inset-0 bg-black/95 bg-opacity-60 flex items-center justify-center z-50 cursor-pointer ${
-                            isClosing ? 'animate-fadeOut' : 'animate-fadeIn'
-                        }`}
-                        onClick={closeLightbox}
-                    >
-                        <div 
-                            className={`relative max-w-4xl max-h-[80vh] p-4 ${
-                                isClosing ? 'animate-collapseToOrigin' : 'animate-expandFromOrigin'
-                            }`}
-                            style={{
-                                '--origin-x': `${originPosition.x}px`,
-                                '--origin-y': `${originPosition.y}px`,
-                                '--origin-width': `${originPosition.width}px`,
-                                '--origin-height': `${originPosition.height}px`
-                            }}
-                        >
-                            <img 
-                                src={lightboxImage} 
-                                alt="Lightbox Image" 
-                                className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white transition-transform duration-300"
-                            />
-                            <button 
-                                onClick={closeLightbox}
-                                className="absolute -top-4 -right-4 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold hover:bg-gray-200 transition-colors duration-200"
-                            >
-                                ×
-                            </button>
+                        {/* 2. WHAT ARE THESE INSPECTIONS */}
+                        <div className="quality-section">
+                            <div className="text-center mb-8">
+                                <div className="flex items-center justify-center mb-6">
+                                    <div className="mr-4">
+                                        <RiSearchLine size={48} className="text-gbm-green" />
+                                    </div>
+                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">WHAT ARE THESE INSPECTIONS?</h3>
+                                </div>
+                            </div>
+                            
+                            <div className="flex flex-col lg:flex-row items-center gap-12">
+                                <div className="lg:w-1/2">
+                                    <ul className="space-y-4 text-lg lg:text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Cleaning and janitorial inspections.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Safety inspections.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Routine maintenance and corrective actions.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            APPA and CIMS cleaning standar inspections.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="lg:w-1/2">
+                                    <div className="photo-qualityAssurance transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                                        <img 
+                                            src="/assets/images/QualityAssurance-03.jpg" 
+                                            alt="Quality Assurance 3" 
+                                            className={`w-full h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
+                                                clickedImageSrc === '/assets/images/QualityAssurance-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                            }`}
+                                            onClick={(e) => openLightbox('/assets/images/QualityAssurance-03.jpg', e)}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        {/* 3. WHY THIS DATA */}
+                        <div className="quality-section">
+                            <div className="text-center mb-8">
+                                <div className="flex items-center justify-center mb-6">
+                                    <div className="mr-4">
+                                        <RiBarChartLine size={48} className="text-gbm-green" />
+                                    </div>
+                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">WHY THIS DATA?</h3>
+                                </div>
+                            </div>
+                            
+                            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+                                <div className="lg:w-1/2">
+                                    <ul className="space-y-4 text-lg lg:text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Identify possible deficiencies.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Identify opportunities for improvement.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Identify where to focus the constant training of our employees.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Key performance indicator KPI.
+                                        </li>
+                                        <li className="flex items-center">
+                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
+                                            Bonuses, and annual incentives.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="lg:w-1/2">
+                                    <div className="photo-qualityAssurance transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                                        <img 
+                                            src="/assets/images/QualityAssurance-04.jpg" 
+                                            alt="Quality Assurance 4" 
+                                            className={`w-full h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
+                                                clickedImageSrc === '/assets/images/QualityAssurance-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                            }`}
+                                            onClick={(e) => openLightbox('/assets/images/QualityAssurance-04.jpg', e)}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                )}
+                    
+                </div>
+                
             </section>
-            
-            {/* Estilos CSS para las animaciones */}
-            <style jsx>{`
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
-                    }
-                }
-                
-                @keyframes fadeOut {
-                    from {
-                        opacity: 1;
-                    }
-                    to {
-                        opacity: 0;
-                    }
-                }
-                
-                @keyframes expandFromOrigin {
-                    0% {
-                        transform: translate(
-                            calc(var(--origin-x) - 50vw), 
-                            calc(var(--origin-y) - 50vh)
-                        ) scale(0.01);
-                        opacity: 0;
-                    }
-                    30% {
-                        transform: translate(
-                            calc(var(--origin-x) - 50vw), 
-                            calc(var(--origin-y) - 50vh)
-                        ) scale(0.3);
-                        opacity: 0.8;
-                    }
-                    100% {
-                        transform: translate(0, 0) scale(1);
-                        opacity: 1;
-                    }
-                }
-                
-                @keyframes collapseToOrigin {
-                    0% {
-                        transform: translate(0, 0) scale(1);
-                        opacity: 1;
-                    }
-                    70% {
-                        transform: translate(
-                            calc(var(--origin-x) - 50vw), 
-                            calc(var(--origin-y) - 50vh)
-                        ) scale(0.3);
-                        opacity: 0.8;
-                    }
-                    100% {
-                        transform: translate(
-                            calc(var(--origin-x) - 50vw), 
-                            calc(var(--origin-y) - 50vh)
-                        ) scale(0.01);
-                        opacity: 0;
-                    }
-                }
-                
-                .animate-fadeIn {
-                    animation: fadeIn 0.4s ease-out;
-                }
-                
-                .animate-fadeOut {
-                    animation: fadeOut 0.5s ease-out;
-                }
-                
-                .animate-expandFromOrigin {
-                    animation: expandFromOrigin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                
-                .animate-collapseToOrigin {
-                    animation: collapseToOrigin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-            `}</style>
+
+            {/* Lightbox usando Portal */}
+            {lightboxImage && typeof document !== 'undefined' && createPortal(
+                <div 
+                    className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-pointer"
+                    onClick={closeLightbox}
+                >
+                    <div className="relative max-w-4xl max-h-[80vh] p-4">
+                        <img 
+                            src={lightboxImage} 
+                            alt="Lightbox Image" 
+                            className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                        <button 
+                            onClick={closeLightbox}
+                            className="absolute -top-4 -right-4 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold hover:bg-gray-200 transition-colors duration-200"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>,
+                document.body
+            )}
         </>
     )
 }

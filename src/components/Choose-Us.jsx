@@ -34,7 +34,7 @@ export default function ChooseUs () {
 
     return (
         <>
-            <section className="chooseUsTrigger w-full h-screen bg-[url('/assets/images/bg-van.jpg')] bg-cover bg-center text-white relative">
+            <section id="choose-us" className="chooseUsTrigger w-full h-screen bg-[url('/assets/images/bg-van.jpg')] bg-cover bg-center text-white relative">
                 <div className="chooseUs-overlay w-full h-screen bg-gbm-blue/70 absolute inset-0 py-4 md:py-20">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
 

@@ -7,7 +7,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function CrossContamination () {
     useGSAP (() => {
-        // Configuración inicial - todos abajo del viewport
+        // Configuración inicial - todos empiezan desde el bottom del viewport
         gsap.set('.crossContamination-title', { y: '100vh', opacity: 0 });
         gsap.set('.crossContamination-cloths', { y: '100vh', opacity: 0 });
         gsap.set('.crossContamination-mops', { y: '100vh', opacity: 0 });
@@ -23,18 +23,18 @@ export default function CrossContamination () {
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Fase 1: Title - viene de abajo, va al centro, luego sale por arriba (0% - 50%)
-                if (progress <= 0.3) {
-                    const titleProgress = progress / 0.6;
-                    const yPosition = gsap.utils.interpolate(100, -100, titleProgress);
+                // Fase 1: Title - viaja desde bottom hasta top y se detiene arriba (0% - 25%)
+                if (progress <= 0.25) {
+                    const titleProgress = progress / 0.25;
+                    const yPosition = gsap.utils.interpolate(100, -20, titleProgress);
                     
-                    // Opacidad = 1 cuando está en el centro o más arriba (0vh)
+                    // Opacidad máxima cuando está en el centro (0vh)
                     let opacity = 0;
-                    if (yPosition <= 0) {
+                    if (yPosition >= -20 && yPosition <= 20) {
                         opacity = 1;
-                    } else {
-                        // Fade in cuando se acerca al centro desde abajo
-                        opacity = gsap.utils.interpolate(0, 1, (60 - yPosition) / 20);
+                    } else if (yPosition > 20) {
+                        // Fade in cuando sube desde abajo
+                        opacity = gsap.utils.interpolate(0, 1, (100 - yPosition) / 80);
                     }
                     
                     gsap.set('.crossContamination-title', {
@@ -42,45 +42,52 @@ export default function CrossContamination () {
                         opacity: opacity
                     });
                 } else {
-                    gsap.set('.crossContamination-title', { y: '-100vh', opacity: 0 });
+                    // Se queda arriba fijo después del 25%
+                    gsap.set('.crossContamination-title', { y: '-20vh', opacity: 1 });
                 }
 
-                // Fase 2: Cloths - viene de abajo, va al centro, luego sale por arriba (25% - 75%)
-                if (progress >= 0.25 && progress <= 0.75) {
-                    const clothsProgress = (progress - 0.25) / 0.5;
+                // Fase 2: Cloths - viaja desde bottom hasta center, luego hasta top (30% - 70%)
+                if (progress >= 0.3 && progress <= 0.7) {
+                    const clothsProgress = (progress - 0.3) / 0.4;
                     const yPosition = gsap.utils.interpolate(100, -100, clothsProgress);
                     
-                    // Opacidad = 1 cuando está en 20vh (20% del bottom)
+                    // Opacidad máxima cuando está en el centro
                     let opacity = 0;
-                    if (yPosition <= 20) {
+                    if (yPosition >= -20 && yPosition <= 20) {
                         opacity = 1;
-                    } else {
-                        // Fade in cuando se acerca al 20vh
+                    } else if (yPosition > 20) {
+                        // Fade in cuando sube desde abajo
                         opacity = gsap.utils.interpolate(0, 1, (100 - yPosition) / 80);
+                    } else {
+                        // Fade out cuando sale por arriba
+                        opacity = gsap.utils.interpolate(1, 0, Math.abs(yPosition + 20) / 80);
                     }
                     
                     gsap.set('.crossContamination-cloths', {
                         y: `${yPosition}vh`,
                         opacity: opacity
                     });
-                } else if (progress < 0.25) {
+                } else if (progress < 0.3) {
                     gsap.set('.crossContamination-cloths', { y: '100vh', opacity: 0 });
                 } else {
                     gsap.set('.crossContamination-cloths', { y: '-100vh', opacity: 0 });
                 }
 
-                // Fase 3: Mops - viene de abajo, va al centro, luego sale por arriba (50% - 100%)
-                if (progress >= 0.5) {
-                    const mopsProgress = (progress - 0.5) / 0.5;
+                // Fase 3: Mops - viaja desde bottom hasta center, luego hasta top (60% - 100%)
+                if (progress >= 0.6) {
+                    const mopsProgress = (progress - 0.6) / 0.4;
                     const yPosition = gsap.utils.interpolate(100, -100, mopsProgress);
                     
-                    // Opacidad = 1 cuando está en 20vh (20% del bottom)
+                    // Opacidad máxima cuando está en el centro
                     let opacity = 0;
-                    if (yPosition <= 20) {
+                    if (yPosition >= -20 && yPosition <= 20) {
                         opacity = 1;
-                    } else {
-                        // Fade in cuando se acerca al 20vh
+                    } else if (yPosition > 20) {
+                        // Fade in cuando sube desde abajo
                         opacity = gsap.utils.interpolate(0, 1, (100 - yPosition) / 80);
+                    } else {
+                        // Fade out cuando sale por arriba
+                        opacity = gsap.utils.interpolate(1, 0, Math.abs(yPosition + 20) / 80);
                     }
                     
                     gsap.set('.crossContamination-mops', {
@@ -97,12 +104,12 @@ export default function CrossContamination () {
 
     return (
         <>
-            <section className="crossContaminationTrigger w-full h-screen bg-[url('/assets/images/bg-cross.jpg')] bg-cover bg-center text-white relative">
+            <section id="cross-contamination" className="crossContaminationTrigger w-full h-screen bg-[url('/assets/images/bg-cross.jpg')] bg-cover bg-center text-white relative">
                 <div className="crossContamination-overlay w-full h-full bg-gbm-blue/80 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center text-center relative">
                         <div className="crossContamination-title w-full lg:w-3/5 text-center mx-auto absolute inset-x-0">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">AT GLARING WE TAKE CARE OF YOU FROM CROSS CONTAMINATION</h2>
+                                <h2 className="text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">AT GLARING WE TAKE CARE OF YOU FROM CROSS CONTAMINATION</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">

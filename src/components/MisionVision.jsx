@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function MisionVision () {
     useGSAP (() => {
@@ -13,7 +13,7 @@ export default function MisionVision () {
         gsap.set('.values-section', { opacity: 0, y: 50 });
 
         // ScrollTrigger para MISSION
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.missionTrigger',
             start: 'top top',
             end: '+=1000',
@@ -42,7 +42,7 @@ export default function MisionVision () {
         });
 
         // ScrollTrigger para VISION
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.visionTrigger',
             start: 'top top',
             end: '+=1000',
@@ -71,7 +71,7 @@ export default function MisionVision () {
         });
 
         // ScrollTrigger para VALUES
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.valuesTrigger',
             start: 'top top',
             end: '+=1000',
@@ -109,7 +109,7 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="mission-section w-full lg:w-3/5 text-center mx-auto">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">MISSION</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">MISSION</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
@@ -125,7 +125,7 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="vision-section w-full lg:w-3/5 text-center mx-auto">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">VISION</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">VISION</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
@@ -141,7 +141,7 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="values-section w-full lg:w-4/5 text-center mx-auto">
                             <div className="w-full mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">VALUES</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">VALUES</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <div className="w-full flex justify-center">

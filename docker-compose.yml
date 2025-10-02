@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build: .
+    container_name: mi-nextjs-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      # Agrega aquí tus variables de entorno
+      # - DATABASE_URL=${DATABASE_URL}
+      # - API_URL=${API_URL}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nextjs-app.rule=Host(`tudominio.com`)"
+      - "traefik.http.routers.nextjs-app.entrypoints=websecure"
+      - "traefik.http.routers.nextjs-app.tls.certresolver=letsencrypt"
+      - "traefik.http.services.nextjs-app.loadbalancer.server.port=3000"
+      # Opcional: redirección de HTTP a HTTPS
+      - "traefik.http.routers.nextjs-app-http.rule=Host(`tudominio.com`)"
+      - "traefik.http.routers.nextjs-app-http.entrypoints=web"
+      - "traefik.http.routers.nextjs-app-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+    networks:
+      - traefik
+    # Si necesitas volúmenes para datos persistentes
+    # volumes:
+    #   - ./uploads:/app/uploads
+
+networks:
+  traefik:
+    external: true

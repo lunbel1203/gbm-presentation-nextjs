@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
 export default function ContingencyPlan () {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -22,12 +20,14 @@ export default function ContingencyPlan () {
     }
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Estado inicial - todos los elementos ocultos
         gsap.set('.contingency-title', { y: 100, opacity: 0 });
         gsap.set('.story-section', { y: 100, opacity: 0 });
 
         // ScrollTrigger para la sección
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.contingencyPlan-section',
             start: 'top top',
             end: '+=3500',
@@ -87,19 +87,22 @@ export default function ContingencyPlan () {
                         <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
                     </div>
 
-                    <div className="max-w-6xl w-full space-y-20">
+                    <div className="max-w-4xl w-full space-y-20">
 
                         {/* 1. INTRODUCCIÓN */}
                         <div className="story-section">
                             <div className="flex flex-col lg:flex-row items-center gap-12">
                                 <div className="lg:w-1/2">
-                                    <img 
-                                        src="/assets/images/Contingency-Plan-01.jpg" 
-                                        alt="Background checks & screenings" 
+                                    <Image
+                                        src="/assets/images/contingency-plan-01.jpg"
+                                        alt="Contingency Plan 01"
+                                        width={500}
+                                        height={500}
                                         className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/Contingency-Plan-01.jpg' ? 'opacity-0' : 'opacity-100'
+                                            clickedImageSrc === '/assets/images/contingency-plan-01.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
-                                        onClick={(e) => openLightbox('/assets/images/Contingency-Plan-01.jpg', e)}
+                                        onClick={(e) => openLightbox('/assets/images/contingency-plan-01.jpg', e)}
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
@@ -114,17 +117,20 @@ export default function ContingencyPlan () {
                         <div className="story-section">
                             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
                                 <div className="lg:w-1/2">
-                                    <img 
-                                        src="/assets/images/Contingency-Plan-02.jpg" 
-                                        alt="Uniformed staff with ID badges" 
+                                    <Image
+                                        src="/assets/images/contingency-plan-02.jpg"
+                                        alt="Contingency Plan 02"
+                                        width={500}
+                                        height={500} 
                                         className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/Contingency-Plan-02.jpg' ? 'opacity-0' : 'opacity-100'
+                                            clickedImageSrc === '/assets/images/contingency-plan-02.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
-                                        onClick={(e) => openLightbox('/assets/images/Contingency-Plan-02.jpg', e)}
+                                        onClick={(e) => openLightbox('/assets/images/contingency-plan-02.jpg', e)}
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
-                                <div className="lg:w-1/2 text-center lg:text-left">
-                                    <ul className="space-y-4 text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
+                                <div className="lg:w-1/2 text-center">
+                                    <ul className="space-y-4 text-2xl lg:text-3xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
                                             Call outs
@@ -142,17 +148,20 @@ export default function ContingencyPlan () {
                         <div className="story-section">
                             <div className="flex flex-col lg:flex-row items-center gap-12">
                                 <div className="lg:w-1/2">
-                                    <img 
-                                        src="/assets/images/Contingency-Plan-03.jpg" 
-                                        alt="Trained on client security protocols" 
+                                    <Image
+                                        src="/assets/images/contingency-plan-03.jpg"
+                                        alt="Contingency Plan 03"
+                                        width={500}
+                                        height={500}
                                         className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/Contingency-Plan-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                            clickedImageSrc === '/assets/images/contingency-plan-03.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
-                                        onClick={(e) => openLightbox('/assets/images/Contingency-Plan-03.jpg', e)}
+                                        onClick={(e) => openLightbox('/assets/images/contingency-plan-03.jpg', e)}
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
-                                    <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">HOW WE DO IT?</h3>
+                                    <h3 className="text-2xl lg:text-6xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">HOW WE DO IT?</h3>
                                 </div>
                             </div>
                         </div>
@@ -161,17 +170,20 @@ export default function ContingencyPlan () {
                         <div className="story-section">
                             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
                                 <div className="lg:w-1/2">
-                                    <img 
-                                        src="/assets/images/Contingency-Plan-04.jpg" 
-                                        alt="Real-time location & time tracking system" 
+                                    <Image
+                                        src="/assets/images/contingency-plan-04.jpg"
+                                        alt="Contingency Plan 04"
+                                        width={500}
+                                        height={500}
                                         className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/Contingency-Plan-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                            clickedImageSrc === '/assets/images/contingency-plan-04.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
-                                        onClick={(e) => openLightbox('/assets/images/Contingency-Plan-04.jpg', e)}
+                                        onClick={(e) => openLightbox('/assets/images/contingency-plan-04.jpg', e)}
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
-                                <div className="lg:w-1/2 text-center lg:text-left">
-                                    <h3 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent leading-relaxed">
+                                <div className="lg:w-1/2 text-center lg:text-right">
+                                    <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
                                         We have a specialized support team ready to step in if your primary assigned employee is unavailable, ensuring that all daily tasks are completed seamlessly. Each team member is trained in site-specific safety and security protocols, so your facility's operations continue without disruption and quality standards are consistently met.
                                     </h3>
                                 </div>
@@ -191,11 +203,14 @@ export default function ContingencyPlan () {
                     onClick={closeLightbox}
                 >
                     <div className="relative max-w-4xl max-h-[80vh] p-4">
-                        <img 
-                            src={lightboxImage} 
-                            alt="Lightbox Image" 
+                        <Image
+                            src={lightboxImage}
+                            alt="Lightbox Image"
+                            width={800}
+                            height={600}
                             className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white"
                             onClick={(e) => e.stopPropagation()}
+                            sizes="80vw"
                         />
                         <button 
                             onClick={closeLightbox}

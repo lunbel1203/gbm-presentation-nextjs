@@ -1,24 +1,23 @@
 import React from 'react'
-import { gsap } from 'gsap'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-import { 
-    RiMapPinLine, 
-    RiGlobalLine, 
-    RiMailLine, 
-    RiInstagramLine, 
-    RiFacebookLine, 
-    RiLinkedinLine, 
-    RiYoutubeLine 
+import {
+    RiMapPinLine,
+    RiGlobalLine,
+    RiMailLine,
+    RiInstagramLine,
+    RiFacebookLine,
+    RiLinkedinLine,
+    RiYoutubeLine
 } from '@remixicon/react'
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function ContactUs () {
     
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // ScrollTrigger para las animaciones secuenciales
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.contactUsTrigger',
             start: 'top top',
             end: '+=4000',
@@ -32,11 +31,12 @@ export default function ContactUs () {
                 if (progress <= 0.2) {
                     const titleProgress = progress / 0.2;
                     const smoothProgress = gsap.utils.interpolate(0, 1, Math.pow(titleProgress, 0.7));
-                    gsap.set('.title', {
+                    gsap.set('.contactus-title-container', {
                         y: gsap.utils.interpolate(100, 0, smoothProgress),
                         opacity: smoothProgress,
                         scale: gsap.utils.interpolate(0.8, 1, smoothProgress),
-                        rotateX: gsap.utils.interpolate(45, 0, smoothProgress)
+                        rotateX: gsap.utils.interpolate(45, 0, smoothProgress),
+                        transform: `translateY(${gsap.utils.interpolate(100, 0, smoothProgress)}px) scale(${gsap.utils.interpolate(0.8, 1, smoothProgress)}) rotateX(${gsap.utils.interpolate(45, 0, smoothProgress)}deg)`
                     });
                     // Mantener todos los contact-items ocultos durante la fase del título
                     gsap.set('.contact-item', { x: -200, opacity: 0, scale: 0.8 });
@@ -47,7 +47,13 @@ export default function ContactUs () {
                 
                 // Fase 2: Animar los li uno por uno (20% - 60%)
                 else if (progress > 0.2 && progress <= 0.6) {
-                    gsap.set('.title', { y: 0, opacity: 1, scale: 1, rotateX: 0 });
+                    gsap.set('.contactus-title-container', {
+                        y: 0,
+                        opacity: 1,
+                        scale: 1,
+                        rotateX: 0,
+                        transform: 'translateY(0px) scale(1) rotateX(0deg)'
+                    });
                     
                     const contactItems = gsap.utils.toArray('.contact-item');
                     const itemAnimationDuration = 0.4 / contactItems.length; // 40% del tiempo dividido entre los items
@@ -128,7 +134,7 @@ export default function ContactUs () {
         });
 
         // Estado inicial
-        gsap.set('.title', { y: 100, opacity: 0, scale: 0.8, rotateX: 45 });
+        gsap.set('.contactus-title-container', { y: 100, opacity: 0, scale: 0.8, rotateX: 45 });
         gsap.set('.contact-item', { x: -200, opacity: 0, scale: 0.8 });
         gsap.set('.branches-title', { y: 100, opacity: 0 });
         gsap.set('.branch-item', { x: -200, opacity: 0, scale: 0.8 });
@@ -141,8 +147,8 @@ export default function ContactUs () {
                 <div className="contactUs-section container mx-auto px-6 lg:px-8">
                     
                     {/* Header Section */}
-                    <div className="title text-center my-16" style={{perspective: '1000px'}}>
-                        <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4" style={{transformStyle: 'preserve-3d'}}>
+                    <div className="contactus-title-container text-center my-16" style={{perspective: '1000px'}}>
+                        <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4 leading-tight" style={{transformStyle: 'preserve-3d'}}>
                             SPECIALIZED CLEANING SERVICES FOR COMMERCIAL FACILITIES
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
@@ -207,7 +213,7 @@ export default function ContactUs () {
                                 <h3 className='branches-title text-4xl mb-5 text-center bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold uppercase'>Branches</h3>
                                 <ul className="flex flex-wrap justify-center gap-5">
                                     <li className="branch-item w-[calc(100%/2-20px)]">
-                                        <a href="https://glaringmaintenance.com" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
+                                        <a href="https://www.google.com/maps/place/76+Merrimack+St+6+6b,+Haverhill,+MA+01830,+USA/@42.7745464,-71.0810924,17z/data=!3m1!4b1!4m5!3m4!1s0x89e302348940d777:0x1305baa325a35dc1!8m2!3d42.7745464!4d-71.0785121!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
                                             <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
                                                 <RiMapPinLine color='white' size={24} />
                                             </div>
@@ -223,7 +229,7 @@ export default function ContactUs () {
                                         </a>
                                     </li>
                                     <li className="branch-item w-[calc(100%/2-20px)]">
-                                        <a href="https://glaringmaintenance.com" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
+                                        <a href="https://www.google.com/maps/place/Residencial+imperial+506/@18.4505418,-69.965853,17z/data=!3m1!4b1!4m6!3m5!1s0x8ea561f6cd4e342f:0xe446490026340b85!8m2!3d18.4505418!4d-69.9632727!16s%2Fg%2F11bxg102xt!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
                                             <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
                                                 <RiMapPinLine color='white' size={24} />
                                             </div>

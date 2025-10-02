@@ -1,15 +1,18 @@
 import React from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function ReferProgram () {
     
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // ScrollTrigger para las animaciones secuenciales
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.referTrigger',
             start: 'top top',
             end: '+=3000',
@@ -94,24 +97,18 @@ export default function ReferProgram () {
 
     return (
         <>
-            <section id="refer-program" className="referTrigger w-full min-h-screen bg-gradient-to-br from-gray-50 to-white py-20">
+            <section id="refer-program" className="referTrigger w-full min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white py-20">
                 <div className="refer-section container mx-auto px-6 lg:px-8">
                     
                     {/* Header Section */}
-                    <div className="title text-center my-16">
-                        <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            REFER A CUSTOMER PROGRAM
-                        </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
-                    </div>
 
                     <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                         <div className="sectionImg w-full">
-                            <img src="/assets/images/refer-program.jpg" alt="Refer Program" className="w-full h-150 object-cover rounded-lg shadow-lg" />
+                            <Image src="/assets/images/refer-program.jpg" alt="Refer Program" width={600} height={400} className="w-full h-150 object-cover rounded-lg shadow-lg" />
                         </div>
                         <div className="w-full flex items-center gap-5 relative">
                             <div className="refer-text flex flex-col gap-5">
-                                <h1 className="text-4xl lg:text-5xl text-[#193263] font-bold mb-4">REFER A CUSTOMER PROGRAM</h1>
+                                <h1 className="text-4xl lg:text-5xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent  font-bold mb-4">REFER A CUSTOMER PROGRAM</h1>
                                 <div className="text-xl space-y-4 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                     <p>
                                         We want to Thank You for spreading Our good name and that is why Glaring Building

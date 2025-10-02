@@ -1,9 +1,10 @@
 import React from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
 
-gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
+
 
 export default function Intro () {
 
@@ -11,15 +12,15 @@ export default function Intro () {
         const introTimeLine = gsap.timeline();
 
         introTimeLine
-            .from('.welcome', { 
-                opacity: 0, 
-                y: 100, 
+            .from('.welcome', {
+                opacity: 0,
+                y: 100,
                 duration: 1.5,
-                ease: 'power2.out' 
+                ease: 'power2.out'
             })
-            .from('.subTitle', { 
-                opacity: 0, 
-                y: 100, 
+            .from('.subTitle', {
+                opacity: 0,
+                y: 100,
                 duration: 1.2,
                 filter: 'blur(10px)',
                 ease: 'elastic.out(1,0.6)'
@@ -37,19 +38,19 @@ export default function Intro () {
         });
 
         scrollTimeLine
-            .fromTo('.overlay', 
+            .fromTo('.overlay',
                 { backgroundColor: 'rgba(25, 50, 99, 0)' },
                 { backgroundColor: 'rgba(25, 50, 99, 0.8)', duration: 1 }
             )
-            .fromTo('.logo', 
+            .fromTo('.logo',
                 { scale: 5, opacity: 0, y: 0 },
                 { scale: 0.6, opacity: 1, y: -300, duration: 1 }, 0
             )
-            .fromTo(['.welcome', '.subTitle'], 
+            .fromTo(['.welcome', '.subTitle'],
                 { opacity: 1 },
                 { opacity: 0, duration: 1 }, 0
             )
-            .fromTo('.thank-section', 
+            .fromTo('.thank-section',
                 { opacity: 0, y: 100 },
                 { opacity: 1, y: 30, duration: 1 }, 1
             );
@@ -65,10 +66,14 @@ export default function Intro () {
                         <h1 className='welcome text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>WELCOME</h1>
                         <p className='subTitle text-4xl text-white font-bold'>to our presentation</p>
                     </div>
-                    <img 
-                        className="logo w-5/6 lg:w-1/4 absolute" 
-                        alt="Glaring Building Maintenance" 
-                        src="/assets/images/logo-white.png" 
+                    <Image
+                        className="logo w-5/6 lg:w-1/4 absolute"
+                        alt="Glaring Building Maintenance"
+                        src="/assets/images/logo-white.png"
+                        width={400}
+                        height={200}
+                        priority
+                        sizes="(max-width: 768px) 83vw, 25vw"
                     />
                     <div className="thank-section w-full lg:w-5/6 mx-auto text-center px-5 mt-20">
                         <div className="mb-10">

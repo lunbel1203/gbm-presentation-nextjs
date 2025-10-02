@@ -1,19 +1,22 @@
 import React, { useRef } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function Equipment () {
     
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Configuración inicial
         gsap.set('.equipment-overlay', { opacity: 0 });
         gsap.set('.equipment-section', { y: '100vh', opacity: 0 });
 
         // ScrollTrigger para equipment
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.equipmentTrigger',
             start: 'top top',
             end: '+=2000',
@@ -55,9 +58,11 @@ export default function Equipment () {
                 <div className="equipment-overlay w-full h-full bg-gbm-blue/90 fixed inset-0"></div>
                 <div className="equipment-section w-3/4 h-full mx-auto flex justify-center items-center text-center">
                     <div className="relative w-68 h-96 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                        <img 
-                            src="/assets/images/equipment-img.jpg" 
-                            alt="" 
+                        <Image
+                            src="/assets/images/equipment-img.jpg"
+                            alt="Equipment Image"
+                            width={800}
+                            height={600}
                             className="w-full h-full object-cover"
                         />
                     </div>
@@ -66,7 +71,7 @@ export default function Equipment () {
                             <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Equipment</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
-                        <p className="text-base lg:text-xl mx-auto leading-relaxed text-gray-200 font-normal">
+                        <p className="text-base lg:text-xl mx-auto font-bold leading-relaxed bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">
                             Our commitment to excellence begins with the tools we provide our team. We invest in the latest, most reliable equipment in the industry, allowing us to deliver consistently superior results. With state-of-the-art technology (SOTA), we ensure efficiency, safety, and the highest standards of quality in every service we perform.
                         </p>
                     </div>

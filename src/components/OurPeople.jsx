@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function OurPeople () {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -35,12 +36,14 @@ export default function OurPeople () {
     }
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Configuración inicial
-        gsap.set('.ourPeople-section .title', { y: 200, opacity: 0 });
+        gsap.set('.ourpeople-title-container', { y: 200, opacity: 0 });
         gsap.set('.photo-people', { y: 1000 });
 
         // ScrollTrigger para la sección
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.ourPeople-section',
             start: 'top top',
             end: '+=3000',
@@ -50,15 +53,20 @@ export default function OurPeople () {
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Animación del H2 (0% - 30%)
+                // Animación del título (0% - 30%)
                 if (progress <= 0.3) {
                     const titleProgress = progress / 0.3;
-                    gsap.set('.ourPeople-section  .title', {
+                    gsap.set('.ourpeople-title-container', {
                         y: gsap.utils.interpolate(200, 0, titleProgress),
-                        opacity: gsap.utils.interpolate(0, 1, titleProgress)
+                        opacity: gsap.utils.interpolate(0, 1, titleProgress),
+                        transform: `translateY(${gsap.utils.interpolate(200, 0, titleProgress)}px)`
                     });
                 } else {
-                    gsap.set('.ourPeople-section  .title', { x: 0, opacity: 1 });
+                    gsap.set('.ourpeople-title-container', {
+                        y: 0,
+                        opacity: 1,
+                        transform: 'translateY(0px)'
+                    });
                 }
 
                 // Animación de las fotos (30% - 60%)
@@ -82,43 +90,52 @@ export default function OurPeople () {
         <>
             <section id="our-people" className="ourPeople-section w-full h-screen bg-[url(''] bg-cover bg-center relative">
                 <div className="mission-overlay w-full flex items-center px-20 bg-white absolute inset-0">
-                    <div className="title w-[30%] text-left">
-                        <h2 className="w-full text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Our Greatest Asset:</h2>
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">Our People</h2>
+                    <div className="ourpeople-title-container w-[30%] text-left">
+                        <h2 className="w-full text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent leading-tight">Our Greatest Asset:</h2>
+                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">Our People</h2>
                         <div className="w-24 h-1 bg-gbm-green"></div>
                     </div>
 
                     <div className="imagesSection w-[70%] flex justify-between items-center gap-6 p-4">
                         <div className="leftColumn w-1/2">
                             <div className="photo-people w-full transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                                <img 
-                                    src="/assets/images/Our-People-02.jpg" 
-                                    alt="Glaring Clean 1" 
+                                <Image
+                                    src="/assets/images/our-people-02.jpg"
+                                    alt="Our People 2"
+                                    width={400}
+                                    height={600}
                                     className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                        clickedImageSrc === '/assets/images/Our-People-02.jpg' ? 'opacity-0' : 'opacity-100'
+                                        clickedImageSrc === '/assets/images/our-people-02.jpg' ? 'opacity-0' : 'opacity-100'
                                     }`}
-                                    onClick={(e) => openLightbox('/assets/images/Our-People-02.jpg', e)}
+                                    onClick={(e) => openLightbox('/assets/images/our-people-02.jpg', e)}
+                                    sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                             </div>
                         </div>
                         <div className="photo-people w-1/2 mt-40 transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <img 
-                                src="/assets/images/Our-People-01.jpg" 
-                                alt="Glaring Clean 2" 
+                            <Image
+                                src="/assets/images/our-people-01.jpg"
+                                alt="Our People 1"
+                                width={400}
+                                height={600}
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/Our-People-01.jpg' ? 'opacity-0' : 'opacity-100'
+                                    clickedImageSrc === '/assets/images/our-people-01.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
-                                onClick={(e) => openLightbox('/assets/images/Our-People-01.jpg', e)}
+                                onClick={(e) => openLightbox('/assets/images/our-people-01.jpg', e)}
+                                sizes="(max-width: 768px) 100vw, 33vw"
                             />
                         </div>
-                        <div className="photo-people w-1/2 mt-40 transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <img 
-                                src="/assets/images/Our-People-03.jpg" 
-                                alt="Glaring Clean 2" 
+                        <div className="photo-people w-1/2 mt-80 transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
+                            <Image
+                                src="/assets/images/our-people-03.jpg"
+                                alt="Our People 3"
+                                width={400}
+                                height={600}
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/Our-People-3.jpg' ? 'opacity-0' : 'opacity-100'
+                                    clickedImageSrc === '/assets/images/our-people-03.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
-                                onClick={(e) => openLightbox('/assets/images/Our-People-03.jpg', e)}
+                                onClick={(e) => openLightbox('/assets/images/our-people-03.jpg', e)}
+                                sizes="(max-width: 768px) 100vw, 33vw"
                             />
                         </div>
                     </div>
@@ -143,10 +160,13 @@ export default function OurPeople () {
                                 '--origin-height': `${originPosition.height}px`
                             }}
                         >
-                            <img 
-                                src={lightboxImage} 
-                                alt="Lightbox Image" 
+                            <Image
+                                src={lightboxImage}
+                                alt="Lightbox Image"
+                                width={800}
+                                height={600}
                                 className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white transition-transform duration-300"
+                                sizes="80vw"
                             />
                             <button 
                                 onClick={closeLightbox}

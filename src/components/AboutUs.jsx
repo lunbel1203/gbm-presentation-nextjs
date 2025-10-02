@@ -1,14 +1,17 @@
 import React, {useRef} from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function AboutUs () {
     const picturesRef = useRef(null);
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         const paragraphs = document.querySelectorAll('.paragraph-animation');
         
         // Primer párrafo visible por defecto
@@ -21,7 +24,7 @@ export default function AboutUs () {
             }
         });
 
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.about-section',
             start: 'top top',
             end: '+=4000',
@@ -30,48 +33,26 @@ export default function AboutUs () {
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
-                
-                // Resetear todos los elementos primero
-                paragraphs.forEach(p => gsap.set(p, { opacity: 0, x: '100%' }));
-                
-                if (progress < 0.25) {
-                    // Primer párrafo visible y sale
-                    gsap.set(paragraphs[0], { 
-                        x: gsap.utils.interpolate(0, -100, progress / 0.25) + '%',
-                        opacity: 1 - (progress / 0.25)
-                    });
-                } else if (progress >= 0.25 && progress < 0.5) {
-                    // Segundo párrafo entra y sale
-                    const localProgress = (progress - 0.25) / 0.25;
-                    gsap.set(paragraphs[1], { 
-                        x: gsap.utils.interpolate(100, -100, localProgress) + '%',
-                        opacity: 1
-                    });
-                } else if (progress >= 0.5) {
-                    // Tercer párrafo entra y se queda en posición del primer párrafo
-                    const localProgress = Math.min((progress - 0.5) / 0.25, 1);
-                    gsap.set(paragraphs[2], { 
-                        x: gsap.utils.interpolate(100, 0, localProgress) + '%',
-                        opacity: 1
-                    });
-                }
 
                 // Animación de tarjetas apareciendo una por una
                 const employeeCards = picturesRef.current?.querySelectorAll('.employee-card');
+                let secondCardStartProgress = 0;
+
                 if (employeeCards) {
-                    const totalCards = employeeCards.length; // 7 tarjetas
-                    
+                    const totalCards = employeeCards.length; // 6 tarjetas
+                    secondCardStartProgress = (2 / totalCards) * 0.75; // Momento cuando aparece la tercera tarjeta
+
                     employeeCards.forEach((card, index) => {
                         // Cada tarjeta aparece en diferentes momentos del scroll
                         const cardStartProgress = (index / totalCards) * 0.75; // Distribuir en el 75% del progress
                         const cardEndProgress = ((index + 1) / totalCards) * 0.75;
-                        
+
                         if (progress >= cardStartProgress && progress <= cardEndProgress) {
                             // La tarjeta está en su momento de aparecer
                             const localProgress = (progress - cardStartProgress) / (cardEndProgress - cardStartProgress);
                             const opacity = gsap.utils.interpolate(0, 1, localProgress);
                             const yPosition = gsap.utils.interpolate(50, 0, localProgress); // Viene de abajo
-                            
+
                             gsap.set(card, {
                                 opacity: opacity,
                                 y: yPosition + 'px',
@@ -92,6 +73,39 @@ export default function AboutUs () {
                                 scale: 0.8
                             });
                         }
+                    });
+                }
+
+                // Resetear todos los párrafos primero
+                paragraphs.forEach(p => gsap.set(p, { opacity: 0, x: '100%' }));
+
+                // Animación de párrafos basada en las tarjetas
+                if (progress < secondCardStartProgress) {
+                    // Primer párrafo visible hasta que aparece la tercera tarjeta
+                    gsap.set(paragraphs[0], {
+                        x: '0%',
+                        opacity: 1
+                    });
+                } else if (progress >= secondCardStartProgress && progress < 0.25) {
+                    // Primer párrafo se va cuando aparece la tercera tarjeta
+                    const localProgress = (progress - secondCardStartProgress) / (0.25 - secondCardStartProgress);
+                    gsap.set(paragraphs[0], {
+                        x: gsap.utils.interpolate(0, -100, localProgress) + '%',
+                        opacity: 1 - localProgress
+                    });
+                } else if (progress >= 0.25 && progress < 0.5) {
+                    // Segundo párrafo entra y sale
+                    const localProgress = (progress - 0.25) / 0.25;
+                    gsap.set(paragraphs[1], {
+                        x: gsap.utils.interpolate(100, -100, localProgress) + '%',
+                        opacity: 1
+                    });
+                } else if (progress >= 0.5) {
+                    // Tercer párrafo entra y se queda en posición del primer párrafo
+                    const localProgress = Math.min((progress - 0.5) / 0.25, 1);
+                    gsap.set(paragraphs[2], {
+                        x: gsap.utils.interpolate(100, 0, localProgress) + '%',
+                        opacity: 1
                     });
                 }
 
@@ -136,10 +150,13 @@ export default function AboutUs () {
                         <div className="employee-card flex-shrink-0 w-72 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
-                                    <img 
-                                        src="/assets/images/Lindsey-meinert.jpg" 
-                                        alt="John Smith" 
+                                    <Image
+                                        src="/assets/images/lindsey-meinert.jpg"
+                                        alt="Lindsey Meinert"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>
@@ -150,10 +167,13 @@ export default function AboutUs () {
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
-                                    <img 
-                                        src="/assets/images/Ceverino-Diaz.jpg" 
-                                        alt="Sarah Johnson" 
+                                    <Image
+                                        src="/assets/images/ceverino-diaz.jpg"
+                                        alt="Ceverino Diaz"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>
@@ -164,10 +184,13 @@ export default function AboutUs () {
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
-                                    <img 
-                                        src="/assets/images/Rosa-Bagaglio.jpg" 
-                                        alt="Mike Rodriguez" 
+                                    <Image
+                                        src="/assets/images/rosa-bagaglio.jpg"
+                                        alt="Rosa Bagaglio"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>
@@ -178,10 +201,13 @@ export default function AboutUs () {
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
-                                    <img 
-                                        src="/assets/images/Amanda-Atchley.jpeg" 
-                                        alt="Lisa Chen" 
+                                    <Image
+                                        src="/assets/images/amanda-atchley.jpeg"
+                                        alt="Amanda Atchley"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>
@@ -192,10 +218,13 @@ export default function AboutUs () {
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
-                                    <img 
-                                        src="/assets/images/Elaine-DeArce.png" 
-                                        alt="Lisa Chen" 
+                                    <Image
+                                        src="/assets/images/elaine-dearce.png"
+                                        alt="Elaine DeArce"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>
@@ -206,10 +235,13 @@ export default function AboutUs () {
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
-                                    <img 
-                                        src="/assets/images/Silvia-Nicola.jpg" 
-                                        alt="Lisa Chen" 
+                                    <Image
+                                        src="/assets/images/silvia-nicola.jpg"
+                                        alt="Silvia Nicola"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>

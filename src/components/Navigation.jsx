@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 import { RiMenuLine, RiCloseLine } from '@remixicon/react'
 
-gsap.registerPlugin(useGSAP);
+
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,11 +22,15 @@ export default function Navigation() {
         { id: 'choose-us', label: 'Why Choose Us', href: '#choose-us' },
         { id: 'security-system', label: 'Security System', href: '#security-system' },
         { id: 'contingency-plan', label: 'Contingency Plan', href: '#contingency-plan' },
+        { id: 'ourWork', label: 'Our Work', href: '#ourWork' },
         { id: 'quality-assurance', label: 'Quality Assurance', href: '#quality-assurance' },
         { id: 'cross-contamination', label: 'Cross Contamination', href: '#cross-contamination' },
         { id: 'tasks-organization', label: 'Tasks Organization', href: '#tasks-organization' },
         { id: 'equipment', label: 'Equipment', href: '#equipment' },
+        { id: 'sponsor', label: 'Sponsor', href: '#sponsor' },
+        { id: 'fundation', label: 'Fundation', href: '#fundation' },
         { id: 'we-offer', label: 'What We Offer', href: '#we-offer' },
+        { id: 'glaringStandard', label: 'The Glaring Standard', href: '#glaringStandard' },
         { id: 'certificates', label: 'Our Certifications', href: '#certificates' },
         { id: 'we-serve', label: 'Area of Service', href: '#we-serve' },
         { id: 'refer-program', label: 'Refer Program', href: '#refer-program' },
@@ -34,6 +39,8 @@ export default function Navigation() {
     ];
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Animacion inicial del menu
         gsap.set('.nav-menu', { x: '100%' });
         gsap.set('.nav-item', { x: 50, opacity: 0 });
@@ -139,9 +146,11 @@ export default function Navigation() {
                     
                     {/* Logo */}
                     <div className="mb-12 text-center">
-                        <img 
-                            src="/assets/images/logo-normal.png" 
-                            alt="GBM Logo" 
+                        <Image
+                            src="/assets/images/logo-normal.png"
+                            alt="GBM Logo"
+                            width={200}
+                            height={64}
                             className="h-16 mx-auto object-contain"
                         />
                     </div>

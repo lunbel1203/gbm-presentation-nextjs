@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function WeServe () {
     useGSAP (() => {
@@ -15,7 +15,7 @@ export default function WeServe () {
         gsap.set('.republicaDominicana-section', { opacity: 0, y: 50 });
 
         // ScrollTrigger para weServe
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.weServeTrigger',
             start: 'top top',
             end: '+=1500',
@@ -44,7 +44,7 @@ export default function WeServe () {
         });
 
         // ScrollTrigger para massachusetts
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.massachusettsTrigger',
             start: 'top top',
             end: '+=1500',
@@ -73,7 +73,7 @@ export default function WeServe () {
         });
 
         // ScrollTrigger para hampshire
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.hampshireTrigger',
             start: 'top top',
             end: '+=1500',
@@ -102,7 +102,7 @@ export default function WeServe () {
         });
 
         // ScrollTrigger para hampshire
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.maineTrigger',
             start: 'top top',
             end: '+=1500',
@@ -131,7 +131,7 @@ export default function WeServe () {
         });
 
         // ScrollTrigger para hampshire
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.republicaDominicanaTrigger',
             start: 'top top',
             end: '+=1500',

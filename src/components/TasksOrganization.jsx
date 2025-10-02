@@ -1,9 +1,7 @@
 import React from 'react'
-import { gsap } from 'gsap'
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function tasksOrganization () {
     useGSAP (() => {
@@ -12,7 +10,7 @@ export default function tasksOrganization () {
         gsap.set('.tasksOrganization-cards', { y: '150vh', opacity: 1 });
 
         // ScrollTrigger para la animación inmediata
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.tasksOrganizationTrigger',
             start: 'top top',
             end: '+=4000',
@@ -32,7 +30,7 @@ export default function tasksOrganization () {
         });
 
         // ScrollTrigger adicional para fade out cuando lleguen al título de WeOffer
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.weOffer-title',
             start: 'bottom bottom', // Cuando el bottom del título toca el bottom del viewport
             end: 'bottom top',      // Cuando el bottom del título llega al top del viewport
@@ -57,28 +55,30 @@ export default function tasksOrganization () {
                 <div className="tasksOrganization-overlay w-full h-screen flex items-center px-6 lg:px-8">
                     
                     {/* Header Section - Lado izquierdo */}
-                    <div className="task-title w-1/3 text-left pr-8">
+                    <div className="task-title w-[40%] text-left pr-8">
                         <h2 className="text-4xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
                             TASKS ORGANIZATION
                         </h2>
                         <h3 className="text-2xl lg:text-4xl font-bold text-gray-600 mb-6">Team Cleaning</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mb-8"></div>
-                        <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+                        <p className="text-lg lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold leading-relaxed">
                             In the team cleaning approach individual cleaners are assigned specialized tasks to ensure maximum efficiency and expertise.
                         </p>
                     </div>
 
                     {/* Modern Cards - Lado derecho */}
-                    <div className="tasksOrganization-cards w-2/3 pl-8">
+                    <div className="tasksOrganization-cards w-[60%] pl-8">
                         <div className="space-y-6">
                         
                                 {/* Card 1 */}
                                 <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     <div className="flex items-center gap-6">
                                         <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <img 
-                                                src="/assets/images/task-light-duty.jpg" 
-                                                alt="Light Duty Cleaning" 
+                                            <Image
+                                                src="/assets/images/task-light-duty.jpg"
+                                                alt="Light Duty Cleaning"
+                                                width={272}
+                                                height={384}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
@@ -97,9 +97,11 @@ export default function tasksOrganization () {
                                 <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     <div className="flex items-center gap-6">
                                         <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <img 
-                                                src="/assets/images/task-restroom.jpg" 
-                                                alt="Restroom Cleaning" 
+                                            <Image 
+                                                src="/assets/images/task-restroom.jpg"
+                                                alt="Restroom Cleaning"
+                                                width={272}
+                                                height={384}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
@@ -118,9 +120,11 @@ export default function tasksOrganization () {
                                 <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     <div className="flex items-center gap-6">
                                         <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <img 
-                                                src="/assets/images/task-vaccum.jpg" 
-                                                alt="Vacuum Cleaning" 
+                                            <Image 
+                                                src="/assets/images/task-vaccum.jpg"
+                                                alt="Vacuum Cleaning"
+                                                width={272}
+                                                height={384}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
@@ -139,9 +143,11 @@ export default function tasksOrganization () {
                                 <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     <div className="flex items-center gap-6">
                                         <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <img 
-                                                src="/assets/images/task-utility.jpg" 
-                                                alt="Utility Cleaning" 
+                                            <Image 
+                                                src="/assets/images/task-utility.jpg"
+                                                alt="Utility Cleaning"
+                                                width={272}
+                                                height={384}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>

@@ -1,13 +1,16 @@
 import React from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function ThankYou() {
     
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Animacion simple y elegante para la pagina de agradecimiento
         gsap.fromTo('.thank-you-logo', 
             {
@@ -58,9 +61,11 @@ export default function ThankYou() {
                     
                     {/* Logo */}
                     <div className="thank-you-logo mb-16">
-                        <img 
-                            src="/assets/images/logo-normal.png" 
-                            alt="Glaring Building Maintenance" 
+                        <Image
+                            src="/assets/images/logo-normal.png"
+                            alt="Glaring Building Maintenance"
+                            width={400}
+                            height={256}
                             className="w-auto h-48 lg:h-64 mx-auto object-contain"
                         />
                     </div>

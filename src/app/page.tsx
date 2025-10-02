@@ -1,37 +1,108 @@
 'use client'
 
-import Intro from '@/components/Intro'
-import AboutUs from '@/components/AboutUs'
-import MisionVision from '@/components/MisionVision'
-import GlaringClean from '@/components/GlaringClean'
-import OurPeople from '@/components/OurPeople'
-import WorkerCompensation from '@/components/WorkerCompensation'
-import ChooseUs from '@/components/Choose-Us'
-import SecuritySystem from '@/components/SecuritySystem'
-import ContingencyPlan from '@/components/ContingencyPlan'
-import QualityAssurance from '@/components/QualityAssurance'
-import CrossContamination from '@/components/CrossContamination'
-import TasksOrganization from '@/components/TasksOrganization'
-import Equipment from '@/components/Equipment'
-import WeOffer from '@/components/WeOffer'
-import Certificates from '@/components/Certificates'
-import WeServe from '@/components/WeServe'
+import dynamic from 'next/dynamic'
 import Navigation from '@/components/Navigation'
-import ReferProgram from '@/components/ReferProgram'
-import ContactUs from '@/components/ContactUs'
-import ThankYou from '@/components/ThankYou'
-import Photos from '@/components/Photos'
+import Intro from '@/components/Intro'
+
+// Dynamic imports con loading fallbacks para componentes no críticos
+const AboutUs = dynamic(() => import('@/components/AboutUs'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const MisionVision = dynamic(() => import('@/components/MisionVision'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const GlaringClean = dynamic(() => import('@/components/GlaringClean'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const OurPeople = dynamic(() => import('@/components/OurPeople'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const WorkerCompensation = dynamic(() => import('@/components/WorkerCompensation'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const ChooseUs = dynamic(() => import('@/components/Choose-Us'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const SecuritySystem = dynamic(() => import('@/components/SecuritySystem'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const OurWork = dynamic(() => import('@/components/OurWork'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const ContingencyPlan = dynamic(() => import('@/components/ContingencyPlan'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const QualityAssurance = dynamic(() => import('@/components/QualityAssurance'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const CrossContamination = dynamic(() => import('@/components/CrossContamination'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const TasksOrganization = dynamic(() => import('@/components/TasksOrganization'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const Equipment = dynamic(() => import('@/components/Equipment'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const WeOffer = dynamic(() => import('@/components/WeOffer'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const Certificates = dynamic(() => import('@/components/Certificates'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const WeServe = dynamic(() => import('@/components/WeServe'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const GlaringStandard = dynamic(() => import('@/components/GlaringStandard'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const ReferProgram = dynamic(() => import('@/components/ReferProgram'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const ContactUs = dynamic(() => import('@/components/ContactUs'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const ThankYou = dynamic(() => import('@/components/ThankYou'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const Sponsor = dynamic(() => import('@/components/Sponsor'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const Fundation = dynamic(() => import('@/components/Fundation'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
 
 export default function Home() {
 
     return (
         <div className="w-full">
-            
+
             <Navigation />
 
-            {/* <Intro /> 
-            
-            <AboutUs /> 
+            <Intro />
+
+            <AboutUs />
 
             <MisionVision />
 
@@ -39,29 +110,35 @@ export default function Home() {
 
             <OurPeople />
 
-            <WorkerCompensation />  */}
+            <WorkerCompensation />
 
-            {/* <ChooseUs /> */}
+            <ChooseUs />
 
-            {/* <SecuritySystem /> */}
+            <SecuritySystem />
 
-            {/* <ContingencyPlan /> */}
+            <OurWork />
 
-            {/* <QualityAssurance /> */}
+            <ContingencyPlan />
 
-            {/* <CrossContamination /> */}
+            <QualityAssurance />
 
-            {/* <TasksOrganization /> */}
+            <CrossContamination />
 
-            {/* <Equipment /> */}
+            <TasksOrganization />
 
-            <Photos />
+            <Equipment />
 
-            {/* <WeOffer /> */}
+            <Sponsor />
 
-            {/* <Certificates /> */}
+            <Fundation />
 
-            {/* <WeServe /> */}
+            <WeOffer />
+
+            <GlaringStandard />
+
+            <Certificates />
+
+            <WeServe />
 
             <ReferProgram />
 

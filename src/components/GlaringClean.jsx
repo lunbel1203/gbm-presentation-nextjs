@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function GlaringClean () {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -35,12 +36,14 @@ export default function GlaringClean () {
     }
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Configuración inicial
-        gsap.set('.glaringClean-section  .title', { x: -200, opacity: 0 });
+        gsap.set('.glaringclean-title-container', { x: -200, opacity: 0 });
         gsap.set('.photo-frame', { y: 1000 });
 
         // ScrollTrigger para la sección
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.glaringClean-section',
             start: 'top top',
             end: '+=3000',
@@ -50,15 +53,20 @@ export default function GlaringClean () {
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Animación del H2 (0% - 30%)
+                // Animación del título (0% - 30%)
                 if (progress <= 0.3) {
                     const titleProgress = progress / 0.3;
-                    gsap.set('.glaringClean-section .title', {
+                    gsap.set('.glaringclean-title-container', {
                         x: gsap.utils.interpolate(-200, 0, titleProgress),
-                        opacity: gsap.utils.interpolate(0, 1, titleProgress)
+                        opacity: gsap.utils.interpolate(0, 1, titleProgress),
+                        transform: `translateX(${gsap.utils.interpolate(-200, 0, titleProgress)}px)`
                     });
                 } else {
-                    gsap.set('.glaringClean-section  .title', { x: 0, opacity: 1 });
+                    gsap.set('.glaringclean-title-container', {
+                        x: 0,
+                        opacity: 1,
+                        transform: 'translateX(0px)'
+                    });
                 }
 
                 // Animación de las fotos (30% - 60%)
@@ -81,42 +89,51 @@ export default function GlaringClean () {
     return (
         <>
             <section id="glaring-clean" className="glaringClean-section w-full h-screen flex items-center bg-slate-50 px-20 relative">
-                <div className="title w-[45%] text-left">
-                    <h2 className="w-full h-40 text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">It's not just clean, <br /> it's Glaring clean!</h2>
+                <div className="glaringclean-title-container w-[45%] text-left">
+                    <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">It's not just clean, <br /> it's Glaring clean!</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
                 </div>
 
                 <div className="imagesSection w-[55%] flex justify-between items-center gap-6 p-4">
                     <div className="leftColumn w-[50%]">
                         <div className="photo-frame w-full transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                            <img 
-                                src="/assets/images/glaring-clean-01.jpg" 
-                                alt="Glaring Clean 1" 
+                            <Image
+                                src="/assets/images/glaring-clean-01.jpg"
+                                alt="Glaring Clean 1"
+                                width={400}
+                                height={300}
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
                                     clickedImageSrc === '/assets/images/glaring-clean-01.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
                                 onClick={(e) => openLightbox('/assets/images/glaring-clean-01.jpg', e)}
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
                         <div className="photo-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300 mt-8 cursor-pointer">
-                            <img 
-                                src="/assets/images/glaring-clean-02.jpg" 
-                                alt="Glaring Clean 2" 
+                            <Image
+                                src="/assets/images/glaring-clean-02.jpg"
+                                alt="Glaring Clean 2"
+                                width={400}
+                                height={300}
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
                                     clickedImageSrc === '/assets/images/glaring-clean-02.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
                                 onClick={(e) => openLightbox('/assets/images/glaring-clean-02.jpg', e)}
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
                     </div>
                     <div className="photo-frame w-[50%] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                        <img 
-                            src="/assets/images/glaring-clean-03.jpg" 
-                            alt="Glaring Clean 3" 
+                        <Image
+                            src="/assets/images/glaring-clean-03.jpg"
+                            alt="Glaring Clean 3"
+                            width={400}
+                            height={600}
                             className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
                                 clickedImageSrc === '/assets/images/glaring-clean-03.jpg' ? 'opacity-0' : 'opacity-100'
                             }`}
                             onClick={(e) => openLightbox('/assets/images/glaring-clean-03.jpg', e)}
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>
@@ -140,10 +157,13 @@ export default function GlaringClean () {
                                 '--origin-height': `${originPosition.height}px`
                             }}
                         >
-                            <img 
-                                src={lightboxImage} 
-                                alt="Lightbox Image" 
+                            <Image
+                                src={lightboxImage}
+                                alt="Lightbox Image"
+                                width={800}
+                                height={600}
                                 className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white transition-transform duration-300"
+                                sizes="80vw"
                             />
                             <button 
                                 onClick={closeLightbox}

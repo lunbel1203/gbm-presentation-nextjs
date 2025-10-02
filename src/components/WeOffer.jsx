@@ -1,9 +1,10 @@
 import React from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function WeOffer () {
     useGSAP (() => {
@@ -11,7 +12,7 @@ export default function WeOffer () {
         gsap.set('.weOffer-cards', { y: '100vh', opacity: 0 });
 
         // ScrollTrigger optimizado para 21 cards
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.weOfferTrigger',
             start: 'top top',
             end: '+=6000', // Más espacio para las 21 cards
@@ -84,7 +85,7 @@ export default function WeOffer () {
                         {/* Card 3 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Janitorial.jpg')] bg-cover bg-center"></div>
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-janitorial.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         JANITORIAL
@@ -129,7 +130,7 @@ export default function WeOffer () {
                         {/* Card 6 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-GREEN-CLEANING.webp')] bg-cover bg-center"></div>
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-green-cleaning.webp')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         GREEN CLEANING
@@ -189,7 +190,7 @@ export default function WeOffer () {
                         {/* Card 10 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-PRESSURE-WASHING.jpg')] bg-cover bg-center"></div>
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-pressure-washing.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         PRESSURE WASHING
@@ -279,7 +280,7 @@ export default function WeOffer () {
                         {/* Card 16 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Emergency.jpeg')] bg-cover bg-center"></div>
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-emergency.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         EMERGENCY CLEANING SERVICES
@@ -370,9 +371,11 @@ export default function WeOffer () {
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <div className="flex items-center gap-6">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                    <img 
-                                        src="/assets/images/painting.jpg" 
-                                        alt="Paint and Drywall" 
+                                    <Image
+                                        src="/assets/images/painting.jpg"
+                                        alt="Paint and Drywall"
+                                        width={208}
+                                        height={208}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>

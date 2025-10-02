@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function WorkerCompensation () {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -35,12 +36,14 @@ export default function WorkerCompensation () {
     }
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Configuración inicial
-        gsap.set('.compensation-section .title', { y: 200, opacity: 0 });
+        gsap.set('.compensation-title-container', { y: 200, opacity: 0 });
         gsap.set('.photo-compensation', { y: 1000 });
 
         // ScrollTrigger para la sección
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.compensation-section',
             start: 'top top',
             end: '+=3000',
@@ -50,15 +53,20 @@ export default function WorkerCompensation () {
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Animación del H2 (0% - 30%)
+                // Animación del título (0% - 30%)
                 if (progress <= 0.3) {
                     const titleProgress = progress / 0.3;
-                    gsap.set('.compensation-section  .title', {
+                    gsap.set('.compensation-title-container', {
                         y: gsap.utils.interpolate(200, 0, titleProgress),
-                        opacity: gsap.utils.interpolate(0, 1, titleProgress)
+                        opacity: gsap.utils.interpolate(0, 1, titleProgress),
+                        transform: `translateY(${gsap.utils.interpolate(200, 0, titleProgress)}px)`
                     });
                 } else {
-                    gsap.set('.compensation-section  .title', { x: 0, opacity: 1 });
+                    gsap.set('.compensation-title-container', {
+                        y: 0,
+                        opacity: 1,
+                        transform: 'translateY(0px)'
+                    });
                 }
 
                 // Animación de las fotos (30% - 60%)
@@ -81,58 +89,70 @@ export default function WorkerCompensation () {
     return (
         <>
             <section id="worker-compensation" className="compensation-section w-full h-screen relative">
-                <div className="mission-overlay w-full flex items-center px-20 bg-white absolute inset-0">
-                    <div className="imagesSection w-[50%] flex flex-wrap items-center gap-6 p-4">
-                        <div className="photo-compensation w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <img 
-                                src="/assets/images/Working-Compensation-01.jpg" 
-                                alt="Glaring Clean 2" 
+                <div className="compensation-overlay w-full flex items-center px-20 bg-white absolute inset-0">
+                    <div className="imagesSection w-[60%] flex flex-wrap items-center gap-6">
+                        <div className="photo-compensation w-[calc(100%/2-150px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
+                            <Image
+                                src="/assets/images/working-compensation-01.jpg"
+                                alt="Worker Compensation 1"
+                                width={300}
+                                height={400}
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/Working-Compensation-01.jpg' ? 'opacity-0' : 'opacity-100'
+                                    clickedImageSrc === '/assets/images/working-compensation-01.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
-                                onClick={(e) => openLightbox('/assets/images/Working-Compensation-01.jpg', e)}
+                                onClick={(e) => openLightbox('/assets/images/working-compensation-01.jpg', e)}
+                                sizes="(max-width: 768px) 50vw, 25vw"
                             />
                         </div>
-                        <div className="leftColumn w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
+                        <div className="leftColumn w-[calc(100%/2-150px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
                             <div className="photo-compensation w-full transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                                <img 
-                                    src="/assets/images/Working-Compensation-02.jpg" 
-                                    alt="Glaring Clean 1" 
+                                <Image
+                                    src="/assets/images/working-compensation-02.jpg"
+                                    alt="Worker Compensation 2"
+                                    width={300}
+                                    height={400}
                                     className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                        clickedImageSrc === '/assets/images/Working-Compensation-02.jpg' ? 'opacity-0' : 'opacity-100'
+                                        clickedImageSrc === '/assets/images/working-compensation-02.jpg' ? 'opacity-0' : 'opacity-100'
                                     }`}
-                                    onClick={(e) => openLightbox('/assets/images/Working-Compensation-02.jpg', e)}
+                                    onClick={(e) => openLightbox('/assets/images/working-compensation-02.jpg', e)}
+                                    sizes="(max-width: 768px) 50vw, 25vw"
                                 />
                             </div>
                         </div>
-                        <div className="leftColumn w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
+                        <div className="leftColumn w-[calc(100%/2-150px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
                             <div className="photo-compensation w-full transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                                <img 
-                                    src="/assets/images/Working-Compensation-03.jpg" 
-                                    alt="Glaring Clean 1" 
+                                <Image
+                                    src="/assets/images/working-compensation-03.jpg"
+                                    alt="Worker Compensation 3"
+                                    width={300}
+                                    height={400}
                                     className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                        clickedImageSrc === '/assets/images/Working-Compensation-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                        clickedImageSrc === '/assets/images/working-compensation-03.jpg' ? 'opacity-0' : 'opacity-100'
                                     }`}
-                                    onClick={(e) => openLightbox('/assets/images/Working-Compensation-03.jpg', e)}
+                                    onClick={(e) => openLightbox('/assets/images/working-compensation-03.jpg', e)}
+                                    sizes="(max-width: 768px) 50vw, 25vw"
                                 />
                             </div>
                         </div>
-                        <div className="photo-compensation w-[calc(100%/2-50px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
-                            <img 
-                                src="/assets/images/Working-Compensation-04.jpg" 
-                                alt="Glaring Clean 2" 
+                        <div className="photo-compensation w-[calc(100%/2-150px)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 col-span-2 cursor-pointer">
+                            <Image
+                                src="/assets/images/working-compensation-04.jpg"
+                                alt="Worker Compensation 4"
+                                width={300}
+                                height={400}
                                 className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/Working-Compensation-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                    clickedImageSrc === '/assets/images/working-compensation-04.jpg' ? 'opacity-0' : 'opacity-100'
                                 }`}
-                                onClick={(e) => openLightbox('/assets/images/Working-Compensation-04.jpg', e)}
+                                onClick={(e) => openLightbox('/assets/images/working-compensation-04.jpg', e)}
+                                sizes="(max-width: 768px) 50vw, 25vw"
                             />
                         </div>
                     </div>
-                    <div className="title w-[50%] text-left pl-10">
+                    <div className="compensation-title-container w-[40%] text-left">
                         <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">WORKERS COMPENSATION</h2>
-                        <h2 className="w-full text-3xl font-bold text-gbm-green mb-10">All workers are budgeted based on a living wage.</h2>
+                        <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">All workers are budgeted based on a living wage.</h3>
                         <div className="w-24 h-1 bg-gbm-green mb-10"></div>
-                        <p className='text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold'>(This represent 20-30% Massachusetts state minimun wage) Cleaning worker turnover rate: 20% annually (Industry average = 200%)</p>
+                        <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>(This represents 20-30% above Massachusetts state minimum wage) Cleaning worker turnover rate: 20% annually (Industry average = 200%)</h3>
                     </div>
                 </div>
 
@@ -155,10 +175,13 @@ export default function WorkerCompensation () {
                                 '--origin-height': `${originPosition.height}px`
                             }}
                         >
-                            <img 
-                                src={lightboxImage} 
-                                alt="Lightbox Image" 
+                            <Image
+                                src={lightboxImage}
+                                alt="Lightbox Image"
+                                width={800}
+                                height={600}
                                 className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white transition-transform duration-300"
+                                sizes="80vw"
                             />
                             <button 
                                 onClick={closeLightbox}

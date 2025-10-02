@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
-import { gsap } from 'gsap'
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
 import { RiClipboardLine, RiSearchLine, RiBarChartLine } from '@remixicon/react';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function QaulityAssurance () {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -23,12 +21,14 @@ export default function QaulityAssurance () {
     }
 
     useGSAP(() => {
+        if (typeof window === 'undefined') return;
+
         // Estado inicial - todos los elementos ocultos
         gsap.set('.quality-title', { y: 100, opacity: 0 });
         gsap.set('.quality-section', { y: 100, opacity: 0 });
 
-        // ScrollTrigger para la sección
-        ScrollTrigger.create({
+        // ScrollTrigger optimizado para la sección
+        createOptimizedScrollTrigger({
             trigger: '.qualityAssurance-section',
             start: 'top top',
             end: '+=3500',
@@ -101,23 +101,29 @@ export default function QaulityAssurance () {
                             {/* Imágenes de supervisión */}
                             <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
                                 <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full max-w-md">
-                                    <img 
-                                        src="/assets/images/QualityAssurance.png" 
-                                        alt="Quality Assurance 1" 
+                                    <Image
+                                        src="/assets/images/qualityassurance.png"
+                                        alt="Quality Assurance 1"
+                                        width={400}
+                                        height={300}
                                         className={`w-full h-auto object-contain shadow-xl border-8 border-white rounded-lg ${
-                                            clickedImageSrc === '/assets/images/QualityAssurance.png' ? 'opacity-0' : 'opacity-100'
+                                            clickedImageSrc === '/assets/images/qualityassurance.png' ? 'opacity-0' : 'opacity-100'
                                         }`}
-                                        onClick={(e) => openLightbox('/assets/images/QualityAssurance.png', e)}
+                                        onClick={(e) => openLightbox('/assets/images/qualityassurance.png', e)}
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                                 <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full">
-                                    <img 
-                                        src="/assets/images/QualityAssurance-02.png" 
-                                        alt="Quality Assurance 2" 
+                                    <Image
+                                        src="/assets/images/qualityassurance-02.png"
+                                        alt="Quality Assurance 2"
+                                        width={800}
+                                        height={400}
                                         className={`w-full h-auto object-contain shadow-xl border-8 border-white rounded-lg ${
-                                            clickedImageSrc === '/assets/images/QualityAssurance-02.png' ? 'opacity-0' : 'opacity-100'
+                                            clickedImageSrc === '/assets/images/qualityassurance-02.png' ? 'opacity-0' : 'opacity-100'
                                         }`}
-                                        onClick={(e) => openLightbox('/assets/images/QualityAssurance-02.png', e)}
+                                        onClick={(e) => openLightbox('/assets/images/qualityassurance-02.png', e)}
+                                        sizes="(max-width: 768px) 100vw, 80vw"
                                     />
                                 </div>
                             </div>
@@ -157,13 +163,16 @@ export default function QaulityAssurance () {
                                 </div>
                                 <div className="lg:w-1/2">
                                     <div className="photo-qualityAssurance transform -rotate-1 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                                        <img 
-                                            src="/assets/images/QualityAssurance-03.jpg" 
-                                            alt="Quality Assurance 3" 
+                                        <Image
+                                            src="/assets/images/qualityassurance-03.jpg"
+                                            alt="Quality Assurance 3"
+                                            width={500}
+                                            height={384}
                                             className={`w-full h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
-                                                clickedImageSrc === '/assets/images/QualityAssurance-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                                clickedImageSrc === '/assets/images/qualityassurance-03.jpg' ? 'opacity-0' : 'opacity-100'
                                             }`}
-                                            onClick={(e) => openLightbox('/assets/images/QualityAssurance-03.jpg', e)}
+                                            onClick={(e) => openLightbox('/assets/images/qualityassurance-03.jpg', e)}
+                                            sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                     </div>
                                 </div>
@@ -208,13 +217,16 @@ export default function QaulityAssurance () {
                                 </div>
                                 <div className="lg:w-1/2">
                                     <div className="photo-qualityAssurance transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                                        <img 
-                                            src="/assets/images/QualityAssurance-04.jpg" 
-                                            alt="Quality Assurance 4" 
+                                        <Image
+                                            src="/assets/images/qualityassurance-04.jpg"
+                                            alt="Quality Assurance 4"
+                                            width={500}
+                                            height={384}
                                             className={`w-full h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
-                                                clickedImageSrc === '/assets/images/QualityAssurance-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                                clickedImageSrc === '/assets/images/qualityassurance-04.jpg' ? 'opacity-0' : 'opacity-100'
                                             }`}
-                                            onClick={(e) => openLightbox('/assets/images/QualityAssurance-04.jpg', e)}
+                                            onClick={(e) => openLightbox('/assets/images/qualityassurance-04.jpg', e)}
+                                            sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                     </div>
                                 </div>
@@ -234,7 +246,7 @@ export default function QaulityAssurance () {
                     onClick={closeLightbox}
                 >
                     <div className="relative max-w-4xl max-h-[80vh] p-4">
-                        <img 
+                        <Image 
                             src={lightboxImage} 
                             alt="Lightbox Image" 
                             className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white"

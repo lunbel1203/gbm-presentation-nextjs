@@ -1,9 +1,10 @@
 import React, { useRef } from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image'
+import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
+import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 export default function CrossContamination () {
     useGSAP (() => {
@@ -13,7 +14,7 @@ export default function CrossContamination () {
         gsap.set('.crossContamination-mops', { y: '100vh', opacity: 0 });
 
         // ScrollTrigger para la sección
-        ScrollTrigger.create({
+        createOptimizedScrollTrigger({
             trigger: '.crossContaminationTrigger',
             start: 'top top',
             end: '+=6000',
@@ -118,13 +119,55 @@ export default function CrossContamination () {
                         </div>
 
                         <div className="crossContamination-cloths w-full flex flex-wrap justify-center gap-10 absolute inset-x-0">
-                            <h3 className='w-full text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>DIFFERENT CLOTHS COLOR</h3>
-                            <img src="/assets/images/cloths.png" alt="" />
+                            <h3 className='w-full text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#FFFFFF] to-gbm-green bg-clip-text text-transparent mb-8'>DIFFERENT CLOTHS COLOR</h3>
+                            <div className="grid grid-cols-4 gap-8 w-full max-w-7xl px-8">
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-blue.jpeg" alt="Microfiber Blue" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">GLASS</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-green.jpeg" alt="Microfiber Green" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">DUST & HEAVY DUTY</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-yellow.jpeg" alt="Microfiber Yellow" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">KITCHENETTES & CAFETERIAS</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-pink.jpeg" alt="Microfiber Pink" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">RESTROOMS COUNTERS, DISPENSERS & SINKS</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-white.jpeg" alt="Microfiber White" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">TOILETS & URINALS</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-orange.jpeg" alt="Microfiber Orange" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">STAINLESS STEEL</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/microfiber-cleaning-clot-black.jpeg" alt="Microfiber Black" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">GRANITE & STONE</h4>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="crossContamination-mops w-full flex flex-wrap justify-center gap-10 absolute inset-x-0">
-                            <h3 className='w-full text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>DIFFERENT MOPS</h3>
-                            <img src="/assets/images/mops.png" alt="" />
+                            <h3 className='w-full text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#FFFFFF] to-gbm-green bg-clip-text text-transparent mb-8'>DIFFERENT MOPS</h3>
+                            <div className="w-full grid grid-cols-3 gap-12 max-w-4xl px-8">
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/mop-bathrooms.jpeg" alt="Mop for Bathrooms" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">BATHROOMS</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/mop-heavy-duty-areas.jpeg" alt="Mop for Heavy Duty Areas" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">HEAVY DUTY AREAS</h4>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <Image src="/assets/images/mop-general-use.jpeg" alt="Mop for General Use" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">GENERAL USE</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

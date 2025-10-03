@@ -164,7 +164,7 @@ export default function WeServe () {
 
     return (
         <>
-            <section id="we-serve" className="weServeTrigger w-full h-screen bg-[url('/assets/images/bg-weServe.jpg')] bg-cover bg-center text-white relative">
+            <section id="we-serve" className="weServeTrigger w-full h-screen bg-[url('/assets/images/bg-weserve.jpg')] bg-cover bg-center text-white relative">
                 <div className="weServe-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="weServe-section w-full lg:w-4/5 text-center mx-auto">

@@ -71,22 +71,21 @@ export default function tasksOrganization () {
                         <div className="space-y-6">
                         
                                 {/* Card 1 */}
-                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    <div className="flex items-center gap-6">
-                                        <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-48">
+                                    <div className="flex h-full">
+                                        <div className="relative w-64 flex-shrink-0">
                                             <Image
                                                 src="/assets/images/task-light-duty.jpg"
                                                 alt="Light Duty Cleaning"
-                                                width={272}
-                                                height={384}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>
-                                        <div className="flex-1 p-4">
-                                            <h3 className="text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
+                                        <div className="flex-1 p-4 flex flex-col justify-center">
+                                            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
                                                 Light duty Specialist (LD)
                                             </h3>
-                                            <p className="text-gray-700 text-base leading-relaxed">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
                                                 The cleaner will be responsible for doing the light duty (LD) sweep of the area to be cleaned, removing all the trash and any large object on the floor.
                                             </p>
                                         </div>
@@ -94,22 +93,21 @@ export default function tasksOrganization () {
                                 </div>
 
                                 {/* Card 2 */}
-                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    <div className="flex items-center gap-6">
-                                        <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <Image 
+                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-48">
+                                    <div className="flex h-full">
+                                        <div className="relative w-64 flex-shrink-0">
+                                            <Image
                                                 src="/assets/images/task-restroom.jpg"
                                                 alt="Restroom Cleaning"
-                                                width={272}
-                                                height={384}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>
-                                        <div className="flex-1 p-4">
-                                            <h3 className="text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
+                                        <div className="flex-1 p-4 flex flex-col justify-center">
+                                            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
                                                 Restrooms Specialist (RS)
                                             </h3>
-                                            <p className="text-gray-700 text-base leading-relaxed">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
                                                 The cleaner will be responsible to clean, sanitize and fill the supplies of the bathrooms.
                                             </p>
                                         </div>
@@ -117,22 +115,21 @@ export default function tasksOrganization () {
                                 </div>
 
                                 {/* Card 3 */}
-                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    <div className="flex items-center gap-6">
-                                        <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <Image 
+                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-48">
+                                    <div className="flex h-full">
+                                        <div className="relative w-64 flex-shrink-0">
+                                            <Image
                                                 src="/assets/images/task-vaccum.jpg"
                                                 alt="Vacuum Cleaning"
-                                                width={272}
-                                                height={384}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>
-                                        <div className="flex-1 p-4">
-                                            <h3 className="text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
+                                        <div className="flex-1 p-4 flex flex-col justify-center">
+                                            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
                                                 Vaccum Specialist (VS)
                                             </h3>
-                                            <p className="text-gray-700 text-base leading-relaxed">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
                                                 The cleaner will be responsible for thoroughly vacuuming the area while making sure no objects were left behind from the LD sweep, checking all trash bins in the area as well.
                                             </p>
                                         </div>
@@ -140,22 +137,21 @@ export default function tasksOrganization () {
                                 </div>
 
                                 {/* Card 4 */}
-                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    <div className="flex items-center gap-6">
-                                        <div className="relative w-68 h-96 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                            <Image 
+                                <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-48">
+                                    <div className="flex h-full">
+                                        <div className="relative w-64 flex-shrink-0">
+                                            <Image
                                                 src="/assets/images/task-utility.jpg"
                                                 alt="Utility Cleaning"
-                                                width={272}
-                                                height={384}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>
-                                        <div className="flex-1 p-4">
-                                            <h3 className="text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
+                                        <div className="flex-1 p-4 flex flex-col justify-center">
+                                            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
                                                 Utilities specialist (US)
                                             </h3>
-                                            <p className="text-gray-700 text-base leading-relaxed">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
                                                 The cleaner will be responsible for mopping, disinfecting, buffing and auto scrubbing the floor, as well as other tasks, as assigned.
                                             </p>
                                         </div>

@@ -45,17 +45,17 @@ export default function WeOffer () {
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
                             what we offer
                         </h2>
-                        <h3 className="text-2xl lg:text-4xl font-bold text-gray-600 mb-6">Our core services</h3>
+                        <h3 className="text-2xl lg:text-4xl font-bold text-gbm-green mb-6">Our core services</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
                     </div>
 
                     {/* Modern Cards */}
-                    <div className="weOffer-cards w-full mx-auto space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
-                        
+                    <div className="weOffer-cards w-full mx-auto space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+
                         {/* Card 1 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Data-Center.jpeg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-data-center.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         DATA CENTER CLEANING
@@ -68,9 +68,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Cleanroom-Services.jpeg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-cleanroom-services.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         CLEANROOM SERVICES
@@ -83,8 +83,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-janitorial.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -98,8 +98,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-day-porter.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -113,9 +113,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 5 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Deep-Cleaning.jpeg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-deep-cleaning.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         DEEP CLEANING
@@ -128,8 +128,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 6 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-green-cleaning.webp')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -143,9 +143,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 7 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Windows-Cleaning.jpg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-windows-cleaning.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         WINDOW CLEANING
@@ -158,9 +158,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 8 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Tile-Stone-Care.jpeg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-tile-stone-care.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         TILE & STONE CARE
@@ -173,9 +173,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 9 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Solar-Panel.png')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-solar-panel.png')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         SOLAR PANEL CLEANING
@@ -188,8 +188,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 10 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-pressure-washing.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -203,9 +203,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 11 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Post-Construction.jpg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-post-construction.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         POST CONSTRUCTION
@@ -218,9 +218,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 12 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Maintenance-Services.jpg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-maintenance-services.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         MAINTENANCE SERVICES
@@ -233,9 +233,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 13 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Epoxy-Flooring.jpg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-epoxy-flooring-alt.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         EPOXY FLOORING
@@ -248,9 +248,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 14 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Concrete.jpeg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-concrete.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         CONCRETE GRINDING POLISHING
@@ -263,8 +263,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 15 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-disinfection-services.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -278,8 +278,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 16 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-emergency.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -293,9 +293,9 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 17 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-Upholstery.jpg')] bg-cover bg-center"></div>
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-upholstery.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         UPHOLSTERY
@@ -308,8 +308,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 18 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-carpet-maintenance.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -323,8 +323,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 19 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-hard-floor.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -338,8 +338,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 20 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-snow-removing.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -353,8 +353,8 @@ export default function WeOffer () {
                         </div>
 
                         {/* Card 21 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-landscaping.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
@@ -367,18 +367,10 @@ export default function WeOffer () {
                             </div>
                         </div>
 
-                        {/* Card 21 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-6">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                    <Image
-                                        src="/assets/images/painting.jpg"
-                                        alt="Paint and Drywall"
-                                        width={208}
-                                        height={208}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
+                        {/* Card 22 */}
+                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
+                            <div className="flex items-center gap-6 h-full">
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/painting.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         Paint and drywall

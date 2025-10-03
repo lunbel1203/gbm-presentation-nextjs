@@ -31,16 +31,16 @@ export default function QaulityAssurance () {
         createOptimizedScrollTrigger({
             trigger: '.qualityAssurance-section',
             start: 'top top',
-            end: '+=3500',
-            scrub: 0.4,
+            end: '+=9000',
+            scrub: 1.5,
             pin: true,
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Animación del título (0% - 18%)
-                if (progress <= 0.18) {
-                    const titleProgress = progress / 0.18;
+                // Animación del título (0% - 8%)
+                if (progress <= 0.08) {
+                    const titleProgress = progress / 0.08;
                     gsap.set('.quality-title', {
                         y: gsap.utils.interpolate(100, 0, titleProgress),
                         opacity: gsap.utils.interpolate(0, 1, titleProgress)
@@ -49,23 +49,30 @@ export default function QaulityAssurance () {
                     gsap.set('.quality-title', { y: 0, opacity: 1 });
                 }
 
-                // Animación de las secciones con mejor timing
+                // Animación de las secciones - 3 secciones distribuidas suavemente
                 const sections = document.querySelectorAll('.quality-section');
                 sections.forEach((section, index) => {
-                    const sectionStartProgress = 0.18 + (index * 0.22); // Secciones empiezan desde 18% espaciadas cada 22%
-                    const sectionEndProgress = sectionStartProgress + 0.25; // Cada sección dura 25% del scroll con solapamiento
+                    // Primera sección empieza inmediatamente después del título (5%)
+                    // Espaciado más generoso entre secciones
+                    const sectionStartProgress = 0.05 + (index * 0.15); // Empieza al 5%, espaciadas cada 15%
+                    const sectionDuration = 0.2; // Cada sección dura 20%
+                    const sectionEndProgress = sectionStartProgress + sectionDuration;
 
                     if (progress >= sectionStartProgress && progress <= sectionEndProgress) {
-                        const localProgress = (progress - sectionStartProgress) / 0.25;
-                        const smoothProgress = gsap.utils.interpolate(0, 1, Math.pow(localProgress, 0.75));
+                        const actualDuration = sectionEndProgress - sectionStartProgress;
+                        const localProgress = (progress - sectionStartProgress) / actualDuration;
+                        // Suavizado exponencial más suave
+                        const smoothProgress = gsap.utils.interpolate(0, 1, Math.pow(localProgress, 0.8));
+
                         gsap.set(section, {
-                            y: gsap.utils.interpolate(80, 0, smoothProgress),
-                            opacity: gsap.utils.interpolate(0, 1, smoothProgress)
+                            y: gsap.utils.interpolate(30, 0, smoothProgress),
+                            opacity: gsap.utils.interpolate(0, 1, smoothProgress),
+                            scale: gsap.utils.interpolate(0.98, 1, smoothProgress)
                         });
                     } else if (progress > sectionEndProgress) {
-                        gsap.set(section, { y: 0, opacity: 1 });
+                        gsap.set(section, { y: 0, opacity: 1, scale: 1 });
                     } else {
-                        gsap.set(section, { y: 80, opacity: 0 });
+                        gsap.set(section, { y: 30, opacity: 0, scale: 0.98 });
                     }
                 });
             }
@@ -99,27 +106,27 @@ export default function QaulityAssurance () {
                             </p>
                             
                             {/* Imágenes de supervisión */}
-                            <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
-                                <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full max-w-md">
+                            <div className="grid grid-cols-2 items-center gap-8 max-w-4xl mx-auto">
+                                <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full max-w-sm">
                                     <Image
                                         src="/assets/images/qualityassurance.png"
                                         alt="Quality Assurance 1"
                                         width={400}
                                         height={300}
-                                        className={`w-full h-auto object-contain shadow-xl border-8 border-white rounded-lg ${
+                                        className={`w-full max-h-96 object-contain shadow-xl border-8 border-white rounded-lg ${
                                             clickedImageSrc === '/assets/images/qualityassurance.png' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/qualityassurance.png', e)}
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, 400px"
                                     />
                                 </div>
-                                <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full">
+                                <div className="photo-qualityAssurance hover:scale-105 transition-transform duration-300 cursor-pointer w-full max-w-2xl">
                                     <Image
                                         src="/assets/images/qualityassurance-02.png"
                                         alt="Quality Assurance 2"
                                         width={800}
                                         height={400}
-                                        className={`w-full h-auto object-contain shadow-xl border-8 border-white rounded-lg ${
+                                        className={`w-full max-h-80 object-contain shadow-xl border-8 border-white rounded-lg ${
                                             clickedImageSrc === '/assets/images/qualityassurance-02.png' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/qualityassurance-02.png', e)}
@@ -168,7 +175,7 @@ export default function QaulityAssurance () {
                                             alt="Quality Assurance 3"
                                             width={500}
                                             height={384}
-                                            className={`w-full h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
+                                            className={`w-full max-h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
                                                 clickedImageSrc === '/assets/images/qualityassurance-03.jpg' ? 'opacity-0' : 'opacity-100'
                                             }`}
                                             onClick={(e) => openLightbox('/assets/images/qualityassurance-03.jpg', e)}
@@ -222,7 +229,7 @@ export default function QaulityAssurance () {
                                             alt="Quality Assurance 4"
                                             width={500}
                                             height={384}
-                                            className={`w-full h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
+                                            className={`w-full max-h-96 object-cover shadow-xl border-8 border-white rounded-lg ${
                                                 clickedImageSrc === '/assets/images/qualityassurance-04.jpg' ? 'opacity-0' : 'opacity-100'
                                             }`}
                                             onClick={(e) => openLightbox('/assets/images/qualityassurance-04.jpg', e)}

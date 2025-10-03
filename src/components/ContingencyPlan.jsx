@@ -30,8 +30,8 @@ export default function ContingencyPlan () {
         createOptimizedScrollTrigger({
             trigger: '.contingencyPlan-section',
             start: 'top top',
-            end: '+=3500',
-            scrub: 0.3,
+            end: '+=8000',
+            scrub: 1.5,
             pin: true,
             pinSpacing: true,
             onUpdate: (self) => {
@@ -51,15 +51,17 @@ export default function ContingencyPlan () {
                 // Animación de las secciones con timing más suave
                 const sections = document.querySelectorAll('.story-section');
                 sections.forEach((section, index) => {
-                    // Empezamos desde 15% con más espacio entre secciones
-                    const sectionStart = 0.15 + (index * 0.2); // Cada sección empieza cada 20%
-                    const sectionEnd = sectionStart + 0.3; // Cada sección dura 30% (con más solapamiento)
+                    // Distribuir 4 secciones en solo el 60% del scroll total
+                    const sectionStart = 0.08 + (index * 0.13); // Cada sección empieza cada 13%
+                    const sectionDuration = 0.2; // Cada sección dura 20%
+                    const sectionEnd = sectionStart + sectionDuration;
 
                     if (progress >= sectionStart && progress <= sectionEnd) {
-                        const localProgress = (progress - sectionStart) / 0.3;
+                        const actualDuration = sectionEnd - sectionStart;
+                        const localProgress = (progress - sectionStart) / actualDuration;
                         // Suavizado exponencial para evitar saltos bruscos
                         const smoothProgress = gsap.utils.interpolate(0, 1, Math.pow(localProgress, 0.8));
-                        
+
                         gsap.set(section, {
                             y: gsap.utils.interpolate(30, 0, smoothProgress),
                             opacity: gsap.utils.interpolate(0, 1, smoothProgress),
@@ -78,8 +80,8 @@ export default function ContingencyPlan () {
     return (
         <>
             <section id="contingency-plan" className="contingencyPlan-section w-full min-h-screen bg-gradient-to-br from-slate-50 to-white relative">
-                
-                <div className="w-full flex flex-col items-center px-8 lg:px-20 py-16">
+
+                <div className="w-full flex flex-col items-center px-8 lg:px-20 py-16 pb-32">
                     
                     {/* Título Principal */}
                     <div className="contingency-title text-center mb-16">
@@ -87,7 +89,7 @@ export default function ContingencyPlan () {
                         <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
                     </div>
 
-                    <div className="max-w-4xl w-full space-y-20">
+                    <div className="w-3/4 space-y-20">
 
                         {/* 1. INTRODUCCIÓN */}
                         <div className="story-section">
@@ -98,7 +100,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 01"
                                         width={500}
                                         height={500}
-                                        className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-01.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-01.jpg', e)}
@@ -122,7 +124,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 02"
                                         width={500}
                                         height={500} 
-                                        className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-02.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-02.jpg', e)}
@@ -153,7 +155,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 03"
                                         width={500}
                                         height={500}
-                                        className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-03.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-03.jpg', e)}
@@ -175,7 +177,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 04"
                                         width={500}
                                         height={500}
-                                        className={`w-full h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-04.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-04.jpg', e)}

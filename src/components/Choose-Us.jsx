@@ -46,7 +46,7 @@ export default function ChooseUs () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
 
                         <div className="chooseUs-list w-full h-screen flex flex-wrap items-center px-4 md:px-8 lg:px-20 relative">
-                            <div className="chooseUs-section w-full lg:w-3/5 text-center mx-auto">
+                            <div className="chooseUs-section w-full lg:w-4/5 text-center mx-auto">
                                 <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WHY CHOOSE US</h2>
                                 <div className="w-32 sm:w-40 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>

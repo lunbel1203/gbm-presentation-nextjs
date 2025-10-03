@@ -76,36 +76,41 @@ export default function AboutUs () {
                     });
                 }
 
-                // Resetear todos los párrafos primero
-                paragraphs.forEach(p => gsap.set(p, { opacity: 0, x: '100%' }));
-
-                // Animación de párrafos basada en las tarjetas
-                if (progress < secondCardStartProgress) {
-                    // Primer párrafo visible hasta que aparece la tercera tarjeta
+                // Animación de párrafos con transiciones suaves
+                // Primer párrafo: visible al inicio, sale suavemente entre 20% y 35%
+                if (progress < 0.20) {
                     gsap.set(paragraphs[0], {
                         x: '0%',
                         opacity: 1
                     });
-                } else if (progress >= secondCardStartProgress && progress < 0.25) {
-                    // Primer párrafo se va cuando aparece la tercera tarjeta
-                    const localProgress = (progress - secondCardStartProgress) / (0.25 - secondCardStartProgress);
+                    gsap.set(paragraphs[1], { x: '100%', opacity: 0 });
+                    gsap.set(paragraphs[2], { x: '100%', opacity: 0 });
+                } else if (progress >= 0.20 && progress < 0.35) {
+                    // Primer párrafo sale suavemente
+                    const localProgress = (progress - 0.20) / 0.15;
                     gsap.set(paragraphs[0], {
                         x: gsap.utils.interpolate(0, -100, localProgress) + '%',
-                        opacity: 1 - localProgress
+                        opacity: gsap.utils.interpolate(1, 0, localProgress)
                     });
-                } else if (progress >= 0.25 && progress < 0.5) {
+                    gsap.set(paragraphs[1], { x: '100%', opacity: 0 });
+                    gsap.set(paragraphs[2], { x: '100%', opacity: 0 });
+                } else if (progress >= 0.35 && progress < 0.65) {
                     // Segundo párrafo entra y sale
-                    const localProgress = (progress - 0.25) / 0.25;
+                    const localProgress = (progress - 0.35) / 0.30;
+                    gsap.set(paragraphs[0], { x: '-100%', opacity: 0 });
                     gsap.set(paragraphs[1], {
                         x: gsap.utils.interpolate(100, -100, localProgress) + '%',
-                        opacity: 1
+                        opacity: localProgress < 0.5 ? gsap.utils.interpolate(0, 1, localProgress * 2) : gsap.utils.interpolate(1, 0, (localProgress - 0.5) * 2)
                     });
-                } else if (progress >= 0.5) {
-                    // Tercer párrafo entra y se queda en posición del primer párrafo
-                    const localProgress = Math.min((progress - 0.5) / 0.25, 1);
+                    gsap.set(paragraphs[2], { x: '100%', opacity: 0 });
+                } else if (progress >= 0.65) {
+                    // Tercer párrafo entra y se queda
+                    const localProgress = Math.min((progress - 0.65) / 0.20, 1);
+                    gsap.set(paragraphs[0], { x: '-100%', opacity: 0 });
+                    gsap.set(paragraphs[1], { x: '-100%', opacity: 0 });
                     gsap.set(paragraphs[2], {
                         x: gsap.utils.interpolate(100, 0, localProgress) + '%',
-                        opacity: 1
+                        opacity: gsap.utils.interpolate(0, 1, localProgress)
                     });
                 }
 

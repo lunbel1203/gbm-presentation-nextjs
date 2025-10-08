@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Navigation from '@/components/Navigation'
 import Intro from '@/components/Intro'
@@ -94,6 +95,27 @@ const Fundation = dynamic(() => import('@/components/Fundation'), {
 })
 
 export default function Home() {
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
+    if (isMobile) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-100 text-center px-4">
+                <div>
+                    <h1 className="text-2xl font-bold text-gray-800 mb-4">Presentation not available on mobile</h1>
+                    <p className="text-lg text-gray-600">This presentation is only available on desktop. Please open it from a computer for the best experience.</p>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="w-full">

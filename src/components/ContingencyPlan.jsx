@@ -22,66 +22,96 @@ export default function ContingencyPlan () {
     useGSAP(() => {
         if (typeof window === 'undefined') return;
 
-        // Estado inicial - todos los elementos ocultos
-        gsap.set('.contingency-title', { y: 100, opacity: 0 });
-        gsap.set('.story-section', { y: 100, opacity: 0 });
+        // Estado inicial - todos los elementos ocultos excepto el título
+        gsap.set('.contingency-title', { opacity: 1 });
+        gsap.set('.planIntro-section', { opacity: 0 });
+        gsap.set('.planIntro2-section', { opacity: 0 });
+        gsap.set('.doIt-section', { opacity: 0 });
+        gsap.set('.doIt2-section', { opacity: 0 });
 
-        // ScrollTrigger para la sección
+        // ScrollTrigger para la sección con pin
         createOptimizedScrollTrigger({
-            trigger: '.contingencyPlan-section',
+            trigger: '.contingencyPlanTrigger-section',
             start: 'top top',
-            end: '+=8000',
-            scrub: 1.5,
+            end: '+=10000', // Scroll largo para dar tiempo a leer cada sección
+            scrub: 1,
             pin: true,
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                // Animación del título (0% - 15%)
-                if (progress <= 0.15) {
-                    const titleProgress = progress / 0.15;
-                    gsap.set('.contingency-title', {
-                        y: gsap.utils.interpolate(100, 0, titleProgress),
-                        opacity: gsap.utils.interpolate(0, 1, titleProgress)
-                    });
-                } else {
-                    gsap.set('.contingency-title', { y: 0, opacity: 1 });
+                // Definir los rangos de tiempo para cada sección
+                // Cada sección tiene: fade in (10%) + tiempo de lectura (15%) + fade out (10%) = 35% total
+
+                // 1. planIntro-section (0% - 25%)
+                if (progress >= 0 && progress <= 0.10) {
+                    // Fade in
+                    const fadeInProgress = progress / 0.10;
+                    gsap.set('.planIntro-section', { opacity: fadeInProgress, display: 'block' });
+                } else if (progress > 0.10 && progress <= 0.20) {
+                    // Tiempo para leer (completamente visible)
+                    gsap.set('.planIntro-section', { opacity: 1, display: 'block' });
+                } else if (progress > 0.20 && progress <= 0.25) {
+                    // Fade out
+                    const fadeOutProgress = (progress - 0.20) / 0.05;
+                    gsap.set('.planIntro-section', { opacity: 1 - fadeOutProgress, display: 'block' });
+                } else if (progress > 0.25) {
+                    gsap.set('.planIntro-section', { opacity: 0, display: 'none' });
                 }
 
-                // Animación de las secciones con timing más suave
-                const sections = document.querySelectorAll('.story-section');
-                sections.forEach((section, index) => {
-                    // Distribuir 4 secciones en solo el 60% del scroll total
-                    const sectionStart = 0.08 + (index * 0.13); // Cada sección empieza cada 13%
-                    const sectionDuration = 0.2; // Cada sección dura 20%
-                    const sectionEnd = sectionStart + sectionDuration;
+                // 2. planIntro2-section (25% - 50%)
+                if (progress >= 0.25 && progress <= 0.35) {
+                    // Fade in
+                    const fadeInProgress = (progress - 0.25) / 0.10;
+                    gsap.set('.planIntro2-section', { opacity: fadeInProgress, display: 'block' });
+                } else if (progress > 0.35 && progress <= 0.45) {
+                    // Tiempo para leer
+                    gsap.set('.planIntro2-section', { opacity: 1, display: 'block' });
+                } else if (progress > 0.45 && progress <= 0.50) {
+                    // Fade out
+                    const fadeOutProgress = (progress - 0.45) / 0.05;
+                    gsap.set('.planIntro2-section', { opacity: 1 - fadeOutProgress, display: 'block' });
+                } else if (progress > 0.50 || progress < 0.25) {
+                    gsap.set('.planIntro2-section', { opacity: 0, display: 'none' });
+                }
 
-                    if (progress >= sectionStart && progress <= sectionEnd) {
-                        const actualDuration = sectionEnd - sectionStart;
-                        const localProgress = (progress - sectionStart) / actualDuration;
-                        // Suavizado exponencial para evitar saltos bruscos
-                        const smoothProgress = gsap.utils.interpolate(0, 1, Math.pow(localProgress, 0.8));
+                // 3. doIt-section (50% - 75%)
+                if (progress >= 0.50 && progress <= 0.60) {
+                    // Fade in
+                    const fadeInProgress = (progress - 0.50) / 0.10;
+                    gsap.set('.doIt-section', { opacity: fadeInProgress, display: 'block' });
+                } else if (progress > 0.60 && progress <= 0.70) {
+                    // Tiempo para leer
+                    gsap.set('.doIt-section', { opacity: 1, display: 'block' });
+                } else if (progress > 0.70 && progress <= 0.75) {
+                    // Fade out
+                    const fadeOutProgress = (progress - 0.70) / 0.05;
+                    gsap.set('.doIt-section', { opacity: 1 - fadeOutProgress, display: 'block' });
+                } else if (progress > 0.75 || progress < 0.50) {
+                    gsap.set('.doIt-section', { opacity: 0, display: 'none' });
+                }
 
-                        gsap.set(section, {
-                            y: gsap.utils.interpolate(30, 0, smoothProgress),
-                            opacity: gsap.utils.interpolate(0, 1, smoothProgress),
-                            scale: gsap.utils.interpolate(0.98, 1, smoothProgress)
-                        });
-                    } else if (progress > sectionEnd) {
-                        gsap.set(section, { y: 0, opacity: 1, scale: 1 });
-                    } else {
-                        gsap.set(section, { y: 30, opacity: 0, scale: 0.98 });
-                    }
-                });
+                // 4. doIt2-section (75% - 100%)
+                if (progress >= 0.75 && progress <= 0.85) {
+                    // Fade in
+                    const fadeInProgress = (progress - 0.75) / 0.10;
+                    gsap.set('.doIt2-section', { opacity: fadeInProgress, display: 'block' });
+                } else if (progress > 0.85 && progress <= 1.0) {
+                    // Tiempo para leer (se mantiene visible hasta el final)
+                    gsap.set('.doIt2-section', { opacity: 1, display: 'block' });
+                } else if (progress < 0.75) {
+                    gsap.set('.doIt2-section', { opacity: 0, display: 'none' });
+                }
             }
         });
     }, []);
 
+
     return (
         <>
-            <section id="contingency-plan" className="contingencyPlan-section w-full min-h-screen bg-gradient-to-br from-slate-50 to-white relative">
+            <section id="contingency-plan" className="contingencyPlanTrigger-section w-full min-h-screen bg-gradient-to-br from-slate-50 to-white relative">
 
-                <div className="w-full flex flex-col items-center px-8 lg:px-20 py-16 pb-32">
+                <div className="w-full flex flex-col justify-center items-center px-8 lg:px-20 py-16 pb-32">
                     
                     {/* Título Principal */}
                     <div className="contingency-title text-center mb-16">
@@ -92,15 +122,15 @@ export default function ContingencyPlan () {
                     <div className="w-3/4 space-y-20">
 
                         {/* 1. INTRODUCCIÓN */}
-                        <div className="story-section">
+                        <div className="planIntro-section" style={{ opacity: 0 }}>
                             <div className="flex flex-col lg:flex-row items-center gap-12">
                                 <div className="lg:w-1/2">
                                     <Image
                                         src="/assets/images/contingency-plan-01.jpg"
                                         alt="Contingency Plan 01"
-                                        width={500}
+                                        width={250}
                                         height={500}
-                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-01.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-01.jpg', e)}
@@ -108,7 +138,7 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
-                                    <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
+                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
                                         Recognizing the importance of consistency in the maintenance of your spaces, we have developed a robust Contingency Plan to address any eventualities that may arise, such as:
                                     </h3>
                                 </div>
@@ -116,7 +146,7 @@ export default function ContingencyPlan () {
                         </div>
 
                         {/* 2. SITUACIONES */}
-                        <div className="story-section">
+                        <div className="planIntro2-section" style={{ opacity: 0, display: 'none' }}>
                             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
                                 <div className="lg:w-1/2">
                                     <Image
@@ -124,7 +154,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 02"
                                         width={500}
                                         height={500} 
-                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-02.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-02.jpg', e)}
@@ -132,7 +162,7 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center">
-                                    <ul className="space-y-4 text-2xl lg:text-3xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
+                                    <ul className="space-y-4 text-2xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
                                             Call outs
@@ -147,7 +177,7 @@ export default function ContingencyPlan () {
                         </div>
 
                         {/* 3. CÓMO LO HACEMOS */}
-                        <div className="story-section">
+                        <div className="doIt-section" style={{ opacity: 0, display: 'none' }}>
                             <div className="flex flex-col lg:flex-row items-center gap-12">
                                 <div className="lg:w-1/2">
                                     <Image
@@ -155,7 +185,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 03"
                                         width={500}
                                         height={500}
-                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-03.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-03.jpg', e)}
@@ -169,7 +199,7 @@ export default function ContingencyPlan () {
                         </div>
 
                         {/* 4. NUESTRA SOLUCIÓN */}
-                        <div className="story-section">
+                        <div className="doIt2-section" style={{ opacity: 0, display: 'none' }}>
                             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
                                 <div className="lg:w-1/2">
                                     <Image
@@ -177,7 +207,7 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 04"
                                         width={500}
                                         height={500}
-                                        className={`w-full max-h-96 lg:h-[500px] object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
                                             clickedImageSrc === '/assets/images/contingency-plan-04.jpg' ? 'opacity-0' : 'opacity-100'
                                         }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-04.jpg', e)}
@@ -185,7 +215,7 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-right">
-                                    <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
+                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
                                         We have a specialized support team ready to step in if your primary assigned employee is unavailable, ensuring that all daily tasks are completed seamlessly. Each team member is trained in site-specific safety and security protocols, so your facility's operations continue without disruption and quality standards are consistently met.
                                     </h3>
                                 </div>

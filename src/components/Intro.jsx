@@ -30,7 +30,7 @@ export default function Intro () {
             scrollTrigger: {
                 trigger: '.introTrigger',
                 start: 'top top',
-                end: '+=6000',
+                end: '+=3000',
                 scrub: true,
                 pin: true,
                 pinSpacing: true
@@ -63,8 +63,8 @@ export default function Intro () {
             <div className="overlay absolute inset-0 w-full h-full">
                 <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
                     <div className='absolute'>
-                        <h1 className='welcome text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>WELCOME</h1>
-                        <p className='subTitle text-4xl text-white font-bold'>to our presentation</p>
+                        <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>WELCOME</h1>
+                        <p className='subTitle text-2xl md:text-4xl text-white font-bold'>To our presentation</p>
                     </div>
                     <Image
                         className="logo w-5/6 lg:w-1/4 absolute"
@@ -77,13 +77,13 @@ export default function Intro () {
                     />
                     <div className="thank-section w-full lg:w-5/6 mx-auto text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-6xl font-bold text-white mb-5">Thank you for allowing Glaring Building Maintenance (GBM) the opportunity to submit a presentation.</h2>
-                            <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
+                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">Thank you for allowing Glaring Building Maintenance (GBM) the opportunity to submit a presentation.</h2>
+                            <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
-                        <p className="w-4/6 text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">
+                        <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">
                             At GBM, we prioritize the safety and well-being of your visitors and staff, delivering reliable services that support your goals. Our team operates seven days a week, adapting to your schedule, with on-site supervision and regular inspections to ensure the highest quality standards.
                         </p>
-                        <p className="w-4/6 ext-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                        <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
                             Please note that due to fluctuations in material, transportation, and labor costs, all estimates remain valid for thirty (30) days from the date of delivery.
                         </p>
                     </div>

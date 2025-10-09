@@ -115,7 +115,7 @@ export default function ContingencyPlan () {
                     
                     {/* Título Principal */}
                     <div className="contingency-title text-center mb-16">
-                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">CONTINGENCY PLAN</h2>
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">PLAN DE CONTINGENCIA</h2>
                         <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
                     </div>
 
@@ -139,7 +139,7 @@ export default function ContingencyPlan () {
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
-                                        Recognizing the importance of consistency in the maintenance of your spaces, we have developed a robust Contingency Plan to address any eventualities that may arise, such as:
+                                        Reconociendo la importancia de la consistencia en el mantenimiento de sus espacios, hemos desarrollado un Plan de Contingencia robusto para atender cualquier eventualidad que pueda surgir, tales como:
                                     </h3>
                                 </div>
                             </div>
@@ -165,11 +165,11 @@ export default function ContingencyPlan () {
                                     <ul className="space-y-4 text-2xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
-                                            Call outs
+                                            Ausencias
                                         </li>
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
-                                            Personnel Emergencies
+                                            Emergencias del Personal
                                         </li>
                                     </ul>
                                 </div>
@@ -193,7 +193,7 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
-                                    <h3 className="text-2xl lg:text-6xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">HOW WE DO IT?</h3>
+                                    <h3 className="text-2xl lg:text-6xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">¿CÓMO LO HACEMOS?</h3>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +216,7 @@ export default function ContingencyPlan () {
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-right">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
-                                        We have a specialized support team ready to step in if your primary assigned employee is unavailable, ensuring that all daily tasks are completed seamlessly. Each team member is trained in site-specific safety and security protocols, so your facility's operations continue without disruption and quality standards are consistently met.
+                                        Contamos con un equipo de apoyo especializado listo para intervenir si su empleado asignado principal no está disponible, garantizando que todas las tareas diarias se completen sin contratiempos. Cada miembro del equipo está capacitado en los protocolos de seguridad específicos del sitio, por lo que las operaciones de su instalación continúan sin interrupciones y los estándares de calidad se cumplen consistentemente.
                                     </h3>
                                 </div>
                             </div>

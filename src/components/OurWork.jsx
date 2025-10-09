@@ -49,7 +49,7 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="ourWork-section w-full lg:w-3/5 text-center mx-auto">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Our Work Speaks for Itself</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro Trabajo Habla por Sí Mismo</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                         </div>

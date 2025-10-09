@@ -50,11 +50,11 @@ export default function Sponsor () {
                 <div className="sponsor-section container h-full mx-auto flex justify-center items-center text-center gap-20">
                     <div className="sponsor-title w-[40%] text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">Our Care Extends Beyond Buildings</h2>
+                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro Cuidado Va Más Allá de los Edificios</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto leading-relaxed bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
-                            Proudly supporting our community Glaring Building Maintenance partners with local sports teams and foundations to help strengthen and uplift our neighborhoods. Together, we build more than just clean spaces; we build connections that matter.
+                            Apoyando con orgullo a nuestra comunidad, Glaring Building Maintenance colabora con equipos deportivos locales y fundaciones para ayudar a fortalecer y elevar nuestros vecindarios. Juntos, construimos más que espacios limpios; construimos conexiones que importan.
                         </p>
                     </div>
                     <div className="content-section w-[60%]">
@@ -69,7 +69,7 @@ export default function Sponsor () {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Our Glaring family lending a hand and serving meals with heart at the local shelter.
+                                        Nuestra familia Glaring dando una mano y sirviendo comidas con el corazón en el refugio local.
                                     </p>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export default function Sponsor () {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        A sweet moment of gratitude—foundation members enjoying treats from Glaring.
+                                        Un dulce momento de gratitud: miembros de la fundación disfrutando de golosinas de Glaring.
                                     </p>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ export default function Sponsor () {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Sharing smiles and support—because caring for our neighbors matters most.
+                                        Compartiendo sonrisas y apoyo, porque cuidar de nuestros vecinos es lo más importante.
                                     </p>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ export default function Sponsor () {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Every plate served is a reminder that kindness goes a long way.
+                                        Cada plato servido es un recordatorio de que la bondad va muy lejos.
                                     </p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ export default function Sponsor () {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Together, we're more than a company—we're a helping hand in our community.
+                                        Juntos, somos más que una empresa: somos una mano amiga en nuestra comunidad.
                                     </p>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ export default function Sponsor () {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Proud to see the local softball team in action.
+                                        Orgullosos de ver al equipo local de softbol en acción.
                                     </p>
                                 </div>
                             </div>

@@ -110,8 +110,8 @@ export default function Home() {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-100 text-center px-4">
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-800 mb-4">Presentation not available on mobile</h1>
-                    <p className="text-lg text-gray-600">This presentation is only available on desktop. Please open it from a computer for the best experience.</p>
+                    <h1 className="text-2xl font-bold text-gray-800 mb-4">Presentación no disponible en móvil</h1>
+                    <p className="text-lg text-gray-600">Esta presentación solo está disponible en escritorio. Por favor ábrela desde una computadora para la mejor experiencia.</p>
                 </div>
             </div>
         )

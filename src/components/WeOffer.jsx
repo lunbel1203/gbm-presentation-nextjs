@@ -43,9 +43,9 @@ export default function WeOffer () {
                     {/* Header Section */}
                     <div className="weOffer-title w-full text-center">
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            what we offer
+                            lo que ofrecemos
                         </h2>
-                        <h3 className="text-2xl lg:text-4xl font-bold text-gbm-green mb-6">Our core services</h3>
+                        <h3 className="text-2xl lg:text-4xl font-bold text-gbm-green mb-6">Nuestros servicios principales</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
                     </div>
 
@@ -58,10 +58,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-data-center.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DATA CENTER CLEANING
+                                        LIMPIEZA DE CENTROS DE DATOS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Safeguard Your Data with Specialized Cleaning solutions.
+                                        Proteja sus datos con soluciones de limpieza especializadas.
                                     </p>
                                 </div>
                             </div>
@@ -73,10 +73,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-cleanroom-services.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        CLEANROOM SERVICES
+                                        SERVICIOS DE SALAS LIMPIAS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring a Pristine Environment for Your Critical Operations.
+                                        Garantizando un ambiente impecable para sus operaciones críticas.
                                     </p>
                                 </div>
                             </div>
@@ -88,10 +88,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-janitorial.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        JANITORIAL
+                                        CONSERJERÍA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring glaring cleanliness.
+                                        Garantizando una limpieza impecable.
                                     </p>
                                 </div>
                             </div>
@@ -103,10 +103,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-day-porter.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DAY PORTER
+                                        PORTERO DE DÍA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Extra hands at your service ensuring a clean and healthy environment for everyone within your facility.
+                                        Manos extras a su servicio garantizando un ambiente limpio y saludable para todos dentro de su instalación.
                                     </p>
                                 </div>
                             </div>
@@ -118,10 +118,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-deep-cleaning.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DEEP CLEANING
+                                        LIMPIEZA PROFUNDA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring that every little corner is glaring for you.
+                                        Garantizando que cada rincón brille para usted.
                                     </p>
                                 </div>
                             </div>
@@ -133,10 +133,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-green-cleaning.webp')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        GREEN CLEANING
+                                        LIMPIEZA ECOLÓGICA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Go green and make the environment clean.
+                                        Sé ecológico y mantén el ambiente limpio.
                                     </p>
                                 </div>
                             </div>
@@ -148,10 +148,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-windows-cleaning.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        WINDOW CLEANING
+                                        LIMPIEZA DE VENTANAS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Achieve Glaring Clarity with Our Professional Window Cleaning Solutions.
+                                        Logra claridad impecable con nuestras soluciones profesionales de limpieza de ventanas.
                                     </p>
                                 </div>
                             </div>
@@ -163,10 +163,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-tile-stone-care.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        TILE & STONE CARE
+                                        CUIDADO DE AZULEJOS Y PIEDRAS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Revitalize Your Surfaces with Our Glaring Tile & Stone Care Solutions.
+                                        Revitaliza tus superficies con nuestras soluciones impecables de cuidado de azulejos y piedras.
                                     </p>
                                 </div>
                             </div>
@@ -178,10 +178,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-solar-panel.png')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        SOLAR PANEL CLEANING
+                                        LIMPIEZA DE PANELES SOLARES
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Keep Your Solar Panels Pristine for Optimal Energy Production.
+                                        Mantén tus paneles solares impecables para una producción óptima de energía.
                                     </p>
                                 </div>
                             </div>
@@ -193,10 +193,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-pressure-washing.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        PRESSURE WASHING
+                                        LAVADO A PRESIÓN
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Leave the Pressure to Us for a Deep Clean That Makes Your Surfaces Shine.
+                                        Déjanos la presión para una limpieza profunda que hará brillar tus superficies.
                                     </p>
                                 </div>
                             </div>
@@ -208,10 +208,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-post-construction.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        POST CONSTRUCTION
+                                        POST CONSTRUCCIÓN
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Leave the Mess to Us – Professional Post Construction Cleaning Services.
+                                        Déjanos el desorden: servicios profesionales de limpieza post construcción.
                                     </p>
                                 </div>
                             </div>
@@ -223,10 +223,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-maintenance-services.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        MAINTENANCE SERVICES
+                                        SERVICIOS DE MANTENIMIENTO
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Reliable Maintenance Services to Keep Your Property in Top Condition.
+                                        Servicios de mantenimiento confiables para mantener su propiedad en óptimas condiciones.
                                     </p>
                                 </div>
                             </div>
@@ -238,10 +238,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-epoxy-flooring-alt.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        EPOXY FLOORING
+                                        PISOS EPÓXICOS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Customizable Epoxy Floors for a Sleek, Professional Finish.
+                                        Pisos epóxicos personalizables para un acabado elegante y profesional.
                                     </p>
                                 </div>
                             </div>
@@ -253,10 +253,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-concrete.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        CONCRETE GRINDING POLISHING
+                                        PULIDO DE CONCRETO
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Revitalize Your Floors with Precision Concrete Grinding and Polishing.
+                                        Revitaliza tus pisos con pulido y triturado de concreto de precisión.
                                     </p>
                                 </div>
                             </div>
@@ -268,10 +268,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-disinfection-services.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DISINFECTION SERVICES
+                                        SERVICIOS DE DESINFECCIÓN
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Let's keep your business clean but also healthy and free of germs and bacteria.
+                                        Mantengamos tu negocio no solo limpio, sino también saludable y libre de gérmenes y bacterias.
                                     </p>
                                 </div>
                             </div>
@@ -283,10 +283,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-emergency.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        EMERGENCY CLEANING SERVICES
+                                        SERVICIOS DE LIMPIEZA DE EMERGENCIA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Rapid Response Emergency Cleaning Services When You Need Us Most.
+                                        Servicios de limpieza de emergencia con respuesta rápida cuando más nos necesites.
                                     </p>
                                 </div>
                             </div>
@@ -298,10 +298,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-upholstery.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        UPHOLSTERY
+                                        TAPICERÍA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Whether it's couches, chairs or even cubicles walls - We can get your organization's UPHOLSTERY back to clean.
+                                        Ya sean sofás, sillas o incluso paredes de cubículos: podemos dejar la tapicería de tu organización como nueva.
                                     </p>
                                 </div>
                             </div>
@@ -313,10 +313,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-carpet-maintenance.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        CARPET MAINTENANCE
+                                        MANTENIMIENTO DE ALFOMBRAS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Vacuuming is not enough to keep your carpets clean.
+                                        Aspirar no es suficiente para mantener tus alfombras limpias.
                                     </p>
                                 </div>
                             </div>
@@ -328,10 +328,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-hard-floor.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        HARD FLOOR MAINTENANCE
+                                        MANTENIMIENTO DE PISOS DUROS
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Tailored Hard Floor Maintenance Services for Every Surface Type.
+                                        Servicios de mantenimiento de pisos duros adaptados para cada tipo de superficie.
                                     </p>
                                 </div>
                             </div>
@@ -343,10 +343,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-snow-removing.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        SNOW Removing
+                                        REMOCIÓN DE NIEVE
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Keep your business safe and accessible all winter long!
+                                        Mantén tu negocio seguro y accesible durante todo el invierno.
                                     </p>
                                 </div>
                             </div>
@@ -358,10 +358,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-landscaping.jpg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        LandSCaping Services
+                                        SERVICIOS DE JARDINERÍA
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        First impressions start outside. Our professional landscaping services keep your property looking pristine, welcoming, and well-maintained year-round
+                                        Las primeras impresiones comienzan afuera. Nuestros servicios profesionales de jardinería mantienen tu propiedad impecable, acogedora y bien cuidada todo el año.
                                     </p>
                                 </div>
                             </div>
@@ -373,10 +373,10 @@ export default function WeOffer () {
                                 <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/painting.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        Paint and drywall
+                                        PINTURA Y DRYWALL
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Precision in Every Wall, Perfection in Every Coat
+                                        Precisión en cada pared, perfección en cada capa.
                                     </p>
                                 </div>
                             </div>

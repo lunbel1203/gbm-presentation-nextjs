@@ -65,7 +65,7 @@ export default function SecuritySystem () {
 
                     {/* Título de la sección */}
                     <div className="security-title-container w-[40%] text-left mb-16" style={{opacity: isClient ? 0 : 1}}>
-                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 leading-tight">SECURITY SYSTEM</h2>
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 leading-tight">SISTEMA DE SEGURIDAD</h2>
                         <div className="w-24 h-1 bg-gbm-green"></div>
                     </div>
 
@@ -88,7 +88,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Checks & Screenings</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Verificaciones y Evaluaciones</h3>
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content mb-6">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Trained on All Client Security Protocols</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Capacitados en Todos los Protocolos de Seguridad del Cliente</h3>
                             </div>
                         </div>
 
@@ -128,7 +128,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Uniformed Staff with ID Badges</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Personal Uniformado con Gafetes de Identificación</h3>
                             </div>
                         </div>
 
@@ -148,7 +148,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Real-time Location & Time Tracking</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Rastreo de Ubicación y Tiempo en Tiempo Real</h3>
                             </div>
                         </div>
 

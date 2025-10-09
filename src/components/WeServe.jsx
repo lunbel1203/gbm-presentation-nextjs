@@ -169,11 +169,11 @@ export default function WeServe () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="weServe-section w-full lg:w-4/5 text-center mx-auto">
                             <div className="w-full mb-10">
-                                <h2 className="w-full text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WE PROUDLY SERVE</h2>
+                                <h2 className="w-full text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">SERVIMOS CON ORGULLO</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="w-full lg:w-3/5 text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                From New England to the Dominican Republic, we deliver reliable maintenance services that keep your facilities at their best.                            
+                                Desde Nueva Inglaterra hasta República Dominicana, ofrecemos servicios de mantenimiento confiables que mantienen sus instalaciones en su mejor estado.
                             </p>
                         </div>
                     </div>
@@ -224,7 +224,7 @@ export default function WeServe () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="republicaDominicana-section w-full lg:w-4/5 text-center mx-auto">
                             <div className="w-full mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Dominican Republic</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">República Dominicana</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                         </div>

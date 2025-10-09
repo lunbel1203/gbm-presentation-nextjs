@@ -91,8 +91,8 @@ export default function OurPeople () {
             <section id="our-people" className="ourPeople-section w-full h-screen bg-[url(''] bg-cover bg-center relative">
                 <div className="mission-overlay w-full flex items-center px-20 bg-white absolute inset-0">
                     <div className="ourpeople-title-container w-[30%] text-left">
-                        <h2 className="w-full text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent leading-tight">Our Greatest Asset:</h2>
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">Our People</h2>
+                        <h2 className="w-full text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent leading-tight">Nuestro Mayor Activo:</h2>
+                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">Nuestra Gente</h2>
                         <div className="w-24 h-1 bg-gbm-green"></div>
                     </div>
 

@@ -73,7 +73,7 @@ export default function ThankYou() {
                     {/* Thank You Message */}
                     <div className="thank-you-text">
                         <h1 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide">
-                            Thank You for your time.
+                            Gracias por su tiempo.
                         </h1>
                     </div>
 

@@ -108,57 +108,56 @@ export default function ReferProgram () {
                         </div>
                         <div className="w-full flex items-center gap-5 relative">
                             <div className="refer-text flex flex-col gap-5">
-                                <h1 className="text-4xl lg:text-5xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent  font-bold mb-4">REFER A CUSTOMER PROGRAM</h1>
+                                <h1 className="text-4xl lg:text-5xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent  font-bold mb-4">PROGRAMA DE REFERIDOS</h1>
                                 <div className="text-xl space-y-4 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                     <p>
-                                        We want to Thank You for spreading Our good name and that is why Glaring Building
-                                        Maintenance will pay you Six Hundred dollar ($600.00) when you refer a new customer to
-                                        us.!
+                                        Queremos agradecerte por compartir nuestro buen nombre y por eso Glaring Building
+                                        Maintenance te pagará seiscientos dólares ($600.00) cuando refieras un nuevo cliente.
                                     </p>
                                     <p>
-                                        Ask your friends, relatives, vendors, coworkers, or clients if they would like improved
-                                        cleanliness at their workplace! Then email us their information and we will take care of
-                                        the rest! You can look forward to receiving a $600.00 check* after they start receiving
-                                        our services. It’s that simple!
+                                        Pregunta a tus amigos, familiares, proveedores, compañeros de trabajo o clientes si les gustaría
+                                        mejorar la limpieza de su lugar de trabajo. Luego envíanos su información por correo y nosotros nos
+                                        encargamos del resto. Puedes esperar recibir un cheque de $600.00* después de que comiencen a recibir
+                                        nuestros servicios. ¡Así de simple!
                                     </p>
                                     <p>
-                                        Bonus is payable if company referred has at least 10 employees and will be paid after
-                                        GBM provides 30 days of services to the new client.
+                                        El bono es pagadero si la empresa referida tiene al menos 10 empleados y se pagará después de que
+                                        GBM brinde 30 días de servicios al nuevo cliente.
                                     </p>
                                 </div>
                                 
                             </div>
                             <div className="refer-instructions absolute top-0 left-0 w-full flex flex-col gap-5 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
-                                <h2 className="text-3xl lg:text-5xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold mb-4">How to take part?</h2>
-                                <h3 className="text-3xl text-gbm-green font-bold mb-4">Send an email with:</h3>
+                                <h2 className="text-3xl lg:text-5xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold mb-4">¿Cómo participar?</h2>
+                                <h3 className="text-3xl text-gbm-green font-bold mb-4">Envía un correo con:</h3>
                                 <ul className="space-y-2 text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Your Name
+                                        Tu Nombre
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Your Company's name
+                                        Nombre de tu Empresa
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Your Telephone Number
+                                        Tu Número de Teléfono
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Your Email
+                                        Tu Correo Electrónico
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Referral's Name
+                                        Nombre del Referido
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Referral's Email
+                                        Correo del Referido
                                     </li>
                                 </ul>
                                 <p className="text-lg text-gbm-green font-bold mt-4">
-                                    To: contactus@glaringmaintenance.com
+                                    Para: contactus@glaringmaintenance.com
                                 </p>
                             </div>
                         </div>

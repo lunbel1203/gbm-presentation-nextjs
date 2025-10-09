@@ -11,31 +11,31 @@ export default function Navigation() {
     const [activeSection, setActiveSection] = useState('');
 
     const menuItems = [
-        { id: 'intro', label: 'Welcome', href: '#intro' },
-        { id: 'about-us', label: 'About Us', href: '#about-us' },
-        { id: 'mission', label: 'Mission', href: '#mission' },
-        { id: 'vision', label: 'Vision', href: '#vision' },
-        { id: 'values', label: 'Values', href: '#values' },
-        { id: 'glaring-clean', label: 'Is Glaring Clean', href: '#glaring-clean' },
-        { id: 'our-people', label: 'Our Greatest Asset', href: '#our-people' },
-        { id: 'worker-compensation', label: 'Workers Compensation', href: '#worker-compensation' },
-        { id: 'choose-us', label: 'Why Choose Us', href: '#choose-us' },
-        { id: 'security-system', label: 'Security System', href: '#security-system' },
-        { id: 'contingency-plan', label: 'Contingency Plan', href: '#contingency-plan' },
-        { id: 'ourWork', label: 'Our Work', href: '#ourWork' },
-        { id: 'quality-assurance', label: 'Quality Assurance', href: '#quality-assurance' },
-        { id: 'cross-contamination', label: 'Cross Contamination', href: '#cross-contamination' },
-        { id: 'tasks-organization', label: 'Tasks Organization', href: '#tasks-organization' },
-        { id: 'equipment', label: 'Equipment', href: '#equipment' },
-        { id: 'sponsor', label: 'Sponsor', href: '#sponsor' },
-        { id: 'fundation', label: 'Fundation', href: '#fundation' },
-        { id: 'we-offer', label: 'What We Offer', href: '#we-offer' },
-        { id: 'glaringStandard', label: 'The Glaring Standard', href: '#glaringStandard' },
-        { id: 'certificates', label: 'Our Certifications', href: '#certificates' },
-        { id: 'we-serve', label: 'Area of Service', href: '#we-serve' },
-        { id: 'refer-program', label: 'Refer Program', href: '#refer-program' },
-        { id: 'contact-us', label: 'Contact Us', href: '#contact-us' },
-        { id: 'thank-you', label: 'Thank You', href: '#thank-you' }
+        { id: 'intro', label: 'Bienvenida', href: '#intro' },
+        { id: 'about-us', label: 'Sobre Nosotros', href: '#about-us' },
+        { id: 'mission', label: 'Misión', href: '#mission' },
+        { id: 'vision', label: 'Visión', href: '#vision' },
+        { id: 'values', label: 'Valores', href: '#values' },
+        { id: 'glaring-clean', label: 'Es Glaring Clean', href: '#glaring-clean' },
+        { id: 'our-people', label: 'Nuestro Mayor Activo', href: '#our-people' },
+        { id: 'worker-compensation', label: 'Compensación Laboral', href: '#worker-compensation' },
+        { id: 'choose-us', label: 'Por Qué Elegirnos', href: '#choose-us' },
+        { id: 'security-system', label: 'Sistema de Seguridad', href: '#security-system' },
+        { id: 'contingency-plan', label: 'Plan de Contingencia', href: '#contingency-plan' },
+        { id: 'ourWork', label: 'Nuestro Trabajo', href: '#ourWork' },
+        { id: 'quality-assurance', label: 'Aseguramiento de Calidad', href: '#quality-assurance' },
+        { id: 'cross-contamination', label: 'Contaminación Cruzada', href: '#cross-contamination' },
+        { id: 'tasks-organization', label: 'Organización de Tareas', href: '#tasks-organization' },
+        { id: 'equipment', label: 'Equipos', href: '#equipment' },
+        { id: 'sponsor', label: 'Patrocinador', href: '#sponsor' },
+        { id: 'fundation', label: 'Fundación', href: '#fundation' },
+        { id: 'we-offer', label: 'Lo Que Ofrecemos', href: '#we-offer' },
+        { id: 'glaringStandard', label: 'El Estándar Glaring', href: '#glaringStandard' },
+        { id: 'certificates', label: 'Nuestras Certificaciones', href: '#certificates' },
+        { id: 'we-serve', label: 'Área de Servicio', href: '#we-serve' },
+        { id: 'refer-program', label: 'Programa de Referidos', href: '#refer-program' },
+        { id: 'contact-us', label: 'Contáctenos', href: '#contact-us' },
+        { id: 'thank-you', label: 'Gracias', href: '#thank-you' }
     ];
 
     useGSAP(() => {
@@ -181,10 +181,10 @@ export default function Navigation() {
                     {/* Footer */}
                     <div className="mt-16 pt-8 border-t border-gray-200 text-center">
                         <p className="text-sm text-gray-500">
-                            GBM Presentation
+                            Presentación GBM
                         </p>
                         <p className="text-xs text-gray-400 mt-1">
-                            Your Property is Our Priority
+                            Su Propiedad es Nuestra Prioridad
                         </p>
                     </div>
 

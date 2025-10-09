@@ -109,11 +109,11 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="mission-section w-full lg:w-3/5 text-center mx-auto">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">MISSION</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">MISIÓN</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Achieve 100% customer satisfaction, so that they can focus on their own company’s mission and they can achieve their own success. Even quicker. All while keeping our employees satisfied, always seeking excellence and making continuous improvements to our services.
+                                Lograr 100% de satisfacción del cliente, para que puedan enfocarse en la misión de su propia empresa y alcancen su propio éxito. Aún más rápido. Todo mientras mantenemos satisfechos a nuestros empleados, siempre buscando la excelencia y haciendo mejoras continuas a nuestros servicios.
                             </p>
                         </div>
                     </div>
@@ -125,11 +125,11 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="vision-section w-full lg:w-3/5 text-center mx-auto">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">VISION</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">VISIÓN</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                To be recognized as the leading company in the provision of cleaning solutions for the quality of our services and commintment to our customers.
+                                Ser reconocidos como la empresa líder en la provisión de soluciones de limpieza por la calidad de nuestros servicios y compromiso con nuestros clientes.
                             </p>
                         </div>
                     </div>
@@ -141,14 +141,14 @@ export default function MisionVision () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="values-section w-full lg:w-4/5 text-center mx-auto">
                             <div className="w-full mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">VALUES</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">VALORES</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <div className="w-full flex justify-center">
                                 <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-2xl text-left'>
-                                    <li><span className='text-gbm-green font-bold'>Honesty:</span> We like and believe in honesty as one of the fundamental pillars that govern all the activities of any company, and we behave and express ourselves with coherence and sincerity in accordance with the values of truth and justice.</li>
-                                    <li><span className='text-gbm-green font-bold'>Commitment:</span> We highlight the value of the commitment of each member of the company with their assumed responsibilities, we believe in the work of each individual and in their value within the company.</li>
-                                    <li><span className='text-gbm-green font-bold'>Responsibility:</span> We know the responsibility of our actions (and omissions). This is why we assume the responsibility of ensuring a healthy environment for our clients, being responsible also with the environment.</li>
+                                    <li><span className='text-gbm-green font-bold'>Honestidad:</span> Nos gusta y creemos en la honestidad como uno de los pilares fundamentales que rigen todas las actividades de cualquier empresa, y nos comportamos y expresamos con coherencia y sinceridad de acuerdo con los valores de verdad y justicia.</li>
+                                    <li><span className='text-gbm-green font-bold'>Compromiso:</span> Destacamos el valor del compromiso de cada miembro de la empresa con sus responsabilidades asumidas, creemos en el trabajo de cada individuo y en su valor dentro de la empresa.</li>
+                                    <li><span className='text-gbm-green font-bold'>Responsabilidad:</span> Conocemos la responsabilidad de nuestras acciones (y omisiones). Por esto asumimos la responsabilidad de asegurar un ambiente saludable para nuestros clientes, siendo responsables también con el medio ambiente.</li>
                                 </ul>
                             </div>
                         </div>

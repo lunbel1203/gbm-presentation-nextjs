@@ -52,7 +52,7 @@ export default function Certificates () {
                     {/* Header Section */}
                     <div className="text-center my-16">
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            OUR CERTIFICATIONS
+                            NUESTRAS CERTIFICACIONES
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
                     </div>
@@ -66,8 +66,8 @@ export default function Certificates () {
                                     <Image src="/assets/images/certificate-osha.webp" alt="OSHA Certification" width={200} height={128} className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
                                 <div className="text-center">
-                                    <h3 className="text-lg font-bold text-[#194263] mb-2">OSHA Certification</h3>
-                                    <p className="text-gray-600 text-sm">Occupational Safety and Health Administration compliance certification</p>
+                                    <h3 className="text-lg font-bold text-[#194263] mb-2">Certificación OSHA</h3>
+                                    <p className="text-gray-600 text-sm">Certificación de cumplimiento de la Administración de Seguridad y Salud Ocupacional</p>
                                 </div>
                             </div>
                         </div>
@@ -78,8 +78,8 @@ export default function Certificates () {
                                     <Image src="/assets/images/certificate-issa.png" alt="ISSA Certification" width={200} height={128} className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
                                 <div className="text-center">
-                                    <h3 className="text-lg font-bold text-[#194263] mb-2">ISSA Certification</h3>
-                                    <p className="text-gray-600 text-sm">International Sanitary Supply Association professional certification</p>
+                                    <h3 className="text-lg font-bold text-[#194263] mb-2">Certificación ISSA</h3>
+                                    <p className="text-gray-600 text-sm">Certificación profesional de la Asociación Internacional de Suministros Sanitarios</p>
                                 </div>
                             </div>
                         </div>
@@ -90,8 +90,8 @@ export default function Certificates () {
                                     <Image src="/assets/images/certificate-ifma.svg" alt="IFMA Certification" width={200} height={128} className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
                                 <div className="text-center">
-                                    <h3 className="text-lg font-bold text-[#194263] mb-2">IFMA Certification</h3>
-                                    <p className="text-gray-600 text-sm">International Facility Management Association certification</p>
+                                    <h3 className="text-lg font-bold text-[#194263] mb-2">Certificación IFMA</h3>
+                                    <p className="text-gray-600 text-sm">Certificación de la Asociación Internacional de Gestión de Instalaciones</p>
                                 </div>
                             </div>
                         </div>
@@ -102,8 +102,8 @@ export default function Certificates () {
                                     <Image src="/assets/images/certificate-green-building.png" alt="Green Building Certification" width={200} height={128} className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
                                 <div className="text-center">
-                                    <h3 className="text-lg font-bold text-[#194263] mb-2">Green Building</h3>
-                                    <p className="text-gray-600 text-sm">Sustainable and environmentally responsible building practices</p>
+                                    <h3 className="text-lg font-bold text-[#194263] mb-2">Edificios Verdes</h3>
+                                    <p className="text-gray-600 text-sm">Prácticas de construcción sostenibles y ambientalmente responsables</p>
                                 </div>
                             </div>
                         </div>

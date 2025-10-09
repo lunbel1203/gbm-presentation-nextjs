@@ -77,14 +77,14 @@ export default function Intro () {
                     />
                     <div className="thank-section w-full lg:w-5/6 mx-auto text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">Thank you for allowing Glaring Building Maintenance (GBM) the opportunity to submit a presentation.</h2>
+                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">Gracias por permitir a Glaring Building Maintenance (GBM) la oportunidad de presentar nuestra propuesta.</h2>
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
                         <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">
-                            At GBM, we prioritize the safety and well-being of your visitors and staff, delivering reliable services that support your goals. Our team operates seven days a week, adapting to your schedule, with on-site supervision and regular inspections to ensure the highest quality standards.
+                            En GBM, priorizamos la seguridad y el bienestar de sus visitantes y personal, brindando servicios confiables que apoyan sus objetivos. Nuestro equipo opera siete días a la semana, adaptándose a su horario, con supervisión en sitio e inspecciones regulares para asegurar los más altos estándares de calidad.
                         </p>
                         <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
-                            Please note that due to fluctuations in material, transportation, and labor costs, all estimates remain valid for thirty (30) days from the date of delivery.
+                            Por favor note que debido a fluctuaciones en costos de materiales, transporte y mano de obra, todas las cotizaciones permanecen válidas por treinta (30) días desde la fecha de entrega.
                         </p>
                     </div>
                 </div>

@@ -99,7 +99,7 @@ export default function QaulityAssurance () {
                     
                     {/* Título Principal */}
                     <div className="quality-title text-center mb-16">
-                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Quality Assurance</h2>
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Aseguramiento de Calidad</h2>
                         <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
                     </div>
 
@@ -112,10 +112,10 @@ export default function QaulityAssurance () {
                                     <div className="mr-4">
                                         <RiClipboardLine size={48} className="text-gbm-green" />
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">CONSTANT SUPERVISION</h3>
+                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">SUPERVISIÓN CONSTANTE</h3>
                                 </div>
                                 <p className="text-xl lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold mb-12 max-w-4xl mx-auto">
-                                    Cleaning and maintenance supervisors monitor and inspects constantly to ensure that duties are adequately carried out.
+                                    Los supervisores de limpieza y mantenimiento monitorean e inspeccionan constantemente para garantizar que las tareas se lleven a cabo adecuadamente.
                                 </p>
                             </div>
                             
@@ -157,7 +157,7 @@ export default function QaulityAssurance () {
                                     <div className="mr-4">
                                         <RiSearchLine size={48} className="text-gbm-green" />
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">WHAT ARE THESE INSPECTIONS?</h3>
+                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">¿QUÉ SON ESTAS INSPECCIONES?</h3>
                                 </div>
                             </div>
 
@@ -166,19 +166,19 @@ export default function QaulityAssurance () {
                                     <ul className="space-y-6 text-lg lg:text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Cleaning and janitorial inspections.
+                                            Inspecciones de limpieza y conserjería.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Safety inspections.
+                                            Inspecciones de seguridad.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Routine maintenance and corrective actions.
+                                            Mantenimiento rutinario y acciones correctivas.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            APPA and CIMS cleaning standar inspections.
+                                            Inspecciones de estándares de limpieza APPA y CIMS.
                                         </li>
                                     </ul>
                                 </div>
@@ -207,7 +207,7 @@ export default function QaulityAssurance () {
                                     <div className="mr-4">
                                         <RiBarChartLine size={48} className="text-gbm-green" />
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">WHY THIS DATA?</h3>
+                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">¿POR QUÉ ESTOS DATOS?</h3>
                                 </div>
                             </div>
 
@@ -216,23 +216,23 @@ export default function QaulityAssurance () {
                                     <ul className="space-y-6 text-lg lg:text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Identify possible deficiencies.
+                                            Identificar posibles deficiencias.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Identify opportunities for improvement.
+                                            Identificar oportunidades de mejora.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Identify where to focus the constant training of our employees.
+                                            Identificar en qué enfocar la capacitación constante de nuestros empleados.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Key performance indicator KPI.
+                                            Indicador clave de desempeño KPI.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Bonuses, and annual incentives.
+                                            Bonificaciones e incentivos anuales.
                                         </li>
                                     </ul>
                                 </div>

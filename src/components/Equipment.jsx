@@ -68,11 +68,11 @@ export default function Equipment () {
                     </div>
                     <div className="w-full lg:w-3/5 text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Equipment</h2>
+                            <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Equipos</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto font-bold leading-relaxed bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">
-                            Our commitment to excellence begins with the tools we provide our team. We invest in the latest, most reliable equipment in the industry, allowing us to deliver consistently superior results. With state-of-the-art technology (SOTA), we ensure efficiency, safety, and the highest standards of quality in every service we perform.
+                            Nuestro compromiso con la excelencia comienza con las herramientas que proporcionamos a nuestro equipo. Invertimos en el equipo más reciente y confiable de la industria, permitiéndonos entregar resultados superiores de manera consistente. Con tecnología de última generación (SOTA), aseguramos eficiencia, seguridad y los más altos estándares de calidad en cada servicio que realizamos.
                         </p>
                     </div>
                 </div>

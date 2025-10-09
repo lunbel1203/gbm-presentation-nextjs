@@ -149,10 +149,10 @@ export default function WorkerCompensation () {
                         </div>
                     </div>
                     <div className="compensation-title-container w-[40%] text-left">
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">WORKERS COMPENSATION</h2>
-                        <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">All workers are budgeted based on a living wage.</h3>
+                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">COMPENSACIÓN LABORAL</h2>
+                        <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">Todos los trabajadores son presupuestados con base en un salario digno.</h3>
                         <div className="w-24 h-1 bg-gbm-green mb-10"></div>
-                        <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>(This represents 20-30% above Massachusetts state minimum wage) Cleaning worker turnover rate: 20% annually (Industry average = 200%)</h3>
+                        <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>(Esto representa un 20-30% por encima del salario mínimo del estado de Massachusetts) Tasa de rotación de trabajadores de limpieza: 20% anual (Promedio de la industria = 200%)</h3>
                     </div>
                 </div>
 

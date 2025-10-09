@@ -90,7 +90,7 @@ export default function GlaringClean () {
         <>
             <section id="glaring-clean" className="glaringClean-section w-full h-screen flex items-center bg-slate-50 px-20 relative">
                 <div className="glaringclean-title-container w-[45%] text-left">
-                    <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">It's not just clean, <br /> it's Glaring clean!</h2>
+                    <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">No es solo limpio, <br /> ¡es Glaring limpio!</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
                 </div>
 

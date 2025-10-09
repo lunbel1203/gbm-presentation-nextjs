@@ -149,7 +149,7 @@ export default function ContactUs () {
                     {/* Header Section */}
                     <div className="contactus-title-container text-center my-16" style={{perspective: '1000px'}}>
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4 leading-tight" style={{transformStyle: 'preserve-3d'}}>
-                            SPECIALIZED CLEANING SERVICES FOR COMMERCIAL FACILITIES
+                            SERVICIOS DE LIMPIEZA ESPECIALIZADOS PARA INSTALACIONES COMERCIALES
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
                     </div>
@@ -210,7 +210,7 @@ export default function ContactUs () {
                                 </ul>
                             </div>
                             <div className="sectionImg w-5/6">
-                                <h3 className='branches-title text-4xl mb-5 text-center bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold uppercase'>Branches</h3>
+                                <h3 className='branches-title text-4xl mb-5 text-center bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold uppercase'>Sucursales</h3>
                                 <ul className="flex flex-wrap justify-center gap-5">
                                     <li className="branch-item w-[calc(100%/2-20px)]">
                                         <a href="https://www.google.com/maps/place/76+Merrimack+St+6+6b,+Haverhill,+MA+01830,+USA/@42.7745464,-71.0810924,17z/data=!3m1!4b1!4m5!3m4!1s0x89e302348940d777:0x1305baa325a35dc1!8m2!3d42.7745464!4d-71.0785121!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">

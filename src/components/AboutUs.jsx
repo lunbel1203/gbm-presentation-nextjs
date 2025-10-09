@@ -132,20 +132,20 @@ export default function AboutUs () {
         <section id="about-us" className="about-section w-full h-screen py-20 px-8 bg-slate-50 relative">
             <div className="container mx-auto">
                 <div className="text-left mb-16">
-                    <h2 className="text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">About Us</h2>
+                    <h2 className="text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Sobre Nosotros</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
                 </div>
                 
                 {/* Description */}
                 <div className="h-60 text-container text-[18px] lg:text-4xl font-bold relative">
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        At Glaring Building Maintenance (GBM), we make your property our priority. As a first-class provider of commercial cleaning services, we set the standard for excellence in our industry. For more than 20 years, we’ve delivered specialized solutions with a focus on quality, accountability, and environmentally responsible practices.
+                        En Glaring Building Maintenance (GBM), hacemos de su propiedad nuestra prioridad. Como proveedor de primera clase de servicios de limpieza comercial, establecemos el estándar de excelencia en nuestra industria. Durante más de 20 años, hemos entregado soluciones especializadas con enfoque en calidad, responsabilidad y prácticas ambientalmente responsables.
                     </p>
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        Unlike many others, we never subcontract our work—every service is handled directly by our trained Glaring team, ensuring consistency, reliability, and the highest standards of excellence.
+                        A diferencia de muchos otros, nunca subcontratamos nuestro trabajo—cada servicio es manejado directamente por nuestro equipo capacitado de Glaring, asegurando consistencia, confiabilidad y los más altos estándares de excelencia.
                     </p>
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        Our reputation as one of the best in the business has been built on innovation, technology-driven quality control, and strong management practices. Most importantly, we’ve grown through client referrals—proof of the long-term trust and partnerships we’ve earned with major offices and industrial facilities.
+                        Nuestra reputación como uno de los mejores en el negocio se ha construido sobre innovación, control de calidad impulsado por tecnología y prácticas de gestión sólidas. Lo más importante, hemos crecido a través de referencias de clientes—prueba de la confianza a largo plazo y las asociaciones que hemos ganado con importantes oficinas e instalaciones industriales.
                     </p>
                 </div>
 
@@ -166,7 +166,7 @@ export default function AboutUs () {
                                 </div>
                             </div>
                             <h3 className="text-lg font-bold text-[#194263] mb-1">Lindsey Meinert</h3>
-                            <p className="text-sm text-gray-600 text-center">Business Development Manager</p>
+                            <p className="text-sm text-gray-600 text-center">Gerente de Desarrollo de Negocios</p>
                         </div>
 
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
@@ -183,7 +183,7 @@ export default function AboutUs () {
                                 </div>
                             </div>
                             <h3 className="text-lg font-bold text-[#194263] mb-1">Ceverino Diaz</h3>
-                            <p className="text-sm text-gray-600 text-center">Project Manager</p>
+                            <p className="text-sm text-gray-600 text-center">Gerente de Proyecto</p>
                         </div>
 
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
@@ -200,7 +200,7 @@ export default function AboutUs () {
                                 </div>
                             </div>
                             <h3 className="text-lg font-bold text-[#194263] mb-1">Rosa Bagaglio</h3>
-                            <p className="text-sm text-gray-600 text-center">Recruitment & Engagement Manager</p>
+                            <p className="text-sm text-gray-600 text-center">Gerente de Reclutamiento y Compromiso</p>
                         </div>
 
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
@@ -217,7 +217,7 @@ export default function AboutUs () {
                                 </div>
                             </div>
                             <h3 className="text-lg font-bold text-[#194263] mb-1">Amanda Atchley</h3>
-                            <p className="text-sm text-gray-600 text-center">Account Executive</p>
+                            <p className="text-sm text-gray-600 text-center">Ejecutiva de Cuenta</p>
                         </div>
 
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
@@ -234,7 +234,7 @@ export default function AboutUs () {
                                 </div>
                             </div>
                             <h3 className="text-lg font-bold text-[#194263] mb-1">Elaine DeArce</h3>
-                            <p className="text-sm text-gray-600 text-center">Business Development Representative</p>
+                            <p className="text-sm text-gray-600 text-center">Representante de Desarrollo de Negocios</p>
                         </div>
 
                         <div className="employee-card flex-shrink-0 w-68 lg:w-60 flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
@@ -251,7 +251,7 @@ export default function AboutUs () {
                                 </div>
                             </div>
                             <h3 className="text-lg font-bold text-[#194263] mb-1">Silvia Nicola</h3>
-                            <p className="text-sm text-gray-600 text-center">Account Manager</p>
+                            <p className="text-sm text-gray-600 text-center">Gerente de Cuenta</p>
                         </div>
                     </div>
                 </div>

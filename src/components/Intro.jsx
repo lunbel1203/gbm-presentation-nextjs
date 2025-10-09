@@ -63,8 +63,8 @@ export default function Intro () {
             <div className="overlay absolute inset-0 w-full h-full">
                 <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
                     <div className='absolute'>
-                        <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>WELCOME</h1>
-                        <p className='subTitle text-2xl md:text-4xl text-white font-bold'>To our presentation</p>
+                        <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>BIENVENIDO</h1>
+                        <p className='subTitle text-2xl md:text-4xl text-white font-bold'>A nuestra presentación</p>
                     </div>
                     <Image
                         className="logo w-5/6 lg:w-1/4 absolute"

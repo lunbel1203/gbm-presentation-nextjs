@@ -88,7 +88,7 @@ export default function ChooseUs () {
 
                                     <div className="chooseItem flex justify-end flex-col relative rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[32rem]">
                                         <Image
-                                            src="/assets/images/choose-emergency.jpg"
+                                            src="/assets/images/offer-emergency.jpeg"
                                             alt="Emergency"
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-300"

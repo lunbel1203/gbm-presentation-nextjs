@@ -44,12 +44,12 @@ export default function MisionVision () {
 
     return (
         <>
-            <section id="ourWork" className="ourWorkTrigger w-full h-screen bg-[url('/assets/images/our-work.jpg')] bg-cover bg-center text-white relative">
-                <div className="ourWork-overlay w-full h-full bg-gbm-blue/30 absolute inset-0">
+            <section id="ourWork" className="ourWorkTrigger w-full h-screen bg-[url('/assets/images/nuestro-trabajo.jpg')] bg-cover bg-center text-white relative">
+                <div className="ourWork-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="ourWork-section w-full lg:w-3/5 text-center mx-auto">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro Trabajo Habla por Sí Mismo</h2>
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro trabajo habla por Sí Mismo</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                         </div>

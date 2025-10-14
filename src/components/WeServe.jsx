@@ -43,6 +43,35 @@ export default function WeServe () {
             }
         });
 
+        // ScrollTrigger para República Dominicana
+        createOptimizedScrollTrigger({
+            trigger: '.republicaDominicanaTrigger',
+            start: 'top top',
+            end: '+=1500',
+            scrub: 1,
+            pin: true,
+            pinSpacing: true,
+            onUpdate: (self) => {
+                const progress = self.progress;
+                console.log('republicaDominicana progress:', progress);
+
+                // Fade in gradual desde 10% hasta 30% del scroll
+                let opacity = 0;
+                let yPosition = 50;
+
+                if (progress >= 0.1 && progress <= 0.3) {
+                    const fadeProgress = (progress - 0.1) / 0.2;
+                    opacity = gsap.utils.interpolate(0, 1, fadeProgress);
+                    yPosition = gsap.utils.interpolate(50, 0, fadeProgress);
+                } else if (progress > 0.3) {
+                    opacity = 1;
+                    yPosition = 0;
+                }
+
+                gsap.set('.republicaDominicana-section', { opacity: opacity, y: yPosition });
+            }
+        });
+
         // ScrollTrigger para massachusetts
         createOptimizedScrollTrigger({
             trigger: '.massachusettsTrigger',
@@ -54,11 +83,11 @@ export default function WeServe () {
             onUpdate: (self) => {
                 const progress = self.progress;
                 console.log('massachusetts progress:', progress);
-                
+
                 // Fade in gradual desde 10% hasta 30% del scroll
                 let opacity = 0;
                 let yPosition = 50;
-                
+
                 if (progress >= 0.1 && progress <= 0.3) {
                     const fadeProgress = (progress - 0.1) / 0.2;
                     opacity = gsap.utils.interpolate(0, 1, fadeProgress);
@@ -67,7 +96,7 @@ export default function WeServe () {
                     opacity = 1;
                     yPosition = 0;
                 }
-                
+
                 gsap.set('.massachusetts-section', { opacity: opacity, y: yPosition });
             }
         });
@@ -83,11 +112,11 @@ export default function WeServe () {
             onUpdate: (self) => {
                 const progress = self.progress;
                 console.log('hampshire progress:', progress);
-                
+
                 // Fade in gradual desde 10% hasta 30% del scroll
                 let opacity = 0;
                 let yPosition = 50;
-                
+
                 if (progress >= 0.1 && progress <= 0.3) {
                     const fadeProgress = (progress - 0.1) / 0.2;
                     opacity = gsap.utils.interpolate(0, 1, fadeProgress);
@@ -96,12 +125,12 @@ export default function WeServe () {
                     opacity = 1;
                     yPosition = 0;
                 }
-                
+
                 gsap.set('.hampshire-section', { opacity: opacity, y: yPosition });
             }
         });
 
-        // ScrollTrigger para hampshire
+        // ScrollTrigger para maine
         createOptimizedScrollTrigger({
             trigger: '.maineTrigger',
             start: 'top top',
@@ -112,40 +141,11 @@ export default function WeServe () {
             onUpdate: (self) => {
                 const progress = self.progress;
                 console.log('maine progress:', progress);
-                
-                // Fade in gradual desde 10% hasta 30% del scroll
-                let opacity = 0;
-                let yPosition = 50;
-                
-                if (progress >= 0.1 && progress <= 0.3) {
-                    const fadeProgress = (progress - 0.1) / 0.2;
-                    opacity = gsap.utils.interpolate(0, 1, fadeProgress);
-                    yPosition = gsap.utils.interpolate(50, 0, fadeProgress);
-                } else if (progress > 0.3) {
-                    opacity = 1;
-                    yPosition = 0;
-                }
-                
-                gsap.set('.maine-section', { opacity: opacity, y: yPosition });
-            }
-        });
 
-        // ScrollTrigger para hampshire
-        createOptimizedScrollTrigger({
-            trigger: '.republicaDominicanaTrigger',
-            start: 'top top',
-            end: '+=1500',
-            scrub: 1,
-            pin: true,
-            pinSpacing: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-                console.log('republicaDominicana progress:', progress);
-                
                 // Fade in gradual desde 10% hasta 30% del scroll
                 let opacity = 0;
                 let yPosition = 50;
-                
+
                 if (progress >= 0.1 && progress <= 0.3) {
                     const fadeProgress = (progress - 0.1) / 0.2;
                     opacity = gsap.utils.interpolate(0, 1, fadeProgress);
@@ -154,8 +154,8 @@ export default function WeServe () {
                     opacity = 1;
                     yPosition = 0;
                 }
-                
-                gsap.set('.republicaDominicana-section', { opacity: opacity, y: yPosition });
+
+                gsap.set('.maine-section', { opacity: opacity, y: yPosition });
             }
         });
 
@@ -173,13 +173,26 @@ export default function WeServe () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="w-full lg:w-3/5 text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Desde Nueva Inglaterra hasta República Dominicana, ofrecemos servicios de mantenimiento confiables que mantienen sus instalaciones en su mejor estado.
+                                Desde República Dominicana hasta Nueva Inglaterra, ofrecemos servicios de mantenimiento confiables que mantienen sus instalaciones en su mejor estado.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section className="republicaDominicanaTrigger w-full h-screen bg-[url('/assets/images/bg-republica-dominicana.jpg')] bg-cover bg-center text-white relative">
+                <div className="weServe-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
+                    <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
+                        <div className="republicaDominicana-section w-full lg:w-4/5 text-center mx-auto">
+                            <div className="w-full mb-10">
+                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">República Dominicana</h2>
+                                <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
             <section className="massachusettsTrigger w-full h-screen bg-[url('/assets/images/bg-massachusetts.jpg')] bg-cover bg-center text-white relative">
                 <div className="weServe-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
@@ -219,18 +232,6 @@ export default function WeServe () {
                 </div>
             </section>
 
-            <section className="republicaDominicanaTrigger w-full h-screen bg-[url('/assets/images/bg-republica-dominicana.jpg')] bg-cover bg-center text-white relative">
-                <div className="weServe-overlay w-full h-full bg-gbm-blue/60 absolute inset-0">
-                    <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
-                        <div className="republicaDominicana-section w-full lg:w-4/5 text-center mx-auto">
-                            <div className="w-full mb-10">
-                                <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">República Dominicana</h2>
-                                <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </>
     )
 }

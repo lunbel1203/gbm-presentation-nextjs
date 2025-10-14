@@ -131,7 +131,7 @@ export default function CrossContamination () {
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <Image src="/assets/images/microfiber-cleaning-clot-yellow.jpeg" alt="Microfiber Yellow" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
-                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">COCINETAS Y CAFETERÍAS</h4>
+                                    <h4 className="text-xl bg-gradient-to-r from-[#fff] to-gbm-green bg-clip-text text-transparent font-semibold">ZONA DE COCINA Y COFFE BREAK</h4>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <Image src="/assets/images/microfiber-cleaning-clot-pink.jpeg" alt="Microfiber Pink" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />
@@ -153,7 +153,7 @@ export default function CrossContamination () {
                         </div>
 
                         <div className="crossContamination-mops w-full flex flex-wrap justify-center gap-10 absolute inset-x-0">
-                            <h3 className='w-full text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#FFFFFF] to-gbm-green bg-clip-text text-transparent mb-8'>DIFERENTES MOPAS</h3>
+                            <h3 className='w-full text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#FFFFFF] to-gbm-green bg-clip-text text-transparent mb-8'>DIFERENTES TRAPEADORES</h3>
                             <div className="w-full grid grid-cols-3 gap-12 max-w-4xl px-8">
                                 <div className="flex flex-col items-center">
                                     <Image src="/assets/images/mop-bathrooms.jpeg" alt="Mop for Bathrooms" width={200} height={150} className="w-full h-78 object-cover rounded-lg mb-2" sizes="200px" />

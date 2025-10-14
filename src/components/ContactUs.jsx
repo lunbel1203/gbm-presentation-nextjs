@@ -160,11 +160,11 @@ export default function ContactUs () {
                             <div className="sectionImg w-5/6">
                                 <ul className="flex flex-wrap justify-center gap-5">
                                     <li className="contact-item w-[calc(100%/2-20px)]">
-                                        <a href="https://glaringmaintenance.com" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
+                                        <a href="https://glaringmaintenance.com.do" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
                                             <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
                                                 <RiGlobalLine color='white' size={24} />
                                             </div>
-                                            <span>www.glaringmaintenance.com</span>
+                                            <span>www.glaringmaintenance.com.do</span>
                                         </a>
                                     </li>
                                     <li className="contact-item w-[calc(100%/2-20px)]">
@@ -180,7 +180,7 @@ export default function ContactUs () {
                                             <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
                                                 <RiInstagramLine color='white' size={24} />
                                             </div>
-                                            <span>@glaringmaintenance</span>
+                                            <span>@glaringmaintenancerd</span>
                                         </a>
                                     </li>
                                     <li className="contact-item w-[calc(100%/2-20px)]">
@@ -213,6 +213,14 @@ export default function ContactUs () {
                                 <h3 className='branches-title text-4xl mb-5 text-center bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold uppercase'>Sucursales</h3>
                                 <ul className="flex flex-wrap justify-center gap-5">
                                     <li className="branch-item w-[calc(100%/2-20px)]">
+                                        <a href="https://www.google.com/maps/place/Residencial+imperial+506/@18.4505418,-69.965853,17z/data=!3m1!4b1!4m6!3m5!1s0x8ea561f6cd4e342f:0xe446490026340b85!8m2!3d18.4505418!4d-69.9632727!16s%2Fg%2F11bxg102xt!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
+                                            <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
+                                                <RiMapPinLine color='white' size={24} />
+                                            </div>
+                                            <span>Av. 27 de Febrero, #506, Distrito Nacional, R.D.</span>
+                                        </a>
+                                    </li>
+                                    <li className="branch-item w-[calc(100%/2-20px)]">
                                         <a href="https://www.google.com/maps/place/76+Merrimack+St+6+6b,+Haverhill,+MA+01830,+USA/@42.7745464,-71.0810924,17z/data=!3m1!4b1!4m5!3m4!1s0x89e302348940d777:0x1305baa325a35dc1!8m2!3d42.7745464!4d-71.0785121!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
                                             <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
                                                 <RiMapPinLine color='white' size={24} />
@@ -226,14 +234,6 @@ export default function ContactUs () {
                                                 <RiMapPinLine color='white' size={24} />
                                             </div>
                                             <span>1132 Us Route 1, Suite 3, York ME 03909</span>
-                                        </a>
-                                    </li>
-                                    <li className="branch-item w-[calc(100%/2-20px)]">
-                                        <a href="https://www.google.com/maps/place/Residencial+imperial+506/@18.4505418,-69.965853,17z/data=!3m1!4b1!4m6!3m5!1s0x8ea561f6cd4e342f:0xe446490026340b85!8m2!3d18.4505418!4d-69.9632727!16s%2Fg%2F11bxg102xt!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex items-center text-xl font-bold gap-5 border-2 border-[#193263] rounded-full">
-                                            <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
-                                                <RiMapPinLine color='white' size={24} />
-                                            </div>
-                                            <span>Av. 27 de Febrero, #506, Distrito Nacional, R.D.</span>
                                         </a>
                                     </li>
                                     

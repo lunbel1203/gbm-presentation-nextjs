@@ -111,13 +111,13 @@ export default function ReferProgram () {
                                 <h1 className="text-4xl lg:text-5xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent  font-bold mb-4">PROGRAMA DE REFERIDOS</h1>
                                 <div className="text-xl space-y-4 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                     <p>
-                                        Queremos agradecerte por compartir nuestro buen nombre y por eso Glaring Building
+                                        Queremos agradecerte por compartir nuestro buen nombre, y por eso Glaring Building
                                         Maintenance te pagará seiscientos dólares ($600.00) cuando refieras un nuevo cliente.
                                     </p>
                                     <p>
-                                        Pregunta a tus amigos, familiares, proveedores, compañeros de trabajo o clientes si les gustaría
+                                        Pregunta a tus amigos, familiares, proveedores, compañeros de trabajo o clientes, si les gustaría
                                         mejorar la limpieza de su lugar de trabajo. Luego envíanos su información por correo y nosotros nos
-                                        encargamos del resto. Puedes esperar recibir un cheque de $600.00* después de que comiencen a recibir
+                                        encargamos del resto. Puedes esperar recibir un cheque de $600.00 después de que comiencen a recibir
                                         nuestros servicios. ¡Así de simple!
                                     </p>
                                     <p>
@@ -137,7 +137,7 @@ export default function ReferProgram () {
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Nombre de tu Empresa
+                                        Nombre de la Empresa
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>

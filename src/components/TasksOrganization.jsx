@@ -19,7 +19,7 @@ export default function tasksOrganization () {
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
-                
+
                 // Animación directa: contenido empieza a subir inmediatamente (0% - 100%)
                 const yPosition = gsap.utils.interpolate(150, -50, progress);
                 gsap.set('.tasksOrganization-cards', {
@@ -30,22 +30,26 @@ export default function tasksOrganization () {
         });
 
         // ScrollTrigger adicional para fade out cuando lleguen al título de WeOffer
-        createOptimizedScrollTrigger({
-            trigger: '.weOffer-title',
-            start: 'bottom bottom', // Cuando el bottom del título toca el bottom del viewport
-            end: 'bottom top',      // Cuando el bottom del título llega al top del viewport
-            scrub: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-                
-                // Los cards desaparecen cuando llegan justo debajo del título
-                const opacity = gsap.utils.interpolate(1, 0, progress);
-                
-                gsap.set('.tasksOrganization-cards', {
-                    opacity: opacity
-                });
-            }
-        });
+        // Verificar que el elemento existe antes de crear el trigger
+        const weOfferTitle = document.querySelector('.weOffer-title');
+        if (weOfferTitle) {
+            createOptimizedScrollTrigger({
+                trigger: '.weOffer-title',
+                start: 'bottom bottom', // Cuando el bottom del título toca el bottom del viewport
+                end: 'bottom top',      // Cuando el bottom del título llega al top del viewport
+                scrub: true,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+
+                    // Los cards desaparecen cuando llegan justo debajo del título
+                    const opacity = gsap.utils.interpolate(1, 0, progress);
+
+                    gsap.set('.tasksOrganization-cards', {
+                        opacity: opacity
+                    });
+                }
+            });
+        }
 
     }, []);
 
@@ -152,7 +156,7 @@ export default function tasksOrganization () {
                                                 Especialista en Utilidades (US)
                                             </h3>
                                             <p className="text-gray-700 text-sm leading-relaxed">
-                                                El personal de limpieza será responsable de mapear, desinfectar, pulir y fregar automáticamente el piso, así como otras tareas asignadas.
+                                                El personal de limpieza será responsable de trapear, desinfectar, pulir y fregar automáticamente el piso, así como otras tareas asignadas.
                                             </p>
                                         </div>
                                     </div>

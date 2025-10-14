@@ -113,7 +113,7 @@ export default function MisionVision () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Lograr 100% de satisfacción del cliente, para que puedan enfocarse en la misión de su propia empresa y alcancen su propio éxito. Aún más rápido. Todo mientras mantenemos satisfechos a nuestros empleados, siempre buscando la excelencia y haciendo mejoras continuas a nuestros servicios.
+                                En Glaring Building Maintenance, nuestra misión es alcanzar la total satisfacción de nuestros clientes, permitiéndoles concentrarse en los objetivos de su propia organización y alcanzar el éxito con mayor rapidez. Al mismo tiempo, promovemos el bienestar y la satisfacción de nuestros empleados, impulsando una cultura de excelencia y mejora continua en todos nuestros servicios.
                             </p>
                         </div>
                     </div>
@@ -145,10 +145,11 @@ export default function MisionVision () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <div className="w-full flex justify-center">
-                                <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-2xl text-left'>
-                                    <li><span className='text-gbm-green font-bold'>Honestidad:</span> Nos gusta y creemos en la honestidad como uno de los pilares fundamentales que rigen todas las actividades de cualquier empresa, y nos comportamos y expresamos con coherencia y sinceridad de acuerdo con los valores de verdad y justicia.</li>
-                                    <li><span className='text-gbm-green font-bold'>Compromiso:</span> Destacamos el valor del compromiso de cada miembro de la empresa con sus responsabilidades asumidas, creemos en el trabajo de cada individuo y en su valor dentro de la empresa.</li>
-                                    <li><span className='text-gbm-green font-bold'>Responsabilidad:</span> Conocemos la responsabilidad de nuestras acciones (y omisiones). Por esto asumimos la responsabilidad de asegurar un ambiente saludable para nuestros clientes, siendo responsables también con el medio ambiente.</li>
+                                <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-xl text-left'>
+                                    <li><span className='text-gbm-green font-bold'>Honestidad:</span> Creemos firmemente en la honestidad como uno de los pilares esenciales que guían todas nuestras acciones. Actuamos con transparencia, coherencia y respeto por la verdad, estableciendo relaciones basadas en la confianza y la integridad.</li>
+                                    <li><span className='text-gbm-green font-bold'>Compromiso:</span> Valoramos el compromiso de cada miembro de nuestro equipo con sus responsabilidades y con los objetivos de la organización. Promovemos la dedicación, la cooperación y el sentido de pertenencia como elementos clave para alcanzar resultados de excelencia.</li>
+                                    <li><span className='text-gbm-green font-bold'>Responsabilidad:</span> Asumimos con plena conciencia las consecuencias de nuestras decisiones y acciones. Nos comprometemos a mantener entornos seguros y saludables para nuestros clientes y empleados, así como a operar de manera sostenible y respetuosa con el medio ambiente.</li>
+                                    <li><span className='text-gbm-green font-bold'>Innovación:</span> Fomentamos una cultura de mejora continua y búsqueda constante de nuevas soluciones. Adoptamos tecnologías, procesos y prácticas innovadoras que nos permiten optimizar nuestros servicios, anticiparnos a las necesidades de nuestros clientes y mantenernos a la vanguardia del sector.</li>
                                 </ul>
                             </div>
                         </div>

@@ -99,7 +99,7 @@ export default function QaulityAssurance () {
                     
                     {/* Título Principal */}
                     <div className="quality-title text-center mb-16">
-                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Aseguramiento de Calidad</h2>
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Control y garantía de calidad</h2>
                         <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
                     </div>
 
@@ -166,7 +166,7 @@ export default function QaulityAssurance () {
                                     <ul className="space-y-6 text-lg lg:text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Inspecciones de limpieza y conserjería.
+                                            Inspecciones de mantenimiento y conserjería.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
@@ -239,14 +239,14 @@ export default function QaulityAssurance () {
                                 <div className="w-full lg:w-5/12">
                                     <div className="photo-qualityAssurance transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
                                         <Image
-                                            src="/assets/images/qualityassurance-04.jpg"
+                                            src="/assets/images/why-data.jpg"
                                             alt="Quality Assurance"
                                             width={400}
                                             height={600}
                                             className={`w-full h-auto max-h-[600px] object-cover shadow-xl border-8 border-white rounded-lg ${
-                                                clickedImageSrc === '/assets/images/qualityassurance-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                                clickedImageSrc === '/assets/images/why-data.jpg' ? 'opacity-0' : 'opacity-100'
                                             }`}
-                                            onClick={(e) => openLightbox('/assets/images/qualityassurance-04.jpg', e)}
+                                            onClick={(e) => openLightbox('/assets/images/why-data.jpg', e)}
                                             sizes="(max-width: 768px) 100vw, 40vw"
                                         />
                                     </div>

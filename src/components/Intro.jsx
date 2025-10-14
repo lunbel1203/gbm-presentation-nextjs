@@ -61,7 +61,7 @@ export default function Intro () {
     return (
         <section id="intro" className="introTrigger w-full h-screen bg-[url('/assets/images/bg-building.jpg')] bg-cover bg-center text-white relative">
             <div className="overlay absolute inset-0 w-full h-full">
-                <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
+                <div className="container h-full mx-auto flex justify-center items-center text-center">
                     <div className='absolute'>
                         <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>BIENVENIDO</h1>
                         <p className='subTitle text-2xl md:text-4xl text-white font-bold'>A nuestra presentación</p>
@@ -75,17 +75,22 @@ export default function Intro () {
                         priority
                         sizes="(max-width: 768px) 83vw, 25vw"
                     />
-                    <div className="thank-section w-full lg:w-5/6 mx-auto text-center px-5 mt-20">
+                    <div className="thank-section w-full lg:w-4/6 text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">Gracias por permitir a Glaring Building Maintenance (GBM) la oportunidad de presentar nuestra propuesta.</h2>
+                            <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-white mb-5">Gracias por permitir a Glaring Building Maintenance (GBM) la oportunidad de presentar una propuesta.</h2>
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
-                        <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">
-                            En GBM, priorizamos la seguridad y el bienestar de sus visitantes y personal, brindando servicios confiables que apoyan sus objetivos. Nuestro equipo opera siete días a la semana, adaptándose a su horario, con supervisión en sitio e inspecciones regulares para asegurar los más altos estándares de calidad.
-                        </p>
-                        <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
-                            Por favor note que debido a fluctuaciones en costos de materiales, transporte y mano de obra, todas las cotizaciones permanecen válidas por treinta (30) días desde la fecha de entrega.
-                        </p>
+                        <div className="content grid gap-6">
+                            <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                                En GBM, la seguridad, el bienestar de sus visitantes y colaboradores constituyen el eje central de nuestras operaciones. Ofrecemos servicios confiables y de alto nivel que respaldan sus objetivos institucionales, garantizando entornos limpios, seguros y en óptimas condiciones.
+                            </p>
+                            <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                                Nuestro equipo opera los siete días de la semana y se ajusta a sus necesidades operativas, con supervisión constante en sitio e inspecciones programadas que aseguran el cumplimiento de los más altos estándares de calidad.
+                            </p>
+                            <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                                Por favor, tenga en cuenta que, debido a las variaciones en los costos de materiales, transporte y mano de obra, todas las cotizaciones tendrán una validez de treinta (30) días a partir de la fecha de emisión.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

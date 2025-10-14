@@ -162,7 +162,7 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center">
-                                    <ul className="space-y-4 text-2xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
+                                    <ul className="space-y-4 text-3xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
                                             Ausencias

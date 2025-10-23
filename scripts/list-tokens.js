@@ -14,6 +14,19 @@ try {
   process.exit(1);
 }
 
+// Leer URL base del archivo .env.production
+let baseUrl = 'https://tu-dominio.com';
+try {
+  const envPath = path.join(__dirname, '..', '.env.production');
+  const envContent = fs.readFileSync(envPath, 'utf-8');
+  const urlMatch = envContent.match(/NEXT_PUBLIC_APP_URL=(.+)/);
+  if (urlMatch && urlMatch[1]) {
+    baseUrl = urlMatch[1].trim();
+  }
+} catch (error) {
+  // Si no se puede leer el .env, usar URL por defecto
+}
+
 const tokens = Object.entries(tokensData.tokens);
 
 if (tokens.length === 0) {
@@ -36,11 +49,15 @@ tokens.forEach(([token, info], index) => {
     expired = ' (⚠️  EXPIRADO)';
   }
 
+  // Construir URL completa
+  const clientUrl = `${baseUrl}/?t=${token}`;
+
   console.log(`\n${index + 1}. ${info.client}`);
   console.log(`   Token: ${token}`);
   console.log(`   Estado: ${status}${expired}`);
   console.log(`   Expira: ${expires}`);
   console.log(`   Creado: ${new Date(info.createdAt).toLocaleString()}`);
+  console.log(`   🔗 URL: ${clientUrl}`);
   if (info.notes) {
     console.log(`   Notas: ${info.notes}`);
   }
@@ -48,3 +65,4 @@ tokens.forEach(([token, info], index) => {
 });
 
 console.log('\n═'.repeat(100));
+console.log(`\n💡 Tip: Copia la URL y envíala al cliente por email`);

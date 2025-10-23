@@ -87,19 +87,19 @@ function AccessDeniedContent() {
             <p>
               <span className="font-medium">Email:</span>{' '}
               <a
-                href="mailto:info@glaringbm.com"
+                href="mailto:contactus@glaringmaintenance.com"
                 className="text-[#194263] hover:text-[#2d6a9f] underline"
               >
-                info@glaringbm.com
+                contactus@glaringmaintenance.com
               </a>
             </p>
             <p>
               <span className="font-medium">Phone:</span>{' '}
               <a
-                href="tel:+1234567890"
+                href="tel:+16175108382"
                 className="text-[#194263] hover:text-[#2d6a9f] underline"
               >
-                +1 (234) 567-890
+                +1 (617) 510-8382
               </a>
             </p>
           </div>

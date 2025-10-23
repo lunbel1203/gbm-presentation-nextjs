@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# tokens (sensitive data)
+/data/tokens.json
+/data/*.backup.json

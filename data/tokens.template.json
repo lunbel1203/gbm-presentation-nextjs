@@ -1,0 +1,11 @@
+{
+  "tokens": {
+    "_README": {
+      "client": "ESTE ES UN EJEMPLO - Puedes eliminar esta entrada",
+      "active": true,
+      "createdAt": "2025-01-23T00:00:00.000Z",
+      "expiresAt": "2025-12-31T23:59:59.999Z",
+      "notes": "Formato: npm run token:generate 'Nombre Cliente' [días]"
+    }
+  }
+}

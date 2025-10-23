@@ -9,6 +9,7 @@ Este sistema permite controlar el acceso a la presentación mediante tokens úni
 - ✅ **Expiración opcional**: Puedes configurar tokens con fecha de vencimiento
 - ✅ **Gestión simple**: Scripts CLI para administrar tokens fácilmente
 - ✅ **Sin base de datos**: Todo se guarda en un archivo JSON simple
+- ✅ **URLs listas para copiar**: El comando list muestra las URLs completas de cada cliente
 
 ## 📋 Requisitos
 
@@ -45,7 +46,7 @@ npm run token:generate "Acme Corporation" 30
    Expira: Nunca
 
 🔗 URL para el cliente:
-   https://tu-dominio.com/?t=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
+   https://presentationusa.glaringmaintenance.com/?t=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 
 💡 Tip: Copia esta URL y envíala al cliente
 ```
@@ -69,6 +70,7 @@ npm run token:list
    Estado: ✅ Activo
    Expira: ♾️  Sin expiración
    Creado: 23/1/2025, 10:30:00
+   🔗 URL: https://presentationusa.glaringmaintenance.com/?t=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
    ──────────────────────────────────────────────────
 
 2. Beta Industries
@@ -76,9 +78,12 @@ npm run token:list
    Estado: ❌ Inactivo
    Expira: 📅 22/2/2025
    Creado: 15/1/2025, 14:20:00
+   🔗 URL: https://presentationusa.glaringmaintenance.com/?t=z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5k4
    ──────────────────────────────────────────────────
 
 ════════════════════════════════════════════════════════════════
+
+💡 Tip: Copia la URL y envíala al cliente por email
 ```
 
 ---
@@ -168,14 +173,27 @@ npm run token:delete a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 
 2. **Copiar la URL generada y enviarla al cliente:**
    ```
-   https://gbm-presentation.com/?t=abc123xyz
+   https://presentationusa.glaringmaintenance.com/?t=abc123xyz
    ```
 
 3. **El cliente accede a la presentación** usando ese link
 
 ---
 
-### Escenario 2: Deshabilitar Acceso de un Cliente
+### Escenario 2: Reenviar link a un cliente existente
+
+1. **Listar todos los tokens:**
+   ```bash
+   npm run token:list
+   ```
+
+2. **Copiar la URL del cliente** directamente del output
+
+3. **Enviar la URL al cliente** por email o mensaje
+
+---
+
+### Escenario 3: Deshabilitar Acceso de un Cliente
 
 1. **Ver lista de tokens:**
    ```bash
@@ -191,7 +209,7 @@ npm run token:delete a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 
 ---
 
-### Escenario 3: Rehabilitar Acceso
+### Escenario 4: Rehabilitar Acceso
 
 1. **Habilitar el token nuevamente:**
    ```bash
@@ -211,7 +229,7 @@ gbm-presentation-nextjs/
 │   └── .gitignore          # Evita que tokens.json se suba a git
 ├── scripts/
 │   ├── generate-token.js   # Script para generar tokens
-│   ├── list-tokens.js      # Script para listar tokens
+│   ├── list-tokens.js      # Script para listar tokens con URLs
 │   ├── disable-token.js    # Script para deshabilitar tokens
 │   ├── enable-token.js     # Script para habilitar tokens
 │   └── delete-token.js     # Script para eliminar tokens
@@ -330,7 +348,9 @@ docker-compose restart
    npm run token:list > tokens-audit-$(date +%Y%m%d).txt
    ```
 
-4. **Comunicación clara**: Envía email al cliente con el link y fecha de expiración
+4. **Reenvío de links**: Usa `npm run token:list` para obtener las URLs y reenviarlas fácilmente
+
+5. **Comunicación clara**: Envía email al cliente con el link y fecha de expiración
 
 ---
 

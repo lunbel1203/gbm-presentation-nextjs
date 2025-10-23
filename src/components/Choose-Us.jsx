@@ -21,7 +21,7 @@ export default function ChooseUs () {
         createOptimizedScrollTrigger({
             trigger: '.chooseUsTrigger',
             start: 'top top',
-            end: '+=2500',
+            end: '+=3500',
             scrub: 1,
             pin: true,
             pinSpacing: true,
@@ -29,7 +29,7 @@ export default function ChooseUs () {
                 const progress = self.progress;
 
                 // Animación continua de los cards - suben desde abajo hasta arriba
-                const yPosition = gsap.utils.interpolate(100, -100, progress);
+                const yPosition = gsap.utils.interpolate(100, -150, progress);
                 gsap.set('.chooseUs-list', {
                     y: `${yPosition}vh`,
                     opacity: progress > 0.1 ? 1 : 0

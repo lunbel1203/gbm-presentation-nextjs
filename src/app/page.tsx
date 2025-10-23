@@ -234,6 +234,8 @@ export default function Home() {
 
             <SecuritySystem />
 
+            <WeOffer />
+
             <OurWork />
 
             <ContingencyPlan />
@@ -249,8 +251,6 @@ export default function Home() {
             <Sponsor />
 
             <Fundation />
-
-            <WeOffer />
 
             <GlaringStandard />
 

@@ -239,14 +239,14 @@ export default function QaulityAssurance () {
                                 <div className="w-full lg:w-5/12">
                                     <div className="photo-qualityAssurance transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 cursor-pointer">
                                         <Image
-                                            src="/assets/images/qualityassurance-04.jpg"
+                                            src="/assets/images/why-data.webp"
                                             alt="Quality Assurance"
                                             width={400}
                                             height={600}
                                             className={`w-full h-auto max-h-[600px] object-cover shadow-xl border-8 border-white rounded-lg ${
-                                                clickedImageSrc === '/assets/images/qualityassurance-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                                clickedImageSrc === '/assets/images/why-data.webp' ? 'opacity-0' : 'opacity-100'
                                             }`}
-                                            onClick={(e) => openLightbox('/assets/images/qualityassurance-04.jpg', e)}
+                                            onClick={(e) => openLightbox('/assets/images/why-data.webp', e)}
                                             sizes="(max-width: 768px) 100vw, 40vw"
                                         />
                                     </div>

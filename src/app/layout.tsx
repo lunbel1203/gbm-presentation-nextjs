@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "GBM - Your property, is our priority.",
-  description: "Professional cleaning and maintenance services.",
+  title: "GBM - Su propiedad, es nuestra prioridad.",
+  // description: "Professional cleaning and maintenance services.",
 };
 
 export default function RootLayout({

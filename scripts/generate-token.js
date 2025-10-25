@@ -62,7 +62,7 @@ console.log(`   Cliente: ${clientName}`);
 console.log(`   Válido por: ${daysValid} días`);
 console.log(`   Expira: ${expiresAt.toLocaleDateString('es-ES')}`);
 console.log('\n🔗 URL para el cliente:');
-console.log(`   https://tu-dominio.com/?t=${token}`);
+console.log(`   https://presentacionrd.glaringmaintenance.do/?t=${token}`);
 console.log('\n📝 Token:');
 console.log(`   ${token}`);
 console.log('\n💡 Tip: Guarda esta URL y envíala al cliente de forma segura.');

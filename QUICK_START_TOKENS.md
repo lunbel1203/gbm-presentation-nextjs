@@ -32,7 +32,7 @@ npm run token:generate "Tesla Inc" 90
 
 # Salida:
 # 🔗 URL para el cliente:
-#    https://tu-dominio.com/?t=a1b2c3d4e5f6...
+#    https://presentacionrd.glaringmaintenance.do/?t=a1b2c3d4e5f6...
 
 # 2. Enviar esa URL al cliente por email
 

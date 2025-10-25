@@ -33,7 +33,7 @@ try {
     console.log(`Token:    ${token.substring(0, 16)}...`);
     console.log(`Creado:   ${new Date(info.createdAt).toLocaleDateString('es-ES')}`);
     console.log(`Expira:   ${new Date(info.expiresAt).toLocaleDateString('es-ES')}`);
-    console.log(`URL:      https://tu-dominio.com/?t=${token}`);
+    console.log(`URL:      https://presentacionrd.glaringmaintenance.do/?t=${token}`);
     console.log('-'.repeat(80));
   });
 

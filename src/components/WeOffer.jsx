@@ -50,7 +50,7 @@ export default function WeOffer () {
                     </div>
 
                     {/* Modern Cards */}
-                    <div className="weOffer-cards w-full mx-auto space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <div className="weOffer-cards w-full mx-auto space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
 
                         {/* Card 1 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">

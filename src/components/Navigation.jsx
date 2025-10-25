@@ -16,6 +16,7 @@ export default function Navigation() {
         { id: 'mission', label: 'Mission', href: '#mission' },
         { id: 'vision', label: 'Vision', href: '#vision' },
         { id: 'values', label: 'Values', href: '#values' },
+        { id: 'we-serve', label: 'Area of Service', href: '#we-serve' },
         { id: 'glaring-clean', label: 'It`s Glaring Clean', href: '#glaring-clean' },
         { id: 'our-people', label: 'Our Greatest Asset', href: '#our-people' },
         { id: 'worker-compensation', label: 'Workers Compensation', href: '#worker-compensation' },
@@ -32,7 +33,6 @@ export default function Navigation() {
         { id: 'fundation', label: 'Fundation', href: '#fundation' },
         { id: 'glaringStandard', label: 'The Glaring Standard', href: '#glaringStandard' },
         { id: 'certificates', label: 'Our Certifications', href: '#certificates' },
-        { id: 'we-serve', label: 'Area of Service', href: '#we-serve' },
         { id: 'refer-program', label: 'Refer Program', href: '#refer-program' },
         { id: 'contact-us', label: 'Contact Us', href: '#contact-us' },
         { id: 'thank-you', label: 'Thank You', href: '#thank-you' }

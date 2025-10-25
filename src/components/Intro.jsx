@@ -77,7 +77,7 @@ export default function Intro () {
                     />
                     <div className="thank-section w-full lg:w-5/6 mx-auto text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">Thank you for allowing Glaring Building Maintenance (GBM) the opportunity to submit a presentation.</h2>
+                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">We appreciate the opportunity to present Glaring Building Maintenance (GBM) and demonstrate how our services can support your facility’s needs.</h2>
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
                         <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">

@@ -126,7 +126,7 @@ export default function Fundation () {
                     </p>
 
                     <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        Stay tuned—because Glaring Cares is more than a foundation; it's a movement of compassion, progress, and commitment to a brighter future. Together, we will make a difference.
+                        Stay tuned—because Glaring Cares is more than a foundation, it's a movement of compassion, progress, and commitment to a brighter future. Together, we will make a difference.
                     </p>
                 </div>
 

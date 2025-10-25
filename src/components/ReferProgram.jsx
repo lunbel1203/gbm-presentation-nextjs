@@ -112,7 +112,7 @@ export default function ReferProgram () {
                                 <div className="text-xl space-y-4 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                     <p>
                                         We want to Thank You for spreading Our good name and that is why Glaring Building
-                                        Maintenance will pay you Six Hundred dollar ($600.00) when you refer a new customer to
+                                        Maintenance will pay you Six Hundred dollars ($600.00) when you refer a new customer to
                                         us.!
                                     </p>
                                     <p>

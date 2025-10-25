@@ -43,7 +43,7 @@ export default function WeOffer () {
                     {/* Header Section */}
                     <div className="weOffer-title w-full text-center">
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            what we offer
+                            What we offer
                         </h2>
                         <h3 className="text-2xl lg:text-4xl font-bold text-gbm-green mb-6">Our core services</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
@@ -61,7 +61,7 @@ export default function WeOffer () {
                                         DATA CENTER CLEANING
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Safeguard Your Data with Specialized Cleaning solutions.
+                                        Safeguard your data with specialized cleaning solutions.
                                     </p>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ export default function WeOffer () {
                                         CLEANROOM SERVICES
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring a Pristine Environment for Your Critical Operations.
+                                        Ensuring a pristine environment for your critical operations.
                                     </p>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@ export default function WeOffer () {
                                         WINDOW CLEANING
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Achieve Glaring Clarity with Our Professional Window Cleaning Solutions.
+                                        Achieve Glaring clarity with our professional window cleaning solutions.
                                     </p>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@ export default function WeOffer () {
                                         TILE & STONE CARE
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Revitalize Your Surfaces with Our Glaring Tile & Stone Care Solutions.
+                                        Revitalize your surfaces with our Glaring tile & stone care solutions.
                                     </p>
                                 </div>
                             </div>
@@ -181,7 +181,7 @@ export default function WeOffer () {
                                         SOLAR PANEL CLEANING
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Keep Your Solar Panels Pristine for Optimal Energy Production.
+                                        Keep your solar panels pristine for optimal energy production.
                                     </p>
                                 </div>
                             </div>
@@ -196,7 +196,7 @@ export default function WeOffer () {
                                         PRESSURE WASHING
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Leave the Pressure to Us for a Deep Clean That Makes Your Surfaces Shine.
+                                        Leave the pressure to us for a deep clean that makes your surfaces shine.
                                     </p>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@ export default function WeOffer () {
                                         POST CONSTRUCTION
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Leave the Mess to Us – Professional Post Construction Cleaning Services.
+                                        Leave the mess to us – professional post construction cleaning services.
                                     </p>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@ export default function WeOffer () {
                                         MAINTENANCE SERVICES
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Reliable Maintenance Services to Keep Your Property in Top Condition.
+                                        Reliable maintenance services to keep your property in top condition.
                                     </p>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@ export default function WeOffer () {
                                         EPOXY FLOORING
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Customizable Epoxy Floors for a Sleek, Professional Finish.
+                                        Customizable epoxy floors for a sleek, professional finish.
                                     </p>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@ export default function WeOffer () {
                                         CONCRETE GRINDING POLISHING
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Revitalize Your Floors with Precision Concrete Grinding and Polishing.
+                                        Revitalize your floors with precision concrete grinding and polishing.
                                     </p>
                                 </div>
                             </div>
@@ -286,7 +286,7 @@ export default function WeOffer () {
                                         EMERGENCY CLEANING SERVICES
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Rapid Response Emergency Cleaning Services When You Need Us Most.
+                                        Rapid response emergency cleaning services when you need us Most.
                                     </p>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@ export default function WeOffer () {
                                         UPHOLSTERY
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Whether it's couches, chairs or even cubicles walls - We can get your organization's UPHOLSTERY back to clean.
+                                        Whether it's couches, chairs or even cubicles walls - we can get your organization's UPHOLSTERY back to clean.
                                     </p>
                                 </div>
                             </div>
@@ -331,7 +331,7 @@ export default function WeOffer () {
                                         HARD FLOOR MAINTENANCE
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Tailored Hard Floor Maintenance Services for Every Surface Type.
+                                        Tailored hard floor maintenance services for every surface type.
                                     </p>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@ export default function WeOffer () {
                                         Paint and drywall
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Precision in Every Wall, Perfection in Every Coat
+                                        Precision in every wall, perfection in every coat
                                     </p>
                                 </div>
                             </div>

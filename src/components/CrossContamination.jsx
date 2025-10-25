@@ -110,7 +110,7 @@ export default function CrossContamination () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center text-center relative">
                         <div className="crossContamination-title w-full lg:w-3/5 text-center mx-auto absolute inset-x-0">
                             <div className="mb-10">
-                                <h2 className="text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">AT GLARING WE TAKE CARE OF YOU FROM CROSS CONTAMINATION</h2>
+                                <h2 className="text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">AT GLARING WE PROTECT YOU FROM CROSS CONTAMINATION</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">

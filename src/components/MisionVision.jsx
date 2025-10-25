@@ -129,7 +129,7 @@ export default function MisionVision () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                To be recognized as the leading company in the provision of cleaning solutions for the quality of our services and commintment to our customers.
+                                To be recognized as the leading company in the provision of cleaning solutions for the quality of our services and commitment to our customers.
                             </p>
                         </div>
                     </div>
@@ -146,9 +146,9 @@ export default function MisionVision () {
                             </div>
                             <div className="w-full flex justify-center">
                                 <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-2xl text-left'>
-                                    <li><span className='text-gbm-green font-bold'>Honesty:</span> We like and believe in honesty as one of the fundamental pillars that govern all the activities of any company, and we behave and express ourselves with coherence and sincerity in accordance with the values of truth and justice.</li>
-                                    <li><span className='text-gbm-green font-bold'>Commitment:</span> We highlight the value of the commitment of each member of the company with their assumed responsibilities, we believe in the work of each individual and in their value within the company.</li>
-                                    <li><span className='text-gbm-green font-bold'>Responsibility:</span> We know the responsibility of our actions (and omissions). This is why we assume the responsibility of ensuring a healthy environment for our clients, being responsible also with the environment.</li>
+                                    <li><span className='text-gbm-green font-bold'>Honesty:</span> We uphold honesty as a core pillar of our organization, guiding every decision and action we take. Our conduct is defined by transparency, integrity, and respect for the principles of truth and justice.</li>
+                                    <li><span className='text-gbm-green font-bold'>Commitment:</span> We foster a culture of dedication and accountability. Each team member is committed to excellence, embracing their responsibilities with professionalism and contributing meaningfully to the collective success of our company.</li>
+                                    <li><span className='text-gbm-green font-bold'>Responsibility:</span> We recognize the significance of our actions and their impact. We are committed to creating safe, healthy environments for our clients while maintaining a strong sense of environmental and social responsibility in everything we do.</li>
                                 </ul>
                             </div>
                         </div>

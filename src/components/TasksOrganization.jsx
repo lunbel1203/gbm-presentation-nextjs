@@ -62,7 +62,7 @@ export default function tasksOrganization () {
                         <h3 className="text-2xl lg:text-4xl font-bold text-gray-600 mb-6">Team Cleaning</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mb-8"></div>
                         <p className="text-lg lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold leading-relaxed">
-                            In the team cleaning approach individual cleaners are assigned specialized tasks to ensure maximum efficiency and expertise.
+                            In the team cleaning approach, individual cleaners are assigned specialized tasks to ensure maximum efficiency and expertise.
                         </p>
                     </div>
 
@@ -86,7 +86,7 @@ export default function tasksOrganization () {
                                                 Light duty Specialist (LD)
                                             </h3>
                                             <p className="text-gray-700 text-sm leading-relaxed">
-                                                The cleaner will be responsible for doing the light duty (LD) sweep of the area to be cleaned, removing all the trash and any large object on the floor.
+                                                The cleaner will be responsible for doing the light duty (LD) sweep of the area to be cleaned, removing all the trash and any large objects on the floor.
                                             </p>
                                         </div>
                                     </div>

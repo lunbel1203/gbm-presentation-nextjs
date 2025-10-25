@@ -59,7 +59,7 @@ export default function Equipment () {
                 <div className="equipment-section w-3/4 h-full mx-auto flex justify-center items-center text-center">
                     <div className="relative w-68 h-96 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
                         <Image
-                            src="/assets/images/equipment-img.jpg"
+                            src="/assets/images/equipment2.gif"
                             alt="Equipment Image"
                             width={800}
                             height={600}

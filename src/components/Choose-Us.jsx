@@ -132,7 +132,7 @@ export default function ChooseUs () {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">COMPROMISO</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Prometemos servicios de limpieza de calidad y confiables cada vez para que nuestros clientes leales se sientan especiales. Trabajamos duro para ser los mejores.
+                                                Prometemos brindar servicios de limpieza de calidad y confianza en todo momento, para que nuestros clientes leales se sientan especiales. Trabajamos arduamente para ser los mejores.
                                             </p>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@ export default function ChooseUs () {
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EXPERIENCIA</h3>
-                                            <p className="text-sm sm:text-base leading-relaxed text-center opacity-90 text-white">
+                                            <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
                                                 A lo largo de los años hemos trabajado duro no solo resolviendo problemas existentes para nuestros clientes, sino que hemos aprendido a predecir y prevenir la mayoría de los desafíos recurrentes.
                                             </p>
                                         </div>

@@ -149,6 +149,7 @@ export default function MisionVision () {
                                     <li><span className='text-gbm-green font-bold'>Honesty:</span> We uphold honesty as a core pillar of our organization, guiding every decision and action we take. Our conduct is defined by transparency, integrity, and respect for the principles of truth and justice.</li>
                                     <li><span className='text-gbm-green font-bold'>Commitment:</span> We foster a culture of dedication and accountability. Each team member is committed to excellence, embracing their responsibilities with professionalism and contributing meaningfully to the collective success of our company.</li>
                                     <li><span className='text-gbm-green font-bold'>Responsibility:</span> We recognize the significance of our actions and their impact. We are committed to creating safe, healthy environments for our clients while maintaining a strong sense of environmental and social responsibility in everything we do.</li>
+                                    <li><span className='text-gbm-green font-bold'>Innovation:</span> We foster a culture of continuous improvement and constant pursuit of new solutions. We embrace innovative technologies, processes, and practices that allow us to optimize our services, anticipate our clients’ needs, and remain at the forefront of the industry.</li>
                                 </ul>
                             </div>
                         </div>

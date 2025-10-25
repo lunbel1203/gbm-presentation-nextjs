@@ -1,0 +1,10 @@
+{
+  "tokens": {
+    "ejemplo-token-abc123def456": {
+      "clientName": "Ejemplo Cliente",
+      "createdAt": "2024-12-15T10:30:00.000Z",
+      "expiresAt": "2025-03-15T10:30:00.000Z",
+      "active": true
+    }
+  }
+}

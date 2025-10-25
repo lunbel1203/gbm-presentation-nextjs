@@ -225,6 +225,8 @@ export default function Home() {
 
             <MisionVision />
 
+            <WeOffer />
+
             <GlaringClean />
 
             <OurPeople />
@@ -250,8 +252,6 @@ export default function Home() {
             <Sponsor />
 
             <Fundation />
-
-            <WeOffer />
 
             <GlaringStandard />
 

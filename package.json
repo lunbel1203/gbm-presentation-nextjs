@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "ANALYZE=true next build",
+    "token:generate": "node scripts/generate-token.js",
+    "token:list": "node scripts/list-tokens.js",
+    "token:enable": "node scripts/enable-token.js",
+    "token:disable": "node scripts/disable-token.js",
+    "token:delete": "node scripts/delete-token.js"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -233,7 +233,7 @@ export default function ContactUs () {
                                             <div className="min-h-[4rem] min-w-[4rem] h-16 w-16 flex justify-center items-center bg-gradient-to-r from-[#194263] to-gbm-green rounded-[50%] aspect-square overflow-hidden">
                                                 <RiMapPinLine color='white' size={24} />
                                             </div>
-                                            <span>1132 Us Route 1, Suite 3, York ME 03909</span>
+                                            <span>1132 Us Route 1, Suite 3, <br> York ME 03909</span>
                                         </a>
                                     </li>
                                     

@@ -139,7 +139,7 @@ export default function ContingencyPlan () {
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
-                                        Reconociendo la importancia de la consistencia en el mantenimiento de sus espacios, hemos desarrollado un Plan de Contingencia robusto para atender cualquier eventualidad que pueda surgir, tales como:
+                                        Reconociendo la importancia de la consistencia en el mantenimiento de sus espacios, hemos desarrollado un plan de contingencia robusto para atender cualquier eventualidad que pueda surgir, tales como:
                                     </h3>
                                 </div>
                             </div>

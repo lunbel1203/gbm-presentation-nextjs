@@ -154,6 +154,7 @@ export default function WorkerCompensation () {
                         <div className="w-24 h-1 bg-gbm-green mb-10"></div>
                         <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>(Esto representa un 20-30% por encima del salario mínimo del estado Dominicano).</h3>
                         <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">Tasa de rotación de trabajadores de limpieza:</h3>
+                        <div className="w-24 h-1 bg-gbm-green mb-10"></div>
                         <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>20% anual (Promedio de la industria = 200%)</h3>
                     </div>
                 </div>

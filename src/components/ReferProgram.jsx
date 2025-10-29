@@ -112,12 +112,12 @@ export default function ReferProgram () {
                                 <div className="text-xl space-y-4 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                     <p>
                                         Queremos agradecerte por compartir nuestro buen nombre, y por eso Glaring Building
-                                        Maintenance te pagará seiscientos dólares ($600.00) cuando refieras un nuevo cliente.
+                                        Maintenance te pagará hasta ($2,000.00) dólares, cuando refieras un nuevo cliente.
                                     </p>
                                     <p>
                                         Pregunta a tus amigos, familiares, proveedores, compañeros de trabajo o clientes, si les gustaría
                                         mejorar la limpieza de su lugar de trabajo. Luego envíanos su información por correo y nosotros nos
-                                        encargamos del resto. Puedes esperar recibir un cheque de $600.00 después de que comiencen a recibir
+                                        encargamos del resto. Puedes esperar recibir un cheque de hasta ($2,000.00) dólares después de que comiencen a recibir
                                         nuestros servicios. ¡Así de simple!
                                     </p>
                                     <p>
@@ -133,27 +133,27 @@ export default function ReferProgram () {
                                 <ul className="space-y-2 text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Tu Nombre
+                                        Tu nombre
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Nombre de la Empresa
+                                        Nombre de la empresa
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Tu Número de Teléfono
+                                        Tu Número de teléfono
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Tu Correo Electrónico
+                                        Tu Correo electrónico
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Nombre del Referido
+                                        Nombre del referido
                                     </li>
                                     <li className="flex items-center">
                                         <span className="w-2 h-2 bg-gbm-green rounded-full mr-3"></span>
-                                        Correo del Referido
+                                        Correo del referido
                                     </li>
                                 </ul>
                                 <p className="text-lg text-gbm-green font-bold mt-4">

@@ -103,7 +103,7 @@ export default function Fundation () {
                 {/* Primer párrafo - centrado solo */}
                 <div className="fundation-paragraph absolute inset-0 flex justify-center items-center">
                     <p className="max-w-4xl text-center text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        En Glaring, creemos que nuestra responsabilidad va más allá de los edificios: se extiende a las personas y comunidades que nos rodean. Por eso estamos orgullosos de anunciar el próximo lanzamiento de nuestra propia fundación:
+                        En Glaring, creemos que nuestra responsabilidad va más allá de tus instalaciones: se extiende a las personas y comunidades que nos rodean. Por eso estamos orgullosos de anunciar el próximo lanzamiento de nuestra propia fundación:
                     </p>
                 </div>
 
@@ -126,7 +126,7 @@ export default function Fundation () {
                     </p>
 
                     <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        Mantente atento, porque Glaring Cares es más que una fundación; es un movimiento de compasión, progreso y compromiso con un futuro mejor. Juntos, haremos la diferencia.
+                        Mantente atento, porque Glaring Cares es más que una fundació, es un movimiento de compasión, progreso y compromiso con un futuro mejor. Juntos haremos la diferencia.
                     </p>
                 </div>
 

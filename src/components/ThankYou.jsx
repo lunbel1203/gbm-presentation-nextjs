@@ -75,6 +75,7 @@ export default function ThankYou() {
                         <h1 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide">
                             Gracias por su tiempo.
                         </h1>
+                        <p className='text-2xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide'>Permitanos cuidar su propiedad con la calidad que solo Glaring puede brindar.</p>
                     </div>
 
                 </div>

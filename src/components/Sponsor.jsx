@@ -50,11 +50,11 @@ export default function Sponsor () {
                 <div className="sponsor-section container h-full mx-auto flex justify-center items-center text-center gap-20">
                     <div className="sponsor-title w-[40%] text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro Cuidado Va Más Allá de los Edificios</h2>
+                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro cuidado va más allá de tus instalaciones.</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto leading-relaxed bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
-                            Apoyando con orgullo a nuestra comunidad, Glaring Building Maintenance colabora con equipos deportivos locales y fundaciones para ayudar a fortalecer y elevar nuestros vecindarios. Juntos, construimos más que espacios limpios; construimos conexiones que importan.
+                            Apoyando con orgullo a nuestra comunidad, Glaring Building Maintenance colabora con equipos deportivos locales y fundaciones para ayudar a fortalecer y elevar nuestros vecindarios. Juntos, construimos más que espacios limpios, construimos conexiones que impactan.
                         </p>
                     </div>
                     <div className="content-section w-[60%]">

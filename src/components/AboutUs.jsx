@@ -138,13 +138,13 @@ export default function AboutUs () {
                 
                 {/* Description */}
                 <div className="h-60 text-container text-[18px] lg:text-4xl font-bold relative">
-                    <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
+                    <p className="paragraph-animation absolute text-left w-full lg:w-full mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                         En Glaring Building Maintenance (GBM), hacemos de su propiedad nuestra prioridad. Como proveedor de primera clase de servicios de limpieza comercial, establecemos el estándar de excelencia en nuestra industria. Durante más de 20 años, hemos entregado soluciones especializadas con enfoque en calidad, responsabilidad y prácticas ambientalmente responsables.
                     </p>
-                    <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
+                    <p className="paragraph-animation absolute text-left w-full lg:w-full mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                         A diferencia de muchos otros, nunca subcontratamos nuestro trabajo, cada servicio es manejado directamente por nuestro equipo capacitado de Glaring, asegurando consistencia, confiabilidad y los más altos estándares de excelencia.
                     </p>
-                    <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
+                    <p className="paragraph-animation absolute text-left w-full lg:w-full mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                         Nuestra reputación como una de las mejores empresas del sector se ha construido sobre la base de la innovación, el control de calidad impulsado por la tecnología y prácticas de gestión sólidas. Lo más importante es que hemos crecido gracias a las referencias de nuestros clientes, prueba de la confianza a largo plazo y las alianzas que hemos establecido con oficinas e instalaciones industriales de gran importancia.
                     </p>
                 </div>

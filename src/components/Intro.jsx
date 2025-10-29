@@ -77,17 +77,17 @@ export default function Intro () {
                     />
                     <div className="thank-section w-full lg:w-4/6 text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-white mb-5">Gracias por permitir a Glaring Building Maintenance (GBM) la oportunidad de presentar una propuesta.</h2>
+                            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-5">Gracias por permitir a Glaring Building Maintenance (GBM) la oportunidad de presentar una propuesta.</h2>
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
                         <div className="content grid gap-6">
-                            <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                            <p className="w-full sm:w-5/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
                                 En GBM, la seguridad, el bienestar de sus visitantes y colaboradores constituyen el eje central de nuestras operaciones. Ofrecemos servicios confiables y de alto nivel que respaldan sus objetivos institucionales, garantizando entornos limpios, seguros y en óptimas condiciones.
                             </p>
-                            <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                            <p className="w-full sm:w-5/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
                                 Nuestro equipo opera los siete días de la semana y se ajusta a sus necesidades operativas, con supervisión constante en sitio e inspecciones programadas que aseguran el cumplimiento de los más altos estándares de calidad.
                             </p>
-                            <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
+                            <p className="w-full sm:w-5/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
                                 Por favor, tenga en cuenta que, debido a las variaciones en los costos de materiales, transporte y mano de obra, todas las cotizaciones tendrán una validez de treinta (30) días a partir de la fecha de emisión.
                             </p>
                         </div>

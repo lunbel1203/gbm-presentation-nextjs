@@ -26,8 +26,14 @@ export async function middleware(request: NextRequest) {
   }
 
   try {
-    // Validar token usando API route (compatible con Edge Runtime)
-    const apiUrl = new URL('/api/validate-token', request.url)
+    // Construir URL completa para la API de validación
+    // Usar localhost en el contenedor Docker
+    const protocol = request.nextUrl.protocol
+    const host = request.headers.get('host') || 'localhost:3000'
+    const apiUrl = `${protocol}//${host}/api/validate-token`
+
+    console.log('Validating token via:', apiUrl)
+
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
@@ -35,6 +41,11 @@ export async function middleware(request: NextRequest) {
       },
       body: JSON.stringify({ token }),
     })
+
+    if (!response.ok) {
+      console.error('API response not OK:', response.status)
+      return NextResponse.redirect(new URL('/access-denied?reason=error', request.url))
+    }
 
     const result = await response.json()
 

@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync } from 'fs'
+import fs from 'fs/promises'
 import { join } from 'path'
+
+// Deshabilitar Edge Runtime para usar Node.js APIs
+export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,9 +13,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ valid: false, reason: 'missing' })
     }
 
-    // Leer archivo de tokens
+    // Leer archivo de tokens usando fs/promises (compatible con Node.js runtime)
     const tokensPath = join(process.cwd(), 'data', 'tokens.json')
-    const tokensData = JSON.parse(readFileSync(tokensPath, 'utf-8'))
+    const tokensData = JSON.parse(await fs.readFile(tokensPath, 'utf-8'))
     const tokenInfo = tokensData.tokens[token]
 
     // Validar si el token existe

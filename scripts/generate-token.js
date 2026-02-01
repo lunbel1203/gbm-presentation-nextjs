@@ -64,9 +64,10 @@ try {
   } else {
     console.log(`   Expira: Nunca`);
   }
-  console.log('\n🔗 URL para el cliente:');
-  console.log(`   https://tu-dominio.com/?t=${token}`);
-  console.log('\n💡 Tip: Copia esta URL y envíala al cliente');
+  console.log('\n🔗 URLs para el cliente:');
+  console.log(`   USA: https://presentationusa.glaringmaintenance.com/?t=${token}`);
+  console.log(`   RD:  https://presentationrd.glaringmaintenance.com/?t=${token}`);
+  console.log('\n💡 Tip: Copia la URL correspondiente y envíala al cliente');
 } catch (error) {
   console.error('❌ Error guardando token:', error.message);
   process.exit(1);

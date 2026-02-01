@@ -1,8 +1,85 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import fs from 'fs/promises'
+import { join } from 'path'
+
+// Usar Node.js runtime para poder leer archivos
+export const runtime = 'nodejs'
 
 // Rutas públicas que no requieren token
 const PUBLIC_PATHS = ['/access-denied', '/api/validate-token', '/api/health']
+
+// Tipos para los tokens
+interface TokenInfo {
+  client: string
+  active: boolean
+  createdAt: string
+  expiresAt: string | null
+  notes: string
+}
+
+interface TokensData {
+  tokens: Record<string, TokenInfo>
+}
+
+// Cache de tokens en memoria
+let tokensCache: TokensData | null = null
+let lastCacheTime = 0
+const CACHE_TTL = 60000 // 1 minuto
+
+async function getTokens(): Promise<TokensData> {
+  const now = Date.now()
+
+  // Si tenemos cache válido, usarlo
+  if (tokensCache && (now - lastCacheTime) < CACHE_TTL) {
+    return tokensCache
+  }
+
+  try {
+    // Intentar leer desde variable de entorno primero
+    if (process.env.ACCESS_TOKENS) {
+      const parsedTokens = JSON.parse(process.env.ACCESS_TOKENS) as TokensData
+      tokensCache = parsedTokens
+      lastCacheTime = now
+      return parsedTokens
+    }
+
+    // Si no hay variable de entorno, leer desde archivo
+    const tokensPath = join(process.cwd(), 'data', 'tokens.json')
+    const tokensData = JSON.parse(await fs.readFile(tokensPath, 'utf-8')) as TokensData
+    tokensCache = tokensData
+    lastCacheTime = now
+    return tokensData
+  } catch (error) {
+    console.error('Error reading tokens:', error)
+    return { tokens: {} }
+  }
+}
+
+function validateToken(token: string, tokensData: TokensData): { valid: boolean; reason?: string } {
+  const tokenInfo = tokensData.tokens[token]
+
+  // Validar si el token existe
+  if (!tokenInfo) {
+    return { valid: false, reason: 'invalid' }
+  }
+
+  // Validar si el token está activo
+  if (!tokenInfo.active) {
+    return { valid: false, reason: 'disabled' }
+  }
+
+  // Validar si el token ha expirado
+  if (tokenInfo.expiresAt) {
+    const expirationDate = new Date(tokenInfo.expiresAt)
+    if (expirationDate < new Date()) {
+      return { valid: false, reason: 'expired' }
+    }
+  }
+
+  // Token válido
+  return { valid: true }
+}
 
 export async function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl
@@ -26,20 +103,14 @@ export async function middleware(request: NextRequest) {
   }
 
   try {
-    // Validar token usando API route (compatible con Edge Runtime)
-    const apiUrl = new URL('/api/validate-token', request.url)
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ token }),
-    })
+    // Validar token directamente sin hacer fetch
+    const tokensData = await getTokens()
+    const result = validateToken(token, tokensData)
 
-    const result = await response.json()
-
+    // Si el token no es válido, redirigir con la razón correspondiente
     if (!result.valid) {
-      return NextResponse.redirect(new URL(`/access-denied?reason=${result.reason}`, request.url))
+      const reason = result.reason || 'invalid'
+      return NextResponse.redirect(new URL(`/access-denied?reason=${reason}`, request.url))
     }
 
     // Token válido - permitir acceso

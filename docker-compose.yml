@@ -21,11 +21,10 @@ services:
       - "traefik.http.routers.nextjs-app-http.entrypoints=web"
       - "traefik.http.routers.nextjs-app-http.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+    volumes:
+      - ./data:/app/data
     networks:
       - traefik
-    # Si necesitas volúmenes para datos persistentes
-    # volumes:
-    #   - ./uploads:/app/uploads
 
 networks:
   traefik:

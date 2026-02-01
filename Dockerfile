@@ -44,11 +44,15 @@ RUN chown nextjs:nodejs .next
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Copiar script de inicio
+COPY --chown=nextjs:nodejs start.sh ./
+RUN chmod +x start.sh
+
 USER nextjs
 
 EXPOSE 3000
 
 ENV PORT 3000
 
-# server.js is created by next build from the standalone output
-CMD HOSTNAME="0.0.0.0" node server.js
+# Usar script de inicio que carga tokens.json como variable de entorno
+CMD HOSTNAME="0.0.0.0" ./start.sh

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
 import { useGSAP } from '@gsap/react'
@@ -6,17 +6,17 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function AboutUs () {
+export default function AboutUs() {
     const picturesRef = useRef(null);
 
     useGSAP(() => {
         if (typeof window === 'undefined') return;
 
         const paragraphs = document.querySelectorAll('.paragraph-animation');
-        
+
         // Primer párrafo visible por defecto
         gsap.set(paragraphs[0], { x: 0, opacity: 1 });
-        
+
         // Párrafos restantes ocultos
         paragraphs.forEach((paragraph, index) => {
             if (index > 0) {
@@ -120,8 +120,8 @@ export default function AboutUs () {
         // Estado inicial - todas las tarjetas ocultas
         const employeeCards = picturesRef.current?.querySelectorAll('.employee-card');
         if (employeeCards) {
-            gsap.set(employeeCards, { 
-                opacity: 0, 
+            gsap.set(employeeCards, {
+                opacity: 0,
                 y: '50px',
                 scale: 0.8
             });
@@ -132,10 +132,10 @@ export default function AboutUs () {
         <section id="about-us" className="about-section w-full h-screen py-20 px-8 bg-slate-50 relative">
             <div className="container mx-auto">
                 <div className="text-left mb-16">
-                    <h2 className="text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">About Us</h2>
+                    <h2 className="text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 uppercase">About Us</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
                 </div>
-                
+
                 {/* Description */}
                 <div className="h-60 text-container text-[18px] lg:text-4xl font-bold relative">
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">

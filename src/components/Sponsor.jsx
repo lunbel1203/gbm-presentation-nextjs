@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function Sponsor () {
+export default function Sponsor() {
 
     useGSAP(() => {
         if (typeof window === 'undefined') return;
@@ -26,21 +26,21 @@ export default function Sponsor () {
             { opacity: 0, x: -100 },
             { opacity: 1, x: 0, duration: 1, ease: 'power2.out' }
         )
-        // Cards aparecen desde abajo con stagger
-        .fromTo('.content-section',
-            { y: window.innerHeight, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: 'power3.inOut' },
-            '-=0.5'
-        )
-        // Animar cada card individualmente
-        .from('.card', {
-            y: 80,
-            opacity: 0,
-            scale: 0.9,
-            stagger: 0.1,
-            duration: 0.8,
-            ease: 'back.out(1.5)'
-        }, '-=1');
+            // Cards aparecen desde abajo con stagger
+            .fromTo('.content-section',
+                { y: window.innerHeight, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, ease: 'power3.inOut' },
+                '-=0.5'
+            )
+            // Animar cada card individualmente
+            .from('.card', {
+                y: 80,
+                opacity: 0,
+                scale: 0.9,
+                stagger: 0.1,
+                duration: 0.8,
+                ease: 'back.out(1.5)'
+            }, '-=1');
 
     }, []);
 
@@ -50,7 +50,7 @@ export default function Sponsor () {
                 <div className="sponsor-section container h-full mx-auto flex justify-center items-center text-center gap-20">
                     <div className="sponsor-title w-[40%] text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">Our Care Extends Beyond Buildings</h2>
+                            <h2 className="text-2xl lg:text-5xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5 uppercase">Our Care Extends Beyond Buildings</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto leading-relaxed bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">

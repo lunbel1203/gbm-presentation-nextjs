@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function GlaringClean () {
+export default function GlaringClean() {
     const [lightboxImage, setLightboxImage] = useState(null);
     const [originPosition, setOriginPosition] = useState({ x: 0, y: 0, width: 0, height: 0 });
     const [clickedImageSrc, setClickedImageSrc] = useState(null);
@@ -90,7 +90,7 @@ export default function GlaringClean () {
         <>
             <section id="glaring-clean" className="glaringClean-section w-full h-screen flex items-center bg-slate-50 px-20 relative">
                 <div className="glaringclean-title-container w-[45%] text-left">
-                    <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">It's not just clean, <br /> it's Glaring clean!</h2>
+                    <h2 className="w-full text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">It's not just clean, <br /> it's Glaring clean!</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
                 </div>
 
@@ -102,9 +102,8 @@ export default function GlaringClean () {
                                 alt="Glaring Clean 1"
                                 width={400}
                                 height={300}
-                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/glaring-clean-01.jpg' ? 'opacity-0' : 'opacity-100'
-                                }`}
+                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${clickedImageSrc === '/assets/images/glaring-clean-01.jpg' ? 'opacity-0' : 'opacity-100'
+                                    }`}
                                 onClick={(e) => openLightbox('/assets/images/glaring-clean-01.jpg', e)}
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
@@ -115,9 +114,8 @@ export default function GlaringClean () {
                                 alt="Glaring Clean 2"
                                 width={400}
                                 height={300}
-                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                    clickedImageSrc === '/assets/images/glaring-clean-02.jpg' ? 'opacity-0' : 'opacity-100'
-                                }`}
+                                className={`w-full h-auto object-cover shadow-lg border-8 border-white ${clickedImageSrc === '/assets/images/glaring-clean-02.jpg' ? 'opacity-0' : 'opacity-100'
+                                    }`}
                                 onClick={(e) => openLightbox('/assets/images/glaring-clean-02.jpg', e)}
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
@@ -129,9 +127,8 @@ export default function GlaringClean () {
                             alt="Glaring Clean 3"
                             width={400}
                             height={600}
-                            className={`w-full h-auto object-cover shadow-lg border-8 border-white ${
-                                clickedImageSrc === '/assets/images/glaring-clean-03.jpg' ? 'opacity-0' : 'opacity-100'
-                            }`}
+                            className={`w-full h-auto object-cover shadow-lg border-8 border-white ${clickedImageSrc === '/assets/images/glaring-clean-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                }`}
                             onClick={(e) => openLightbox('/assets/images/glaring-clean-03.jpg', e)}
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
@@ -140,16 +137,14 @@ export default function GlaringClean () {
 
                 {/* Lightbox */}
                 {lightboxImage && (
-                    <div 
-                        className={`fixed inset-0 bg-black/95 bg-opacity-60 flex items-center justify-center z-50 cursor-pointer ${
-                            isClosing ? 'animate-fadeOut' : 'animate-fadeIn'
-                        }`}
+                    <div
+                        className={`fixed inset-0 bg-black/95 bg-opacity-60 flex items-center justify-center z-50 cursor-pointer ${isClosing ? 'animate-fadeOut' : 'animate-fadeIn'
+                            }`}
                         onClick={closeLightbox}
                     >
-                        <div 
-                            className={`relative max-w-4xl max-h-[80vh] p-4 ${
-                                isClosing ? 'animate-collapseToOrigin' : 'animate-expandFromOrigin'
-                            }`}
+                        <div
+                            className={`relative max-w-4xl max-h-[80vh] p-4 ${isClosing ? 'animate-collapseToOrigin' : 'animate-expandFromOrigin'
+                                }`}
                             style={{
                                 '--origin-x': `${originPosition.x}px`,
                                 '--origin-y': `${originPosition.y}px`,
@@ -165,7 +160,7 @@ export default function GlaringClean () {
                                 className="w-full h-auto max-h-[80vh] object-contain shadow-2xl border-8 border-white transition-transform duration-300"
                                 sizes="80vw"
                             />
-                            <button 
+                            <button
                                 onClick={closeLightbox}
                                 className="absolute -top-4 -right-4 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold hover:bg-gray-200 transition-colors duration-200"
                             >
@@ -175,7 +170,7 @@ export default function GlaringClean () {
                     </div>
                 )}
             </section>
-            
+
             {/* Estilos CSS para las animaciones */}
             <style jsx>{`
                 @keyframes fadeIn {

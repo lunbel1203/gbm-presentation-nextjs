@@ -6,8 +6,8 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function WeOffer () {
-    useGSAP (() => {
+export default function WeOffer() {
+    useGSAP(() => {
         // Configuración inicial para las cards
         gsap.set('.weOffer-cards', { y: '100vh', opacity: 0 });
 
@@ -21,11 +21,11 @@ export default function WeOffer () {
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
-                
+
                 // Animación suave de las cards subiendo desde abajo
                 const yPosition = gsap.utils.interpolate(100, -20, progress);
                 const opacity = gsap.utils.interpolate(0, 1, Math.min(progress * 2, 1));
-                
+
                 gsap.set('.weOffer-cards', {
                     y: `${yPosition}vh`,
                     opacity: opacity
@@ -39,7 +39,7 @@ export default function WeOffer () {
         <>
             <section id="we-offer" className="weOfferTrigger w-full min-h-screen bg-gradient-to-br from-gray-50 to-white py-10">
                 <div className="weOffer-overlay container mx-auto px-6 lg:px-8">
-                    
+
                     {/* Header Section */}
                     <div className="weOffer-title w-full text-center">
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
@@ -301,7 +301,7 @@ export default function WeOffer () {
                                         UPHOLSTERY
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Whether it's couches, chairs or even cubicles walls - we can get your organization's UPHOLSTERY back to clean.
+                                        Whether it's couches, chairs or even cubicles walls - we can get your organization's upholstery back to clean.
                                     </p>
                                 </div>
                             </div>
@@ -340,13 +340,13 @@ export default function WeOffer () {
                         {/* Card 20 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
                             <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-snow-removing.jpg')] bg-cover bg-center"></div>
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/snow-removal.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        SNOW Removing
+                                        SNOW REMOVAL
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Keep your business safe and accessible all winter long!
+                                        Keep your business safe and accessible all winter long.
                                     </p>
                                 </div>
                             </div>
@@ -355,13 +355,13 @@ export default function WeOffer () {
                         {/* Card 21 */}
                         <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
                             <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-landscaping.jpg')] bg-cover bg-center"></div>
+                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/landscaping.jpeg')] bg-cover bg-center"></div>
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
                                         LandSCaping Services
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        First impressions start outside. Our professional landscaping services keep your property looking pristine, welcoming, and well-maintained year-round
+                                        First impressions start outside. Our professional landscaping services keep your property looking pristine, welcoming, and well-maintained year-round.
                                     </p>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@ export default function WeOffer () {
                                         Paint and drywall
                                     </h3>
                                     <p className="text-gray-700 text-base leading-relaxed">
-                                        Precision in every wall, perfection in every coat
+                                        Precision in every wall, perfection in every coat.
                                     </p>
                                 </div>
                             </div>

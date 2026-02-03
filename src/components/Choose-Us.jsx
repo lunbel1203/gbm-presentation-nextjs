@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function ChooseUs () {
+export default function ChooseUs() {
 
     useGSAP(() => {
         if (typeof window === 'undefined') return;
@@ -47,7 +47,7 @@ export default function ChooseUs () {
 
                         <div className="chooseUs-list w-full h-screen flex flex-wrap items-center px-4 md:px-8 lg:px-20 relative">
                             <div className="chooseUs-section w-full lg:w-4/5 text-center mx-auto">
-                                <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WHY CHOOSSE US</h2>
+                                <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WHY CHOOSE US</h2>
                                 <div className="w-32 sm:w-40 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
 
@@ -69,7 +69,7 @@ export default function ChooseUs () {
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="chooseItem flex justify-end flex-col relative rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[32rem]">
                                         <Image
                                             src="/assets/images/choose-always-ready.jpg"
@@ -120,7 +120,7 @@ export default function ChooseUs () {
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="chooseItem flex justify-end flex-col relative rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[32rem]">
                                         <Image
                                             src="/assets/images/choose-commitment.jpg"
@@ -132,11 +132,11 @@ export default function ChooseUs () {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">COMMITMENT</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                We promise quality, reliable Janitorial Services every time so our loyal customers feel special. We work hard to be the best.
+                                                Our commitment is dependable janitorial services, delivered with precision and consistency.
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="chooseItem flex justify-end flex-col relative rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[32rem]">
                                         <Image
                                             src="/assets/images/choose-experience.jpg"
@@ -148,7 +148,7 @@ export default function ChooseUs () {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EXPERIENCE</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Over the years we worked hard at not just solving existing problems for our clients, we've learned how to predict and prevent most recurring challenges.
+                                                Over the years, we have focused not only on solving existing problems for our clients, but also on predicting and preventing recurring challenges.
                                             </p>
                                         </div>
                                     </div>
@@ -161,7 +161,7 @@ export default function ChooseUs () {
 
                 </div>
             </section>
-            
+
         </>
     )
 }

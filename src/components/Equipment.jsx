@@ -6,8 +6,8 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function Equipment () {
-    
+export default function Equipment() {
+
     useGSAP(() => {
         if (typeof window === 'undefined') return;
 
@@ -25,7 +25,7 @@ export default function Equipment () {
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
-                
+
                 // Fase 1: Equipment overlay opacity va de 0 a 0.6 (0% - 50%)
                 if (progress <= 0.5) {
                     const overlayProgress = progress / 0.5;
@@ -35,7 +35,7 @@ export default function Equipment () {
                 } else {
                     gsap.set('.equipment-overlay', { opacity: 0.6 });
                 }
-                
+
                 // Fase 2: Equipment section sube desde abajo (50% - 100%)
                 if (progress >= 0.5) {
                     const sectionProgress = (progress - 0.5) / 0.5;
@@ -68,7 +68,7 @@ export default function Equipment () {
                     </div>
                     <div className="w-full lg:w-3/5 text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">Equipment</h2>
+                            <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5 uppercase">Equipment</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto font-bold leading-relaxed bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">

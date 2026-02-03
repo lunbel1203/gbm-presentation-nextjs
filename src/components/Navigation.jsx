@@ -26,7 +26,7 @@ export default function Navigation() {
         { id: 'ourWork', label: 'Our Work', href: '#ourWork' },
         { id: 'quality-assurance', label: 'Quality Assurance', href: '#quality-assurance' },
         { id: 'cross-contamination', label: 'Cross Contamination', href: '#cross-contamination' },
-        { id: 'tasks-organization', label: 'Tasks Organization', href: '#tasks-organization' },
+        { id: 'task-organizations', label: 'Task Organizations', href: '#task-organizations' },
         { id: 'equipment', label: 'Equipment', href: '#equipment' },
         { id: 'sponsor', label: 'Sponsor', href: '#sponsor' },
         { id: 'fundation', label: 'Fundation', href: '#fundation' },
@@ -48,7 +48,7 @@ export default function Navigation() {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-        
+
         if (!isOpen) {
             // Abrir menu
             gsap.to('.nav-menu', {
@@ -56,7 +56,7 @@ export default function Navigation() {
                 duration: 0.3,
                 ease: "power2.out"
             });
-            
+
             gsap.to('.nav-item', {
                 x: 0,
                 opacity: 1,
@@ -74,7 +74,7 @@ export default function Navigation() {
                 stagger: 0.05,
                 ease: "power2.in"
             });
-            
+
             gsap.to('.nav-menu', {
                 x: '100%',
                 duration: 0.3,
@@ -87,7 +87,7 @@ export default function Navigation() {
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ 
+            element.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
@@ -106,7 +106,7 @@ export default function Navigation() {
                 if (section) {
                     const sectionTop = section.offsetTop;
                     const sectionHeight = section.offsetHeight;
-                    
+
                     if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                         setActiveSection(menuItems[index].id);
                     }
@@ -134,7 +134,7 @@ export default function Navigation() {
 
             {/* Overlay */}
             {isOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black/80 z-40"
                     onClick={toggleMenu}
                 />
@@ -143,7 +143,7 @@ export default function Navigation() {
             {/* Navigation Menu */}
             <nav className="nav-menu fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-40 overflow-y-auto">
                 <div className="p-8 pt-20">
-                    
+
                     {/* Logo */}
                     <div className="mb-12 text-center">
                         <Image
@@ -161,16 +161,14 @@ export default function Navigation() {
                             <li key={item.id} className="nav-item">
                                 <button
                                     onClick={() => scrollToSection(item.id)}
-                                    className={`w-full text-left px-6 py-4 rounded-lg transition-all duration-300 font-medium text-lg ${
-                                        activeSection === item.id
+                                    className={`w-full text-left px-6 py-4 rounded-lg transition-all duration-300 font-medium text-lg ${activeSection === item.id
                                             ? 'bg-gradient-to-r from-[#194263] to-gbm-green text-white shadow-lg'
                                             : 'text-[#194263] hover:bg-gray-100 hover:translate-x-2'
-                                    }`}
+                                        }`}
                                 >
                                     <span className="flex items-center">
-                                        <span className={`w-2 h-2 rounded-full mr-4 ${
-                                            activeSection === item.id ? 'bg-white' : 'bg-gbm-green'
-                                        }`}></span>
+                                        <span className={`w-2 h-2 rounded-full mr-4 ${activeSection === item.id ? 'bg-white' : 'bg-gbm-green'
+                                            }`}></span>
                                         {item.label}
                                     </span>
                                 </button>

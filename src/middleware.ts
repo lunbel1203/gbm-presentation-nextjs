@@ -105,7 +105,7 @@ export async function middleware(request: NextRequest) {
   try {
     // Validar token directamente sin hacer fetch
     const tokensData = await getTokens()
-    const result = validateToken(token, tokensData)
+    const result = validateToken(token!, tokensData)
 
     // Si el token no es válido, redirigir con la razón correspondiente
     if (!result.valid) {

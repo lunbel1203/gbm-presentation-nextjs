@@ -5,8 +5,8 @@ import { useGSAP } from '@gsap/react'
 
 
 
-export default function MisionVision () {
-    useGSAP (() => {
+export default function MisionVision() {
+    useGSAP(() => {
         // Configuración inicial: ocultar todas las secciones de contenido
         gsap.set('.mission-section', { opacity: 0, y: 50 });
         gsap.set('.vision-section', { opacity: 0, y: 50 });
@@ -23,11 +23,11 @@ export default function MisionVision () {
             onUpdate: (self) => {
                 const progress = self.progress;
                 console.log('Mission progress:', progress);
-                
+
                 // Fade in gradual desde 10% hasta 30% del scroll
                 let opacity = 0;
                 let yPosition = 50;
-                
+
                 if (progress >= 0.1 && progress <= 0.3) {
                     const fadeProgress = (progress - 0.1) / 0.2; // De 0.1 a 0.3 = 20%
                     opacity = gsap.utils.interpolate(0, 1, fadeProgress);
@@ -36,7 +36,7 @@ export default function MisionVision () {
                     opacity = 1;
                     yPosition = 0;
                 }
-                
+
                 gsap.set('.mission-section', { opacity: opacity, y: yPosition });
             }
         });
@@ -52,11 +52,11 @@ export default function MisionVision () {
             onUpdate: (self) => {
                 const progress = self.progress;
                 console.log('Vision progress:', progress);
-                
+
                 // Fade in gradual desde 10% hasta 30% del scroll
                 let opacity = 0;
                 let yPosition = 50;
-                
+
                 if (progress >= 0.1 && progress <= 0.3) {
                     const fadeProgress = (progress - 0.1) / 0.2;
                     opacity = gsap.utils.interpolate(0, 1, fadeProgress);
@@ -65,7 +65,7 @@ export default function MisionVision () {
                     opacity = 1;
                     yPosition = 0;
                 }
-                
+
                 gsap.set('.vision-section', { opacity: opacity, y: yPosition });
             }
         });
@@ -81,11 +81,11 @@ export default function MisionVision () {
             onUpdate: (self) => {
                 const progress = self.progress;
                 console.log('Values progress:', progress);
-                
+
                 // Fade in gradual desde 10% hasta 30% del scroll
                 let opacity = 0;
                 let yPosition = 50;
-                
+
                 if (progress >= 0.1 && progress <= 0.3) {
                     const fadeProgress = (progress - 0.1) / 0.2;
                     opacity = gsap.utils.interpolate(0, 1, fadeProgress);
@@ -94,7 +94,7 @@ export default function MisionVision () {
                     opacity = 1;
                     yPosition = 0;
                 }
-                
+
                 gsap.set('.values-section', { opacity: opacity, y: yPosition });
             }
         });
@@ -113,7 +113,7 @@ export default function MisionVision () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Achieve 100% customer satisfaction, so that they can focus on their own company’s mission and they can achieve their own success. Even quicker. All while keeping our employees satisfied, always seeking excellence and making continuous improvements to our services.
+                                Our mission is to deliver exceptional service that allows our clients to focus on their core business and achieve success faster, while fostering a culture of employee satisfaction, operational excellence, and continuous improvement.
                             </p>
                         </div>
                     </div>

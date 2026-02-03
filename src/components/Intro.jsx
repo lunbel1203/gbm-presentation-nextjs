@@ -6,12 +6,22 @@ import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
 
 
 
-export default function Intro () {
+export default function Intro() {
 
-    useGSAP (() => {
+    useGSAP(() => {
         const introTimeLine = gsap.timeline();
 
         introTimeLine
+            // Logo entrance
+            .fromTo('.logo',
+                { opacity: 0, scale: 0.5 },
+                { opacity: 1, scale: 1, duration: 1.5, ease: 'elastic.out(1, 0.5)' }
+            )
+            // Logo exit
+            .to('.logo',
+                { opacity: 0, scale: 1.2, duration: 0.5, ease: 'power2.in' }
+            )
+            // Welcome text entrance
             .from('.welcome', {
                 opacity: 0,
                 y: 100,
@@ -44,7 +54,10 @@ export default function Intro () {
             )
             .fromTo('.logo',
                 { scale: 5, opacity: 0, y: 0 },
-                { scale: 0.6, opacity: 1, y: -300, duration: 1 }, 0
+                { scale: 0.6, opacity: 1, y: -300, duration: 0.5 }, 0
+            )
+            .to('.logo',
+                { opacity: 0, scale: 0.3, duration: 0.5 }, 0.5
             )
             .fromTo(['.welcome', '.subTitle'],
                 { opacity: 1 },
@@ -52,7 +65,7 @@ export default function Intro () {
             )
             .fromTo('.thank-section',
                 { opacity: 0, y: 100 },
-                { opacity: 1, y: 30, duration: 1 }, 1
+                { opacity: 1, y: 30, duration: 1 }, 1.5
             );
 
     }, []);
@@ -64,7 +77,6 @@ export default function Intro () {
                 <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
                     <div className='absolute'>
                         <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>WELCOME</h1>
-                        <p className='subTitle text-2xl md:text-4xl text-white font-bold'>To our presentation</p>
                     </div>
                     <Image
                         className="logo w-5/6 lg:w-1/4 absolute"

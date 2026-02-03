@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
 import { useGSAP } from '@gsap/react'
 
-export default function ContingencyPlan () {
+export default function ContingencyPlan() {
     const [lightboxImage, setLightboxImage] = useState(null);
     const [clickedImageSrc, setClickedImageSrc] = useState(null);
 
@@ -112,7 +112,7 @@ export default function ContingencyPlan () {
             <section id="contingency-plan" className="contingencyPlanTrigger-section w-full min-h-screen bg-gradient-to-br from-slate-50 to-white relative">
 
                 <div className="w-full flex flex-col justify-center items-center px-8 lg:px-20 py-16 pb-32">
-                    
+
                     {/* Título Principal */}
                     <div className="contingency-title text-center mb-16">
                         <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">CONTINGENCY PLAN</h2>
@@ -130,9 +130,8 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 01"
                                         width={250}
                                         height={500}
-                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/contingency-plan-01.jpg' ? 'opacity-0' : 'opacity-100'
-                                        }`}
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${clickedImageSrc === '/assets/images/contingency-plan-01.jpg' ? 'opacity-0' : 'opacity-100'
+                                            }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-01.jpg', e)}
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
@@ -153,10 +152,9 @@ export default function ContingencyPlan () {
                                         src="/assets/images/contingency-plan-02.jpg"
                                         alt="Contingency Plan 02"
                                         width={500}
-                                        height={500} 
-                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/contingency-plan-02.jpg' ? 'opacity-0' : 'opacity-100'
-                                        }`}
+                                        height={500}
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${clickedImageSrc === '/assets/images/contingency-plan-02.jpg' ? 'opacity-0' : 'opacity-100'
+                                            }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-02.jpg', e)}
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
@@ -165,11 +163,11 @@ export default function ContingencyPlan () {
                                     <ul className="space-y-4 text-2xl text-right font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
-                                            Call outs
+                                            Employee Call Outs.
                                         </li>
                                         <li className="flex items-center justify-center lg:justify-start">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4"></span>
-                                            Personnel Emergencies
+                                            Employee Emergencies.
                                         </li>
                                     </ul>
                                 </div>
@@ -185,9 +183,8 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 03"
                                         width={500}
                                         height={500}
-                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/contingency-plan-03.jpg' ? 'opacity-0' : 'opacity-100'
-                                        }`}
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${clickedImageSrc === '/assets/images/contingency-plan-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                            }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-03.jpg', e)}
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
@@ -207,9 +204,8 @@ export default function ContingencyPlan () {
                                         alt="Contingency Plan 04"
                                         width={500}
                                         height={500}
-                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${
-                                            clickedImageSrc === '/assets/images/contingency-plan-04.jpg' ? 'opacity-0' : 'opacity-100'
-                                        }`}
+                                        className={`w-full object-cover shadow-xl border-8 border-white rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 ${clickedImageSrc === '/assets/images/contingency-plan-04.jpg' ? 'opacity-0' : 'opacity-100'
+                                            }`}
                                         onClick={(e) => openLightbox('/assets/images/contingency-plan-04.jpg', e)}
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
@@ -223,14 +219,14 @@ export default function ContingencyPlan () {
                         </div>
 
                     </div>
-                    
+
                 </div>
-                
+
             </section>
 
             {/* Lightbox usando Portal */}
             {lightboxImage && typeof document !== 'undefined' && createPortal(
-                <div 
+                <div
                     className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-pointer"
                     onClick={closeLightbox}
                 >
@@ -244,7 +240,7 @@ export default function ContingencyPlan () {
                             onClick={(e) => e.stopPropagation()}
                             sizes="80vw"
                         />
-                        <button 
+                        <button
                             onClick={closeLightbox}
                             className="absolute -top-4 -right-4 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold hover:bg-gray-200 transition-colors duration-200"
                         >

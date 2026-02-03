@@ -7,12 +7,12 @@ import { useGSAP } from '@gsap/react'
 
 
 export default function ThankYou() {
-    
+
     useGSAP(() => {
         if (typeof window === 'undefined') return;
 
         // Animacion simple y elegante para la pagina de agradecimiento
-        gsap.fromTo('.thank-you-logo', 
+        gsap.fromTo('.thank-you-logo',
             {
                 scale: 0.5,
                 opacity: 0,
@@ -33,7 +33,7 @@ export default function ThankYou() {
             }
         );
 
-        gsap.fromTo('.thank-you-text', 
+        gsap.fromTo('.thank-you-text',
             {
                 y: 30,
                 opacity: 0
@@ -58,7 +58,7 @@ export default function ThankYou() {
         <>
             <section id="thank-you" className="thankYouTrigger w-full min-h-screen bg-white flex flex-col justify-center items-center py-20">
                 <div className="thank-you-container max-w-4xl mx-auto px-6 lg:px-8 text-center">
-                    
+
                     {/* Logo */}
                     <div className="thank-you-logo mb-16">
                         <Image
@@ -72,7 +72,7 @@ export default function ThankYou() {
 
                     {/* Thank You Message */}
                     <div className="thank-you-text">
-                        <h1 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide">
+                        <h1 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase">
                             Thank You for your time.
                         </h1>
                     </div>

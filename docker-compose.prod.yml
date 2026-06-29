@@ -12,6 +12,10 @@ services:
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
+      # Integración con Strapi (validación de tokens + logging de accesos)
+      - STRAPI_URL=http://gbm-strapi:1337
+      - PRESENTATION_LANG=usa
+      # VALIDATION_SECRET se define en .env.production (secreto, debe coincidir con Strapi)
     env_file:
       - .env.production
     networks:

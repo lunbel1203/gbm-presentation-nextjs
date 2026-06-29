@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# macOS AppleDouble (volúmenes no-HFS+)
+._*
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -40,6 +43,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# tokens (sensitive data)
-/data/tokens.json
-/data/*.backup.json
+# tokens - sensitive data
+data/tokens.json

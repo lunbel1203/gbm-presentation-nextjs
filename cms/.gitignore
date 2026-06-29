@@ -1,0 +1,40 @@
+############################
+# Strapi
+############################
+.tmp/
+.cache/
+.license/
+.strapi/
+.strapi-updater.json
+dist/
+build/
+exports/
+*.cache
+
+############################
+# Node
+############################
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp.*
+.yarn/*
+
+############################
+# Env / secrets
+############################
+.env
+.env.*
+!.env.example
+
+############################
+# Uploads (se persisten en volumen Docker, no en git)
+############################
+public/uploads/*
+!public/uploads/.gitkeep
+
+############################
+# Misc
+############################
+.DS_Store
+*.pem

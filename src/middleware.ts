@@ -1,84 +1,27 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import fs from 'fs/promises'
-import { join } from 'path'
-
-// Usar Node.js runtime para poder leer archivos
-export const runtime = 'nodejs'
 
 // Rutas públicas que no requieren token
 const PUBLIC_PATHS = ['/access-denied', '/api/validate-token', '/api/health']
 
-// Tipos para los tokens
-interface TokenInfo {
-  client: string
-  active: boolean
-  createdAt: string
-  expiresAt: string | null
-  notes: string
+// Obtener la IP real del cliente (detrás del proxy Traefik)
+function getClientIp(request: NextRequest): string {
+  const xff = request.headers.get('x-forwarded-for')
+  if (xff) return xff.split(',')[0].trim()
+  return request.headers.get('x-real-ip') || ''
 }
 
-interface TokensData {
-  tokens: Record<string, TokenInfo>
-}
-
-// Cache de tokens en memoria
-let tokensCache: TokensData | null = null
-let lastCacheTime = 0
-const CACHE_TTL = 60000 // 1 minuto
-
-async function getTokens(): Promise<TokensData> {
-  const now = Date.now()
-
-  // Si tenemos cache válido, usarlo
-  if (tokensCache && (now - lastCacheTime) < CACHE_TTL) {
-    return tokensCache
-  }
-
-  try {
-    // Intentar leer desde variable de entorno primero
-    if (process.env.ACCESS_TOKENS) {
-      const parsedTokens = JSON.parse(process.env.ACCESS_TOKENS) as TokensData
-      tokensCache = parsedTokens
-      lastCacheTime = now
-      return parsedTokens
-    }
-
-    // Si no hay variable de entorno, leer desde archivo
-    const tokensPath = join(process.cwd(), 'data', 'tokens.json')
-    const tokensData = JSON.parse(await fs.readFile(tokensPath, 'utf-8')) as TokensData
-    tokensCache = tokensData
-    lastCacheTime = now
-    return tokensData
-  } catch (error) {
-    console.error('Error reading tokens:', error)
-    return { tokens: {} }
-  }
-}
-
-function validateToken(token: string, tokensData: TokensData): { valid: boolean; reason?: string } {
-  const tokenInfo = tokensData.tokens[token]
-
-  // Validar si el token existe
-  if (!tokenInfo) {
-    return { valid: false, reason: 'invalid' }
-  }
-
-  // Validar si el token está activo
-  if (!tokenInfo.active) {
-    return { valid: false, reason: 'disabled' }
-  }
-
-  // Validar si el token ha expirado
-  if (tokenInfo.expiresAt) {
-    const expirationDate = new Date(tokenInfo.expiresAt)
-    if (expirationDate < new Date()) {
-      return { valid: false, reason: 'expired' }
-    }
-  }
-
-  // Token válido
-  return { valid: true }
+// Sólo contamos como "acceso" las navegaciones reales de documento (HTML),
+// no las peticiones RSC / prefetch / _next/data internas de Next.js.
+// Así el conteo de accesos refleja aperturas reales de la presentación.
+function isRealPageView(request: NextRequest): boolean {
+  const isRsc = request.headers.get('rsc') === '1'
+  const isPrefetch = request.headers.get('next-router-prefetch') === '1'
+  const isData = request.nextUrl.pathname.startsWith('/_next/data')
+  const dest = request.headers.get('sec-fetch-dest')
+  const accept = request.headers.get('accept') || ''
+  const looksHtml = dest === 'document' || accept.includes('text/html')
+  return looksHtml && !isRsc && !isPrefetch && !isData
 }
 
 export async function middleware(request: NextRequest) {
@@ -103,14 +46,34 @@ export async function middleware(request: NextRequest) {
   }
 
   try {
-    // Validar token directamente sin hacer fetch
-    const tokensData = await getTokens()
-    const result = validateToken(token!, tokensData)
+    // Construir URL completa para la API de validación (interna)
+    const protocol = request.nextUrl.protocol
+    const host = request.headers.get('host') || 'localhost:3000'
+    const apiUrl = `${protocol}//${host}/api/validate-token`
 
-    // Si el token no es válido, redirigir con la razón correspondiente
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        token,
+        ip: getClientIp(request),
+        userAgent: request.headers.get('user-agent') || '',
+        // Registrar el acceso sólo en aperturas reales de página
+        log: isRealPageView(request),
+      }),
+    })
+
+    if (!response.ok) {
+      console.error('API response not OK:', response.status)
+      return NextResponse.redirect(new URL('/access-denied?reason=error', request.url))
+    }
+
+    const result = await response.json()
+
     if (!result.valid) {
-      const reason = result.reason || 'invalid'
-      return NextResponse.redirect(new URL(`/access-denied?reason=${reason}`, request.url))
+      return NextResponse.redirect(new URL(`/access-denied?reason=${result.reason}`, request.url))
     }
 
     // Token válido - permitir acceso

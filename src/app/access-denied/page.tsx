@@ -25,6 +25,18 @@ function AccessDeniedContent() {
       title: 'Access Expired',
       description: 'Your access token has expired. Please contact GBM to request a new link.'
     },
+    'not-started': {
+      title: 'Access Not Yet Available',
+      description: 'Your access link is not active yet. It will be available starting on the indicated start date. Please try again later or contact GBM.'
+    },
+    'wrong-language': {
+      title: 'Link for Another Version',
+      description: 'This token belongs to a different version of the presentation. Please make sure you are using the correct link or contact GBM.'
+    },
+    'limit-reached': {
+      title: 'Access Limit Reached',
+      description: 'This link has reached its maximum number of allowed openings. Please contact GBM to request new access.'
+    },
     error: {
       title: 'Access Error',
       description: 'An error occurred while validating your access. Please try again or contact GBM.'

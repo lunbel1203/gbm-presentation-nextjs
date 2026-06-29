@@ -1,0 +1,15 @@
+.tmp/
+.cache/
+.git/
+.github/
+.vscode/
+node_modules/
+build/
+dist/
+.strapi/
+.env
+.env.*
+!.env.example
+data/
+*.md
+.DS_Store

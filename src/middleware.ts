@@ -4,6 +4,26 @@ import type { NextRequest } from 'next/server'
 // Rutas públicas que no requieren token
 const PUBLIC_PATHS = ['/access-denied', '/api/validate-token', '/api/health']
 
+// Obtener la IP real del cliente (detrás del proxy Traefik)
+function getClientIp(request: NextRequest): string {
+  const xff = request.headers.get('x-forwarded-for')
+  if (xff) return xff.split(',')[0].trim()
+  return request.headers.get('x-real-ip') || ''
+}
+
+// Sólo contamos como "acceso" las navegaciones reales de documento (HTML),
+// no las peticiones RSC / prefetch / _next/data internas de Next.js.
+// Así el conteo de accesos refleja aperturas reales de la presentación.
+function isRealPageView(request: NextRequest): boolean {
+  const isRsc = request.headers.get('rsc') === '1'
+  const isPrefetch = request.headers.get('next-router-prefetch') === '1'
+  const isData = request.nextUrl.pathname.startsWith('/_next/data')
+  const dest = request.headers.get('sec-fetch-dest')
+  const accept = request.headers.get('accept') || ''
+  const looksHtml = dest === 'document' || accept.includes('text/html')
+  return looksHtml && !isRsc && !isPrefetch && !isData
+}
+
 export async function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl
 
@@ -26,20 +46,23 @@ export async function middleware(request: NextRequest) {
   }
 
   try {
-    // Construir URL completa para la API de validación
-    // Usar localhost en el contenedor Docker
+    // Construir URL completa para la API de validación (interna)
     const protocol = request.nextUrl.protocol
     const host = request.headers.get('host') || 'localhost:3000'
     const apiUrl = `${protocol}//${host}/api/validate-token`
-
-    console.log('Validating token via:', apiUrl)
 
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ token }),
+      body: JSON.stringify({
+        token,
+        ip: getClientIp(request),
+        userAgent: request.headers.get('user-agent') || '',
+        // Registrar el acceso sólo en aperturas reales de página
+        log: isRealPageView(request),
+      }),
     })
 
     if (!response.ok) {

@@ -12,7 +12,8 @@
     "token:list": "node scripts/list-tokens.js",
     "token:enable": "node scripts/enable-token.js",
     "token:disable": "node scripts/disable-token.js",
-    "token:delete": "node scripts/delete-token.js"
+    "token:delete": "node scripts/delete-token.js",
+    "token:migrate": "node scripts/migrate-tokens-to-strapi.js"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

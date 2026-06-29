@@ -1,40 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync } from 'fs'
-import { join } from 'path'
+
+// Necesita el runtime de Node.js para variables de entorno y fetch server-side
+export const runtime = 'nodejs'
+
+// URL interna de Strapi (red Docker traefik-public). Configurable por entorno.
+const STRAPI_URL = process.env.STRAPI_URL || 'http://gbm-strapi:1337'
+// Secreto compartido con Strapi para proteger el endpoint de validación
+const VALIDATION_SECRET = process.env.VALIDATION_SECRET || ''
+// Idioma de ESTA presentación: 'rd' (español) o 'usa' (inglés)
+const PRESENTATION_LANG = process.env.PRESENTATION_LANG || 'rd'
 
 export async function POST(request: NextRequest) {
   try {
-    const { token } = await request.json()
+    const { token, ip, userAgent, log } = await request.json()
 
     if (!token) {
       return NextResponse.json({ valid: false, reason: 'missing' })
     }
 
-    // Leer archivo de tokens
-    const tokensPath = join(process.cwd(), 'data', 'tokens.json')
-    const tokensData = JSON.parse(readFileSync(tokensPath, 'utf-8'))
-    const tokenInfo = tokensData.tokens[token]
+    const res = await fetch(`${STRAPI_URL}/api/access/validate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-secret': VALIDATION_SECRET,
+      },
+      body: JSON.stringify({
+        token,
+        ip: ip || null,
+        userAgent: userAgent || '',
+        log: log !== false,
+        language: PRESENTATION_LANG,
+      }),
+      cache: 'no-store',
+    })
 
-    // Validar si el token existe
-    if (!tokenInfo) {
-      return NextResponse.json({ valid: false, reason: 'invalid' })
+    if (!res.ok) {
+      console.error('Strapi validation responded with status:', res.status)
+      return NextResponse.json({ valid: false, reason: 'error' })
     }
 
-    // Validar si el token está activo
-    if (!tokenInfo.active) {
-      return NextResponse.json({ valid: false, reason: 'disabled' })
-    }
-
-    // Validar si el token ha expirado
-    if (tokenInfo.expiresAt) {
-      const expirationDate = new Date(tokenInfo.expiresAt)
-      if (expirationDate < new Date()) {
-        return NextResponse.json({ valid: false, reason: 'expired' })
-      }
-    }
-
-    // Token válido
-    return NextResponse.json({ valid: true })
+    const result = await res.json()
+    return NextResponse.json(result)
 
   } catch (error) {
     console.error('Error validating token:', error)

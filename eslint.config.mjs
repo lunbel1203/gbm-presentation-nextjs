@@ -18,6 +18,9 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      // Archivos AppleDouble de macOS (se generan en volúmenes no-HFS+)
+      "**/._*",
+      "cms/**",
     ],
   },
 ];

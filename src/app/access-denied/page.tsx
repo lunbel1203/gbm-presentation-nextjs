@@ -25,6 +25,18 @@ function AccessDeniedContent() {
       title: 'Acceso Expirado',
       description: 'Tu token de acceso ha expirado. Por favor, contacta a GBM para solicitar un nuevo enlace.'
     },
+    'not-started': {
+      title: 'Acceso Aún No Disponible',
+      description: 'Tu enlace de acceso todavía no está activo. Estará disponible a partir de la fecha de inicio indicada. Por favor, intenta más tarde o contacta a GBM.'
+    },
+    'wrong-language': {
+      title: 'Enlace de Otra Versión',
+      description: 'Este token corresponde a otra versión de la presentación. Por favor, verifica que estés usando el enlace correcto o contacta a GBM.'
+    },
+    'limit-reached': {
+      title: 'Límite de Accesos Alcanzado',
+      description: 'Este enlace alcanzó su número máximo de aperturas permitidas. Por favor, contacta a GBM para solicitar un nuevo acceso.'
+    },
     error: {
       title: 'Error de Acceso',
       description: 'Ocurrió un error al validar tu acceso. Por favor, intenta nuevamente o contacta a GBM.'

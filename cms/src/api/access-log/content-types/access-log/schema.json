@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "access_logs",
+  "info": {
+    "singularName": "access-log",
+    "pluralName": "access-logs",
+    "displayName": "Registro de Acceso",
+    "description": "Cada vez que un cliente abre (o intenta abrir) una presentación"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accessToken": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::access-token.access-token",
+      "inversedBy": "accessLogs"
+    },
+    "accessedAt": {
+      "type": "datetime"
+    },
+    "clientName": {
+      "type": "string"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": ["rd", "usa"]
+    },
+    "ipAddress": {
+      "type": "string"
+    },
+    "userAgent": {
+      "type": "text"
+    },
+    "browser": {
+      "type": "string"
+    },
+    "os": {
+      "type": "string"
+    },
+    "device": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["granted", "denied"],
+      "default": "granted"
+    },
+    "reason": {
+      "type": "string"
+    }
+  }
+}

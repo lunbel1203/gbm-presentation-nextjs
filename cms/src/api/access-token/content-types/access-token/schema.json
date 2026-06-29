@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "access_tokens",
+  "info": {
+    "singularName": "access-token",
+    "pluralName": "access-tokens",
+    "displayName": "Token de Acceso",
+    "description": "Tokens de acceso por cliente a las presentaciones GBM"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "token": {
+      "type": "string",
+      "unique": true,
+      "maxLength": 128
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": ["rd", "usa"],
+      "required": true,
+      "default": "rd"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "maxAccesses": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "accessCount": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "firstAccessAt": {
+      "type": "datetime"
+    },
+    "lastAccessAt": {
+      "type": "datetime"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "accessLogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::access-log.access-log",
+      "mappedBy": "accessToken"
+    }
+  }
+}

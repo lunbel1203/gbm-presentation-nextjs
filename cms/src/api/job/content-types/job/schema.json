@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": "GBM career / job openings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "locale": {
+      "type": "enumeration",
+      "enum": ["en", "es"],
+      "required": true,
+      "default": "en"
+    },
+    "location": {
+      "type": "string"
+    },
+    "employmentType": {
+      "type": "enumeration",
+      "enum": ["Full-Time", "Part-Time"]
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "days": {
+      "type": "string"
+    },
+    "hours": {
+      "type": "string"
+    },
+    "pay": {
+      "type": "string"
+    },
+    "reportsTo": {
+      "type": "string"
+    },
+    "aboutUs": {
+      "type": "text"
+    },
+    "jobDescription": {
+      "type": "text"
+    },
+    "duties": {
+      "type": "json"
+    },
+    "requirements": {
+      "type": "json"
+    },
+    "benefits": {
+      "type": "json"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

@@ -4,8 +4,11 @@ import type { NextRequest } from 'next/server'
 // Rutas públicas que no requieren token
 const PUBLIC_PATHS = ['/access-denied', '/api/validate-token', '/api/health']
 
-// Obtener la IP real del cliente (detrás del proxy Traefik)
+// Obtener la IP real del cliente (detrás de Cloudflare y/o el proxy Traefik)
 function getClientIp(request: NextRequest): string {
+  // Cloudflare entrega la IP real del cliente en cf-connecting-ip
+  const cf = request.headers.get('cf-connecting-ip')
+  if (cf) return cf.trim()
   const xff = request.headers.get('x-forwarded-for')
   if (xff) return xff.split(',')[0].trim()
   return request.headers.get('x-real-ip') || ''
@@ -46,10 +49,10 @@ export async function middleware(request: NextRequest) {
   }
 
   try {
-    // Construir URL completa para la API de validación (interna)
-    const protocol = request.nextUrl.protocol
-    const host = request.headers.get('host') || 'localhost:3000'
-    const apiUrl = `${protocol}//${host}/api/validate-token`
+    // Llamada interna al validador en el MISMO contenedor (evita salir a
+    // internet / Cloudflare y reduce latencia)
+    const port = process.env.PORT || '3000'
+    const apiUrl = `http://127.0.0.1:${port}/api/validate-token`
 
     const response = await fetch(apiUrl, {
       method: 'POST',

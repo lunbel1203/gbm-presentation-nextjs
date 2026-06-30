@@ -46,6 +46,9 @@ services:
         condition: service_healthy
     volumes:
       - strapi-uploads:/app/public/uploads
+      # Sembrado inicial de tokens (opcional, idempotente). Definir
+      # SEED_TOKENS_FILE=/app/seed/tokens.seed.json en .env para activarlo.
+      - ./seed:/app/seed:ro
     networks:
       - internal
       - traefik-public

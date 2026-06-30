@@ -21,6 +21,10 @@
       "unique": true,
       "maxLength": 128
     },
+    "accessUrl": {
+      "type": "string",
+      "maxLength": 255
+    },
     "language": {
       "type": "enumeration",
       "enum": ["rd", "usa"],

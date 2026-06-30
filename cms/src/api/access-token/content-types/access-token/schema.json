@@ -22,8 +22,8 @@
       "maxLength": 128
     },
     "accessUrl": {
-      "type": "string",
-      "maxLength": 255
+      "type": "customField",
+      "customField": "global::copyable-url"
     },
     "language": {
       "type": "enumeration",

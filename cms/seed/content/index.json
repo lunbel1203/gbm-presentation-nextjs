@@ -1,6 +1,12 @@
 [
-  { "uid": "api::service.service", "file": "services.json", "uniqueFields": ["slug", "locale"], "mediaFields": ["image", "heroImage"] },
-  { "uid": "api::service.service", "file": "services-es.json", "uniqueFields": ["slug", "locale"], "mediaFields": ["image", "heroImage"] },
-  { "uid": "api::job.job", "file": "jobs.json", "uniqueFields": ["slug", "locale"] },
-  { "uid": "api::job.job", "file": "jobs-es.json", "uniqueFields": ["slug", "locale"] }
+  { "uid": "api::service.service", "file": "services.json", "key": "slug", "mediaFields": ["image", "heroImage"] },
+  { "uid": "api::service.service", "file": "services-es.json", "key": "slug", "mediaFields": ["image", "heroImage"] },
+  { "uid": "api::job.job", "file": "jobs.json", "key": "slug" },
+  { "uid": "api::job.job", "file": "jobs-es.json", "key": "slug" },
+  { "uid": "api::post.post", "file": "posts.json", "key": "slug", "mediaFields": ["image"] },
+  { "uid": "api::post.post", "file": "posts-es.json", "key": "slug", "mediaFields": ["image"] },
+  { "uid": "api::team-member.team-member", "file": "team-members.json", "key": "name", "mediaFields": ["photo"] },
+  { "uid": "api::testimonial.testimonial", "file": "testimonials.json", "key": "name", "mediaFields": ["photo"] },
+  { "uid": "api::certification.certification", "file": "certifications.json", "key": "name", "mediaFields": ["logo"] },
+  { "uid": "api::industry.industry", "file": "industries.json", "key": "title", "mediaFields": ["image"] }
 ]

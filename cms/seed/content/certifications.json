@@ -1,0 +1,74 @@
+[
+  {
+    "name": "CBSE",
+    "logo": "about/cbse.jpg",
+    "locale": "en",
+    "order": 0
+  },
+  {
+    "name": "EPA",
+    "logo": "about/epa.png",
+    "locale": "en",
+    "order": 1
+  },
+  {
+    "name": "OSHA",
+    "logo": "about/osha.png",
+    "locale": "en",
+    "order": 2
+  },
+  {
+    "name": "ISSA",
+    "logo": "about/issa.png",
+    "locale": "en",
+    "order": 3
+  },
+  {
+    "name": "USGBC",
+    "logo": "about/usgbc.png",
+    "locale": "en",
+    "order": 4
+  },
+  {
+    "name": "IFMA",
+    "logo": "about/ifma.png",
+    "locale": "en",
+    "order": 5
+  },
+  {
+    "name": "CBSE",
+    "logo": "about/cbse.jpg",
+    "locale": "es",
+    "order": 0
+  },
+  {
+    "name": "EPA",
+    "logo": "about/epa.png",
+    "locale": "es",
+    "order": 1
+  },
+  {
+    "name": "OSHA",
+    "logo": "about/osha.png",
+    "locale": "es",
+    "order": 2
+  },
+  {
+    "name": "ISSA",
+    "logo": "about/issa.png",
+    "locale": "es",
+    "order": 3
+  },
+  {
+    "name": "USGBC",
+    "logo": "about/usgbc.png",
+    "locale": "es",
+    "order": 4
+  },
+  {
+    "name": "IFMA",
+    "logo": "about/ifma.png",
+    "locale": "es",
+    "order": 5
+  }
+]

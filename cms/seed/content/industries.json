@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Industrial & Manufacturing",
+    "description": "Industrial and manufacturing facilities have all sorts of rules and regulations that must be followed.",
+    "image": "industries/manufacturing-facilitis.jpg",
+    "locale": "en",
+    "order": 0
+  },
+  {
+    "title": "Educational Institutions",
+    "description": "Ensuring and maintaining a clean and safe environment for everyone on the campus.",
+    "image": "industries/educational-institutions.jpg",
+    "locale": "en",
+    "order": 1
+  },
+  {
+    "title": "Medical Facilities",
+    "description": "When it comes to medical cleaning, every square inch must be clean and disinfected with no exceptions.",
+    "image": "industries/medical-facilities.jpg",
+    "locale": "en",
+    "order": 2
+  },
+  {
+    "title": "Offices",
+    "description": "A good office cleaning plan gives employees peace of mind when they return to work.",
+    "image": "industries/offices.jpg",
+    "locale": "en",
+    "order": 3
+  },
+  {
+    "title": "Dental & Orthodontic Clinics",
+    "description": "In dental and orthodontic clinics, maintaining a sterile and hygienic environment is essential for patient safety.",
+    "image": "industries/dental-clinic.jpg",
+    "locale": "en",
+    "order": 4
+  },
+  {
+    "title": "Retail Stores",
+    "description": "In the retail industry, first impressions matter. A clean and well-maintained store plays a vital role in attracting customers.",
+    "image": "industries/retail.jpg",
+    "locale": "en",
+    "order": 5
+  },
+  {
+    "title": "Gyms & Fitness",
+    "description": "Cleanliness is essential not only for maintaining a professional appearance.",
+    "image": "industries/gym.png",
+    "locale": "en",
+    "order": 6
+  },
+  {
+    "title": "Banks & Financial Institutions",
+    "description": "The condition of a financial institution gives clients a strong impression about its reputation.",
+    "image": "industries/banks.jpeg",
+    "locale": "en",
+    "order": 7
+  },
+  {
+    "title": "Condominium Maintenance",
+    "description": "If your building has specific cleaning needs or concerns, our team can help you address all issues.",
+    "image": "industries/condominium-maintenance.jpg",
+    "locale": "en",
+    "order": 8
+  },
+  {
+    "title": "Pharmaceuticals",
+    "description": "Our team ensures a sterile, compliant, and safe environment.",
+    "image": "industries/pharmacuticals.jpg",
+    "locale": "en",
+    "order": 9
+  },
+  {
+    "title": "Industrial & Manufacturing",
+    "description": "Industrial and manufacturing facilities have all sorts of rules and regulations that must be followed.",
+    "image": "industries/manufacturing-facilitis.jpg",
+    "locale": "es",
+    "order": 0
+  },
+  {
+    "title": "Educational Institutions",
+    "description": "Ensuring and maintaining a clean and safe environment for everyone on the campus.",
+    "image": "industries/educational-institutions.jpg",
+    "locale": "es",
+    "order": 1
+  },
+  {
+    "title": "Medical Facilities",
+    "description": "When it comes to medical cleaning, every square inch must be clean and disinfected with no exceptions.",
+    "image": "industries/medical-facilities.jpg",
+    "locale": "es",
+    "order": 2
+  },
+  {
+    "title": "Offices",
+    "description": "A good office cleaning plan gives employees peace of mind when they return to work.",
+    "image": "industries/offices.jpg",
+    "locale": "es",
+    "order": 3
+  },
+  {
+    "title": "Dental & Orthodontic Clinics",
+    "description": "In dental and orthodontic clinics, maintaining a sterile and hygienic environment is essential for patient safety.",
+    "image": "industries/dental-clinic.jpg",
+    "locale": "es",
+    "order": 4
+  },
+  {
+    "title": "Retail Stores",
+    "description": "In the retail industry, first impressions matter. A clean and well-maintained store plays a vital role in attracting customers.",
+    "image": "industries/retail.jpg",
+    "locale": "es",
+    "order": 5
+  },
+  {
+    "title": "Gyms & Fitness",
+    "description": "Cleanliness is essential not only for maintaining a professional appearance.",
+    "image": "industries/gym.png",
+    "locale": "es",
+    "order": 6
+  },
+  {
+    "title": "Banks & Financial Institutions",
+    "description": "The condition of a financial institution gives clients a strong impression about its reputation.",
+    "image": "industries/banks.jpeg",
+    "locale": "es",
+    "order": 7
+  },
+  {
+    "title": "Condominium Maintenance",
+    "description": "If your building has specific cleaning needs or concerns, our team can help you address all issues.",
+    "image": "industries/condominium-maintenance.jpg",
+    "locale": "es",
+    "order": 8
+  },
+  {
+    "title": "Pharmaceuticals",
+    "description": "Our team ensures a sterile, compliant, and safe environment.",
+    "image": "industries/pharmacuticals.jpg",
+    "locale": "es",
+    "order": 9
+  }
+]

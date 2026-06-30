@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "jobs",
+  "collectionName": "posts",
   "info": {
-    "singularName": "job",
-    "pluralName": "jobs",
-    "displayName": "Job",
-    "description": "GBM career / job openings"
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": "GBM blog posts"
   },
   "options": {
     "draftAndPublish": false
@@ -34,26 +34,6 @@
         }
       }
     },
-    "location": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "employmentType": {
-      "type": "enumeration",
-      "enum": [
-        "Full-Time",
-        "Part-Time"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "excerpt": {
       "type": "text",
       "pluginOptions": {
@@ -62,7 +42,15 @@
         }
       }
     },
-    "days": {
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "author": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -70,7 +58,7 @@
         }
       }
     },
-    "hours": {
+    "date": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -78,39 +66,7 @@
         }
       }
     },
-    "pay": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "reportsTo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "aboutUs": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "jobDescription": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "duties": {
+    "categories": {
       "type": "json",
       "pluginOptions": {
         "i18n": {
@@ -118,16 +74,12 @@
         }
       }
     },
-    "requirements": {
-      "type": "json",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "benefits": {
-      "type": "json",
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true

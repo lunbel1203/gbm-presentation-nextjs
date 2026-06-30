@@ -1,0 +1,50 @@
+[
+  {
+    "name": "A. P.",
+    "position": "Senior Manager",
+    "content": "The level of quality of their cleaning services and their customer service have made a very strong impression. We switched to GBM after a the end of a disappointing contract with another cleaning company.",
+    "photo": "contact/woman.jpg",
+    "locale": "en",
+    "order": 0
+  },
+  {
+    "name": "P.H.",
+    "position": "Operations Manager",
+    "content": "From the initial cleaning… to the day-to-day operation itself, has been outstanding… the attention to detail and overall service we receive from Glaring Building Maintenance is great.",
+    "photo": "contact/man.jpg",
+    "locale": "en",
+    "order": 1
+  },
+  {
+    "name": "A. J.",
+    "position": "Property Manager",
+    "content": "This company's services are truly beyond my expectation.",
+    "photo": "contact/woman.jpg",
+    "locale": "en",
+    "order": 2
+  },
+  {
+    "name": "A. P.",
+    "position": "Senior Manager",
+    "content": "The level of quality of their cleaning services and their customer service have made a very strong impression. We switched to GBM after a the end of a disappointing contract with another cleaning company.",
+    "photo": "contact/woman.jpg",
+    "locale": "es",
+    "order": 0
+  },
+  {
+    "name": "P.H.",
+    "position": "Operations Manager",
+    "content": "From the initial cleaning… to the day-to-day operation itself, has been outstanding… the attention to detail and overall service we receive from Glaring Building Maintenance is great.",
+    "photo": "contact/man.jpg",
+    "locale": "es",
+    "order": 1
+  },
+  {
+    "name": "A. J.",
+    "position": "Property Manager",
+    "content": "This company's services are truly beyond my expectation.",
+    "photo": "contact/woman.jpg",
+    "locale": "es",
+    "order": 2
+  }
+]

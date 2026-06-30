@@ -1,8 +1,6 @@
 [
-  {
-    "uid": "api::service.service",
-    "file": "services.json",
-    "uniqueFields": ["slug", "locale"],
-    "mediaFields": ["image", "heroImage"]
-  }
+  { "uid": "api::service.service", "file": "services.json", "uniqueFields": ["slug", "locale"], "mediaFields": ["image", "heroImage"] },
+  { "uid": "api::service.service", "file": "services-es.json", "uniqueFields": ["slug", "locale"], "mediaFields": ["image", "heroImage"] },
+  { "uid": "api::job.job", "file": "jobs.json", "uniqueFields": ["slug", "locale"] },
+  { "uid": "api::job.job", "file": "jobs-es.json", "uniqueFields": ["slug", "locale"] }
 ]

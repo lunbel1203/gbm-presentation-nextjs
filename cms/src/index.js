@@ -84,6 +84,50 @@ async function uploadOrReuse(strapi, absPath) {
   return Array.isArray(uploaded) && uploaded[0] ? uploaded[0].id : null;
 }
 
+/**
+ * Habilita lectura pública (find/findOne) para las colecciones del website.
+ * Idempotente. Permite que el frontend consuma la API sin token.
+ */
+async function setPublicPermissions(strapi) {
+  try {
+    const publicRole = await strapi.db
+      .query('plugin::users-permissions.role')
+      .findOne({ where: { type: 'public' } });
+    if (!publicRole) return;
+
+    const perms = {
+      'api::service.service': ['find', 'findOne'],
+      'api::job.job': ['find', 'findOne'],
+      'api::post.post': ['find', 'findOne'],
+      'api::team-member.team-member': ['find', 'findOne'],
+      'api::testimonial.testimonial': ['find', 'findOne'],
+      'api::certification.certification': ['find', 'findOne'],
+      'api::industry.industry': ['find', 'findOne'],
+      'api::home.home': ['find'],
+      'api::site-setting.site-setting': ['find'],
+    };
+
+    let added = 0;
+    for (const [uid, actions] of Object.entries(perms)) {
+      for (const a of actions) {
+        const action = `${uid}.${a}`;
+        const existing = await strapi.db
+          .query('plugin::users-permissions.permission')
+          .findOne({ where: { action, role: publicRole.id } });
+        if (!existing) {
+          await strapi.db
+            .query('plugin::users-permissions.permission')
+            .create({ data: { action, role: publicRole.id } });
+          added++;
+        }
+      }
+    }
+    strapi.log.info(`[permissions] lectura pública habilitada (+${added})`);
+  } catch (err) {
+    strapi.log.error(`[permissions] error: ${err.message}`);
+  }
+}
+
 /** Garantiza que el locale `es` exista en i18n. */
 async function ensureLocales(strapi) {
   try {
@@ -216,5 +260,6 @@ module.exports = {
     } catch (err) {
       strapi.log.error(`[seed-content] error sembrando contenido: ${err.message}`);
     }
+    await setPublicPermissions(strapi);
   },
 };

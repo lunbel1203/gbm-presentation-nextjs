@@ -4,10 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Sembrado idempotente de tokens al arrancar.
- * Si la variable SEED_TOKENS_FILE apunta a un JSON (array de tokens), crea los
- * que aún no existan. Útil para migrar los tokens del antiguo tokens.json sin
- * necesidad de acceder al panel. No hace nada si la variable no está definida.
+ * Sembrado idempotente de tokens al arrancar (SEED_TOKENS_FILE).
  */
 async function seedTokens(strapi) {
   const file = process.env.SEED_TOKENS_FILE;
@@ -16,7 +13,6 @@ async function seedTokens(strapi) {
     strapi.log.warn(`[seed] SEED_TOKENS_FILE no encontrado: ${file}`);
     return;
   }
-
   let items;
   try {
     items = JSON.parse(fs.readFileSync(file, 'utf-8'));
@@ -54,15 +50,6 @@ async function seedTokens(strapi) {
   strapi.log.info(`[seed] tokens creados: ${created}, omitidos (ya existían): ${skipped}`);
 }
 
-/**
- * Sembrado idempotente de contenido genérico del website.
- * Si SEED_CONTENT_DIR apunta a un directorio con un `index.json` (manifiesto),
- * crea los registros que aún no existan según `uniqueFields`.
- *
- * Manifiesto (index.json):
- *   [{ "uid": "api::service.service", "file": "services.json", "uniqueFields": ["slug", "locale"] }]
- * Cada `file` es un array de objetos con los campos del content-type.
- */
 function mimeFromExt(ext) {
   const map = {
     '.jpg': 'image/jpeg',
@@ -75,10 +62,7 @@ function mimeFromExt(ext) {
   return map[String(ext).toLowerCase()] || 'application/octet-stream';
 }
 
-/**
- * Sube un archivo a la Media Library (o reutiliza uno ya subido con el mismo
- * nombre) y devuelve su id. Idempotente.
- */
+/** Sube un archivo a la Media Library (o reutiliza uno por nombre) y devuelve su id. */
 async function uploadOrReuse(strapi, absPath) {
   const name = path.basename(absPath);
   const existing = await strapi.db.query('plugin::upload.file').findOne({ where: { name } });
@@ -100,6 +84,27 @@ async function uploadOrReuse(strapi, absPath) {
   return Array.isArray(uploaded) && uploaded[0] ? uploaded[0].id : null;
 }
 
+/** Garantiza que el locale `es` exista en i18n. */
+async function ensureLocales(strapi) {
+  try {
+    const svc = strapi.plugin('i18n').service('locales');
+    const all = await svc.find();
+    if (!all.some((l) => l.code === 'es')) {
+      await svc.create({ code: 'es', name: 'Spanish (es)' });
+      strapi.log.info('[i18n] locale es creado');
+    }
+  } catch (err) {
+    strapi.log.error(`[i18n] error asegurando locales: ${err.message}`);
+  }
+}
+
+/**
+ * Sembrado idempotente de contenido con i18n nativo.
+ * Manifiesto (SEED_CONTENT_DIR/index.json):
+ *   [{ "uid", "file", "key": "slug", "mediaFields": [], }]
+ * Cada item del archivo trae su propio `locale` (en|es). El `en` crea el
+ * documento base; el `es` se añade como traducción del MISMO documento.
+ */
 async function seedContent(strapi) {
   const dir = process.env.SEED_CONTENT_DIR;
   if (!dir) return;
@@ -109,7 +114,6 @@ async function seedContent(strapi) {
     strapi.log.warn(`[seed-content] manifiesto no encontrado: ${manifestPath}`);
     return;
   }
-
   let manifest;
   try {
     manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
@@ -120,14 +124,13 @@ async function seedContent(strapi) {
   if (!Array.isArray(manifest)) return;
 
   for (const entry of manifest) {
-    const { uid, file, uniqueFields = ['slug'], mediaFields = [] } = entry || {};
+    const { uid, file, key = 'slug', mediaFields = [] } = entry || {};
     if (!uid || !file) continue;
     const filePath = path.join(dir, file);
     if (!fs.existsSync(filePath)) {
       strapi.log.warn(`[seed-content] archivo no encontrado: ${filePath}`);
       continue;
     }
-
     let items;
     try {
       items = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
@@ -141,38 +144,56 @@ async function seedContent(strapi) {
     let skipped = 0;
     for (const item of items) {
       if (!item) continue;
-      const filters = {};
-      for (const f of uniqueFields) {
-        if (item[f] !== undefined) filters[f] = { $eq: item[f] };
-      }
-      const existing = await strapi.documents(uid).findMany({ filters, limit: 1 });
-      if (existing && existing.length) {
-        skipped++;
-        continue;
-      }
+      const itemLocale = item.locale || 'en';
+      const keyVal = item[key];
+      const data = { ...item };
+      delete data.locale;
+
       try {
-        const data = { ...item };
-        // Subir imágenes y reemplazar la ruta por el id del archivo en Media
+        // Subir imágenes y reemplazar la ruta por el id del archivo
         for (const mf of mediaFields) {
           if (data[mf] && imagesDir) {
             const id = await uploadOrReuse(strapi, path.join(imagesDir, data[mf]));
             data[mf] = id || null;
           }
         }
-        await strapi.documents(uid).create({ data });
-        created++;
+
+        const base = await strapi.documents(uid).findMany({
+          filters: { [key]: { $eq: keyVal } },
+          locale: 'en',
+          limit: 1,
+        });
+
+        if (itemLocale === 'en') {
+          if (base.length) {
+            skipped++;
+            continue;
+          }
+          await strapi.documents(uid).create({ data, locale: 'en' });
+          created++;
+        } else {
+          if (!base.length) {
+            strapi.log.warn(`[seed-content] sin base 'en' para ${key}=${keyVal} en ${uid}`);
+            continue;
+          }
+          const documentId = base[0].documentId;
+          const existingLoc = await strapi.documents(uid).findOne({ documentId, locale: itemLocale });
+          if (existingLoc) {
+            skipped++;
+            continue;
+          }
+          await strapi.documents(uid).update({ documentId, locale: itemLocale, data });
+          created++;
+        }
       } catch (err) {
-        strapi.log.error(`[seed-content] error creando en ${uid}: ${err.message}`);
+        strapi.log.error(`[seed-content] error en ${uid} (${keyVal}/${itemLocale}): ${err.message}`);
       }
     }
-    strapi.log.info(`[seed-content] ${uid}: creados ${created}, omitidos ${skipped}`);
+    strapi.log.info(`[seed-content] ${uid} [${file}]: creados ${created}, omitidos ${skipped}`);
   }
 }
 
 module.exports = {
-  /**
-   * Registro de custom fields antes de inicializar la app.
-   */
   register({ strapi }) {
     strapi.customFields.register({
       name: 'copyable-url',
@@ -180,11 +201,8 @@ module.exports = {
     });
   },
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   */
   async bootstrap({ strapi }) {
+    await ensureLocales(strapi);
     try {
       await seedTokens(strapi);
     } catch (err) {

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Ceverino Diaz",
+    "role": "Project Manager",
+    "photo": "about/ceverino-diaz.png",
+    "locale": "en",
+    "order": 0
+  },
+  {
+    "name": "Lindsey Meinert",
+    "role": "Business Development Manager",
+    "photo": "about/Lindsey-Meinert.png",
+    "locale": "en",
+    "order": 1
+  },
+  {
+    "name": "Rosa Bagaglio",
+    "role": "Recruitment & Engagement Manager",
+    "photo": "about/Rosa-Bagaglio.png",
+    "locale": "en",
+    "order": 2
+  },
+  {
+    "name": "Silvia Nicola",
+    "role": "Account Manager",
+    "photo": "about/Silvia-Nicola.png",
+    "locale": "en",
+    "order": 3
+  },
+  {
+    "name": "Amanda Atchley",
+    "role": "Account Executive",
+    "photo": "about/amanda.png",
+    "locale": "en",
+    "order": 4
+  },
+  {
+    "name": "Jose Luis Beltre",
+    "role": "IT Manager",
+    "photo": "about/jose-luis-beltre.png",
+    "locale": "en",
+    "order": 5
+  },
+  {
+    "name": "Ceverino Diaz",
+    "role": "Project Manager",
+    "photo": "about/ceverino-diaz.png",
+    "locale": "es",
+    "order": 0
+  },
+  {
+    "name": "Lindsey Meinert",
+    "role": "Business Development Manager",
+    "photo": "about/Lindsey-Meinert.png",
+    "locale": "es",
+    "order": 1
+  },
+  {
+    "name": "Rosa Bagaglio",
+    "role": "Recruitment & Engagement Manager",
+    "photo": "about/Rosa-Bagaglio.png",
+    "locale": "es",
+    "order": 2
+  },
+  {
+    "name": "Silvia Nicola",
+    "role": "Account Manager",
+    "photo": "about/Silvia-Nicola.png",
+    "locale": "es",
+    "order": 3
+  },
+  {
+    "name": "Amanda Atchley",
+    "role": "Account Executive",
+    "photo": "about/amanda.png",
+    "locale": "es",
+    "order": 4
+  },
+  {
+    "name": "Jose Luis Beltre",
+    "role": "IT Manager",
+    "photo": "about/jose-luis-beltre.png",
+    "locale": "es",
+    "order": 5
+  }
+]

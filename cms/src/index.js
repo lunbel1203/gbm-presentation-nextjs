@@ -55,10 +55,14 @@ async function seedTokens(strapi) {
 
 module.exports = {
   /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
+   * Registro de custom fields antes de inicializar la app.
    */
-  register(/* { strapi } */) {},
+  register({ strapi }) {
+    strapi.customFields.register({
+      name: 'copyable-url',
+      type: 'string',
+    });
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

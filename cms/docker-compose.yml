@@ -58,6 +58,7 @@ services:
       - "traefik.http.routers.gbm-strapi.rule=Host(`${CMS_DOMAIN}`)"
       - "traefik.http.routers.gbm-strapi.entrypoints=websecure"
       - "traefik.http.routers.gbm-strapi.tls=true"
+      - "traefik.http.routers.gbm-strapi.tls.certresolver=letsencrypt"
       - "traefik.http.services.gbm-strapi.loadbalancer.server.port=1337"
 
 networks:

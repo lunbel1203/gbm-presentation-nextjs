@@ -1,0 +1,44 @@
+[
+  {
+    "locale": "en",
+    "heroSlides": [
+      {
+        "title": "Total Facility Maintenance in New England — Indoors and Out",
+        "description": "Glaring Building Maintenance delivers complete property care solutions across New England, including cleaning, painting, landscaping, snow removal, and junk removal for our contracted clients. One reliable partner for every maintenance need, efficient, professional, and defined by the Glaring Standard.",
+        "image": "/assets/images/hero/bg-home-1.png",
+        "primaryCtaText": "More About Us",
+        "primaryCtaLink": "/about",
+        "secondaryCtaText": "our services",
+        "secondaryCtaLink": "/services"
+      },
+      {
+        "title": "Our Care Extends Beyond Buildings",
+        "description": "At Glaring Building Maintenance, our purpose goes beyond facility care. Through Glaring Cares, we invest in humanitarian missions, local support programs, and global aid efforts that uplift those facing hardship.",
+        "image": "/assets/images/gc/bg-glaring-cares.jpg",
+        "primaryCtaText": "More About Us",
+        "primaryCtaLink": "/glaring-cares"
+      }
+    ]
+  },
+  {
+    "locale": "es",
+    "heroSlides": [
+      {
+        "title": "Mantenimiento Integral de Instalaciones en la República Dominicana – Interior y Exterior",
+        "description": "En Glaring Building Maintenance, ofrecemos soluciones completas de mantenimiento de propiedades en toda la República Dominicana, incluyendo servicios de limpieza, pintura, jardinería y remoción de desechos, diseñados para nuestros clientes bajo contrato. Un solo socio confiable para todas sus necesidades de mantenimiento: eficiente, profesional y respaldado por el Estándar Glaring.",
+        "image": "/assets/images/hero/bg-home-1.png",
+        "primaryCtaText": "Conócenos",
+        "primaryCtaLink": "/about",
+        "secondaryCtaText": "nuestros servicios",
+        "secondaryCtaLink": "/services"
+      },
+      {
+        "title": "Nuestro compromiso va más allá de las instalaciones",
+        "description": "En Glaring Building Maintenance, nuestro propósito trasciende el cuidado de las facilidades. A través de Glaring Cares, invertimos en misiones humanitarias, programas de apoyo comunitario y esfuerzos de ayuda a nivel local e internacional, enfocados en brindar esperanza, dignidad y apoyo a personas y familias en situación de vulnerabilidad.",
+        "image": "/assets/images/gc/bg-glaring-cares.jpg",
+        "primaryCtaText": "Conócenos",
+        "primaryCtaLink": "/glaring-cares"
+      }
+    ]
+  }
+]

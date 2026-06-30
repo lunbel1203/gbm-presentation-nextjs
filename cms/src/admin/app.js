@@ -6,11 +6,11 @@ export default {
       type: 'string',
       intlLabel: {
         id: 'copyable-url.label',
-        defaultMessage: 'URL de acceso',
+        defaultMessage: 'Access URL',
       },
       intlDescription: {
         id: 'copyable-url.description',
-        defaultMessage: 'URL completa lista para copiar (solo lectura)',
+        defaultMessage: 'Full URL ready to copy (read-only)',
       },
       components: {
         Input: async () => import('./components/CopyableUrlInput'),

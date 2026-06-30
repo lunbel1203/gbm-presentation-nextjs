@@ -4,8 +4,8 @@
   "info": {
     "singularName": "access-log",
     "pluralName": "access-logs",
-    "displayName": "Registro de Acceso",
-    "description": "Cada vez que un cliente abre (o intenta abrir) una presentación"
+    "displayName": "Access Log",
+    "description": "Every time a client opens (or tries to open) a presentation"
   },
   "options": {
     "draftAndPublish": false

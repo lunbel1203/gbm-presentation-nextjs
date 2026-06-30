@@ -4,8 +4,8 @@
   "info": {
     "singularName": "access-token",
     "pluralName": "access-tokens",
-    "displayName": "Token de Acceso",
-    "description": "Tokens de acceso por cliente a las presentaciones GBM"
+    "displayName": "Access Token",
+    "description": "Per-client access tokens for the GBM presentations"
   },
   "options": {
     "draftAndPublish": false

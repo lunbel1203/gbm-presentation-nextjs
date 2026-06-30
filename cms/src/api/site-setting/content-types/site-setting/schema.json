@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Global site settings: contact info and social links"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": { "type": "string" },
+    "phone": { "type": "string" },
+    "email": { "type": "string" },
+    "address": { "type": "text" },
+    "mapsUrl": { "type": "string" },
+    "instagram": { "type": "string" },
+    "facebook": { "type": "string" },
+    "linkedin": { "type": "string" },
+    "youtube": { "type": "string" }
+  }
+}

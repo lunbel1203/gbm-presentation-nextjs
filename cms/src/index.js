@@ -124,21 +124,22 @@ async function seedContent(strapi) {
   if (!Array.isArray(manifest)) return;
 
   for (const entry of manifest) {
-    const { uid, file, key = 'slug', mediaFields = [] } = entry || {};
+    const { uid, file, key = 'slug', mediaFields = [], singleType = false } = entry || {};
     if (!uid || !file) continue;
     const filePath = path.join(dir, file);
     if (!fs.existsSync(filePath)) {
       strapi.log.warn(`[seed-content] archivo no encontrado: ${filePath}`);
       continue;
     }
-    let items;
+    let parsed;
     try {
-      items = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      parsed = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     } catch (err) {
       strapi.log.error(`[seed-content] JSON inválido en ${file}: ${err.message}`);
       continue;
     }
-    if (!Array.isArray(items)) continue;
+    // Un single type puede venir como objeto suelto; lo envolvemos en array
+    const items = Array.isArray(parsed) ? parsed : [parsed];
 
     let created = 0;
     let skipped = 0;
@@ -158,11 +159,13 @@ async function seedContent(strapi) {
           }
         }
 
-        const base = await strapi.documents(uid).findMany({
-          filters: { [key]: { $eq: keyVal } },
-          locale: 'en',
-          limit: 1,
-        });
+        const base = singleType
+          ? await strapi.documents(uid).findMany({ locale: 'en', limit: 1 })
+          : await strapi.documents(uid).findMany({
+              filters: { [key]: { $eq: keyVal } },
+              locale: 'en',
+              limit: 1,
+            });
 
         if (itemLocale === 'en') {
           if (base.length) {

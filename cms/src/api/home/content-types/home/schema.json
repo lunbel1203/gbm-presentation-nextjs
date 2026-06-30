@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home Page",
+    "description": "Home page content (hero slider)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": { "localized": true }
+  },
+  "attributes": {
+    "heroSlides": {
+      "type": "json",
+      "pluginOptions": { "i18n": { "localized": true } }
+    }
+  }
+}

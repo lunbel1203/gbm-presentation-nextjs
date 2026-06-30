@@ -1,0 +1,8 @@
+[
+  {
+    "uid": "api::service.service",
+    "file": "services.json",
+    "uniqueFields": ["slug", "locale"],
+    "mediaFields": ["image", "heroImage"]
+  }
+]

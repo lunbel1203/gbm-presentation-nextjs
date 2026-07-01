@@ -8,7 +8,9 @@
     "image": "services/data-center.jpeg",
     "heroImage": "services/data-center.jpeg",
     "locale": "es",
-    "order": 0
+    "order": 0,
+    "shortDescription": "Safeguard your data with specialized cleaning solutions designed for sensitive environments.",
+    "category": "commercial"
   },
   {
     "title": "Cleanroom Services",
@@ -19,7 +21,9 @@
     "image": "services/cleanroom-services.jpeg",
     "heroImage": "services/cleanroom-services.jpeg",
     "locale": "es",
-    "order": 1
+    "order": 1,
+    "shortDescription": "Ensuring a pristine environment for your critical operations with certified protocols.",
+    "category": "commercial"
   },
   {
     "title": "Day Porter Services",
@@ -30,7 +34,9 @@
     "image": "services/day-porter.jpg",
     "heroImage": "services/day-porter.jpg",
     "locale": "es",
-    "order": 2
+    "order": 2,
+    "shortDescription": "Extra hands at your service ensuring a clean and healthy environment all day long.",
+    "category": "commercial"
   },
   {
     "title": "Deep Cleaning",
@@ -41,7 +47,9 @@
     "image": "services/deep-cleaning.jpg",
     "heroImage": "services/deep-cleaning.jpg",
     "locale": "es",
-    "order": 3
+    "order": 3,
+    "shortDescription": "Comprehensive deep cleaning ensuring every corner shines with meticulous attention.",
+    "category": "commercial"
   },
   {
     "title": "Green Cleaning",
@@ -52,7 +60,9 @@
     "image": "services/green-cleaning.webp",
     "heroImage": "services/green-cleaning.webp",
     "locale": "es",
-    "order": 4
+    "order": 4,
+    "shortDescription": "Eco-friendly cleaning solutions that are safe for the environment and your team.",
+    "category": "commercial"
   },
   {
     "title": "Window Cleaning",
@@ -63,7 +73,9 @@
     "image": "services/window-cleaning.jpg",
     "heroImage": "services/window-cleaning.jpg",
     "locale": "es",
-    "order": 5
+    "order": 5,
+    "shortDescription": "Achieve glaring clarity with our professional window cleaning solutions and expertise.",
+    "category": "project"
   },
   {
     "title": "Tile & Stone Care",
@@ -74,7 +86,9 @@
     "image": "services/tile-stone-care.jpeg",
     "heroImage": "services/tile-stone-care.jpeg",
     "locale": "es",
-    "order": 6
+    "order": 6,
+    "shortDescription": "Revitalize your surfaces with our specialized tile and stone care solutions.",
+    "category": "project"
   },
   {
     "title": "Solar Panel Cleaning",
@@ -85,7 +99,9 @@
     "image": "services/solarpanel.png",
     "heroImage": "services/solarpanel.png",
     "locale": "es",
-    "order": 7
+    "order": 7,
+    "shortDescription": "Keep your solar panels pristine for optimal energy production and efficiency.",
+    "category": "project"
   },
   {
     "title": "Pressure Washing",
@@ -96,7 +112,9 @@
     "image": "services/pressure-washing.jpg",
     "heroImage": "services/pressure-washing.jpg",
     "locale": "es",
-    "order": 8
+    "order": 8,
+    "shortDescription": "Professional pressure washing services that make your surfaces shine like new.",
+    "category": "project"
   },
   {
     "title": "Post Construction",
@@ -107,7 +125,9 @@
     "image": "services/post-construction.jpg",
     "heroImage": "services/post-construction.jpg",
     "locale": "es",
-    "order": 9
+    "order": 9,
+    "shortDescription": "Leave the mess to us with professional post construction cleaning services.",
+    "category": "project"
   },
   {
     "title": "Maintenance Services",
@@ -118,7 +138,9 @@
     "image": "services/maintenance-services.jpg",
     "heroImage": "services/maintenance-services.jpg",
     "locale": "es",
-    "order": 10
+    "order": 10,
+    "shortDescription": "Reliable maintenance services to keep your property in top condition year-round.",
+    "category": "project"
   },
   {
     "title": "Epoxy Flooring",
@@ -129,7 +151,9 @@
     "image": "services/epoxy-flooring.jpg",
     "heroImage": "services/epoxy-flooring.jpg",
     "locale": "es",
-    "order": 11
+    "order": 11,
+    "shortDescription": "Customizable epoxy floors for a sleek, professional, and durable finish.",
+    "category": "project"
   },
   {
     "title": "Concrete Grinding & Polishing",
@@ -140,7 +164,9 @@
     "image": "services/concrete-grinding-polishing.jpeg",
     "heroImage": "services/concrete-grinding-polishing.jpeg",
     "locale": "es",
-    "order": 12
+    "order": 12,
+    "shortDescription": "Revitalize your floors with precision concrete grinding and polishing services.",
+    "category": "project"
   },
   {
     "title": "Disinfection Services",
@@ -151,7 +177,9 @@
     "image": "services/disinfection-services.jpg",
     "heroImage": "services/disinfection-services.jpg",
     "locale": "es",
-    "order": 13
+    "order": 13,
+    "shortDescription": "Keep your business clean, healthy and free of germs and bacteria every day.",
+    "category": "project"
   },
   {
     "title": "Emergency Cleaning",
@@ -162,7 +190,9 @@
     "image": "services/emergency.jpeg",
     "heroImage": "services/emergency.jpeg",
     "locale": "es",
-    "order": 14
+    "order": 14,
+    "shortDescription": "Rapid response emergency cleaning services when you need us most, 24/7 available.",
+    "category": "project"
   },
   {
     "title": "Upholstery",
@@ -173,7 +203,9 @@
     "image": "services/upholstery.jpg",
     "heroImage": "services/upholstery.jpg",
     "locale": "es",
-    "order": 15
+    "order": 15,
+    "shortDescription": "Professional upholstery cleaning for couches, chairs and cubicle walls restoration.",
+    "category": "project"
   },
   {
     "title": "Carpet Maintenance",
@@ -184,7 +216,9 @@
     "image": "services/carpet-maintenance.jpg",
     "heroImage": "services/carpet-maintenance.jpg",
     "locale": "es",
-    "order": 16
+    "order": 16,
+    "shortDescription": "Comprehensive carpet maintenance services that go beyond basic vacuuming.",
+    "category": "project"
   },
   {
     "title": "Hard Floor Maintenance",
@@ -195,7 +229,9 @@
     "image": "services/hard-floor.jpeg",
     "heroImage": "services/hard-floor.jpeg",
     "locale": "es",
-    "order": 17
+    "order": 17,
+    "shortDescription": "Tailored hard floor maintenance services for every surface type and material.",
+    "category": "project"
   },
   {
     "title": "Snow Removal",
@@ -206,7 +242,9 @@
     "image": "services/snow-removing.jpg",
     "heroImage": "services/snow-removing.jpg",
     "locale": "es",
-    "order": 18
+    "order": 18,
+    "shortDescription": "Keep your business safe and accessible all winter long!",
+    "category": "project"
   },
   {
     "title": "Janitorial Services",
@@ -217,7 +255,9 @@
     "image": "services/janitorial.jpg",
     "heroImage": "services/janitorial.jpg",
     "locale": "es",
-    "order": 19
+    "order": 19,
+    "shortDescription": "Professional janitorial services ensuring glaring cleanliness throughout your facility.",
+    "category": "commercial"
   },
   {
     "title": "Paint & Drywall Services",
@@ -228,7 +268,9 @@
     "image": "services/painting.jpeg",
     "heroImage": "services/painting.jpeg",
     "locale": "es",
-    "order": 20
+    "order": 20,
+    "shortDescription": "Precision in every wall, perfection in every coat",
+    "category": "project"
   },
   {
     "title": "Landscaping Services",
@@ -239,7 +281,9 @@
     "image": "services/landscaping.jpg",
     "heroImage": "services/landscaping.jpg",
     "locale": "es",
-    "order": 21
+    "order": 21,
+    "shortDescription": "First impressions start outside. Our professional landscaping services keep your property looking pristine, welcoming, and well-maintained year-round",
+    "category": "project"
   },
   {
     "title": "Junk Removal Services",
@@ -250,6 +294,8 @@
     "image": "services/junk-removal-services.jpeg",
     "heroImage": "services/junk-removal-services.jpeg",
     "locale": "es",
-    "order": 22
+    "order": 22,
+    "shortDescription": "A clean facility isn’t optional—it’s a standard. Our junk removal specialists clear unwanted items quickly and discreetly so your business always looks sharp, safe, and professionally managed.",
+    "category": "project"
   }
 ]

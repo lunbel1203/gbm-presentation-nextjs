@@ -69,7 +69,7 @@ export default function Sponsor() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Our Glaring family lending a hand and serving meals with heart at the local shelter.
+                                        Glaring Cares proudly brought a free dental outreach campaign to a rural community in the Dominican Republic.
                                     </p>
                                 </div>
                             </div>

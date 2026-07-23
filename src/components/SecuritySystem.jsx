@@ -96,14 +96,14 @@ export default function SecuritySystem () {
                         <div className="security-item flex flex-col items-center text-center">
                             <div className="photo-securitySystem mb-6 cursor-pointer">
                                 <Image
-                                    src="/assets/images/security-system-03.jpg"
+                                    src="/assets/images/security-system-03.png"
                                     alt="Trained on client security protocols"
                                     width={400}
                                     height={256}
                                     className={`w-full h-64 object-cover shadow-lg border-8 border-white rounded-lg ${
-                                        clickedImageSrc === '/assets/images/security-system-03.jpg' ? 'opacity-0' : 'opacity-100'
+                                        clickedImageSrc === '/assets/images/security-system-03.png' ? 'opacity-0' : 'opacity-100'
                                     }`}
-                                    onClick={(e) => openLightbox('/assets/images/security-system-03.jpg', e)}
+                                    onClick={(e) => openLightbox('/assets/images/security-system-03.png', e)}
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                             </div>

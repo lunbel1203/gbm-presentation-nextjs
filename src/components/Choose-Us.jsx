@@ -88,7 +88,7 @@ export default function ChooseUs() {
 
                                     <div className="chooseItem flex justify-end flex-col relative rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[32rem]">
                                         <Image
-                                            src="/assets/images/offer-emergency.jpeg"
+                                            src="/assets/images/choose-emergency.png"
                                             alt="Emergency"
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -123,7 +123,7 @@ export default function ChooseUs() {
 
                                     <div className="chooseItem flex justify-end flex-col relative rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[32rem]">
                                         <Image
-                                            src="/assets/images/choose-commitment.jpg"
+                                            src="/assets/images/choose-commitment.png"
                                             alt="Commitment"
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -132,7 +132,7 @@ export default function ChooseUs() {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">COMMITMENT</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Our commitment is dependable janitorial services, delivered with precision and consistency.
+                                                Our commitment is to provide complete facility solutions that exceed expectations through precision, consistency, and unwavering reliability.
                                             </p>
                                         </div>
                                     </div>

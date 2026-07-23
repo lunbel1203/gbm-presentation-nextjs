@@ -156,7 +156,7 @@ export default function AboutUs() {
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <Image
-                                        src="/assets/images/lindsey-meinert.png"
+                                        src="/assets/images/lindsey-meiner.png"
                                         alt="Lindsey Meinert"
                                         width={96}
                                         height={96}

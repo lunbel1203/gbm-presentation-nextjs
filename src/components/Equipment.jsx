@@ -72,7 +72,7 @@ export default function Equipment() {
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto font-bold leading-relaxed bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">
-                            Our commitment to excellence begins with the tools we provide our team. We invest in the latest, most reliable equipment in the industry, allowing us to deliver consistently superior results. With state-of-the-art technology (SOTA), we ensure efficiency, safety, and the highest standards of quality in every service we perform.
+                            Our commitment to excellence begins with the tools we provide our team. We invest in the latest, most reliable equipment in the industry, allowing us to deliver consistently superior results. With state of the art technology (SOTA), we ensure efficiency, safety, and the highest standards of quality in every service we perform.
                         </p>
                     </div>
                 </div>

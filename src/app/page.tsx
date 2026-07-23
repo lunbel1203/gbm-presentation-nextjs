@@ -87,11 +87,11 @@ const ThankYou = dynamic(() => import('@/components/ThankYou'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
 
-const Sponsor = dynamic(() => import('@/components/Sponsor'), {
+const Fundation = dynamic(() => import('@/components/Fundation'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
 
-const Fundation = dynamic(() => import('@/components/Fundation'), {
+const Sponsor = dynamic(() => import('@/components/Sponsor'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
 
@@ -248,9 +248,9 @@ export default function Home() {
 
             <Equipment />
 
-            <Sponsor />
-
             <Fundation />
+
+            <Sponsor />
 
             <GlaringStandard />
 

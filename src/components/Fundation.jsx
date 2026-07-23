@@ -103,8 +103,9 @@ export default function Fundation () {
                 {/* Primer párrafo - centrado solo */}
                 <div className="fundation-paragraph absolute inset-0 flex justify-center items-center">
                     <p className="max-w-4xl text-center text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        At Glaring, we believe our responsibility goes beyond buildings—it extends to the people and communities around us. That's why we are proud to announce the upcoming launch of our very own foundation:
+                        At Glaring, we believe our responsibility extends far beyond the buildings we maintain. It reaches the people, families, and communities we proudly serve. That commitment led us to create the Glaring Cares Foundation, our nonprofit initiative dedicated to making a lasting impact through community outreach, humanitarian efforts, and meaningful support for those in need. 
                     </p>
+                    <p>The Glaring Cares Foundation is a reflection of our core values: service, integrity, compassion, and the belief that every business has the power to create positive change beyond its industry.</p>
                 </div>
 
                 {/* Logo - aparece y se mantiene */}
@@ -122,17 +123,17 @@ export default function Fundation () {
                 {/* Content fundation - aparece debajo del logo */}
                 <div className="content-fundation max-w-4xl text-center">
                     <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-6">
-                        Founded in the USA in 2025 and now expanding to the Dominican Republic in 2026, Glaring Cares is dedicated to supporting local communities, uplifting families, and creating opportunities that inspire hope and lasting change. From community programs to charitable initiatives, our mission is to show that caring is at the heart of everything we do.
+                        Founded in the United States in 2025 and expanded to the Dominican Republic in 2026, Glaring Cares Foundation is dedicated to supporting local communities, helping families, and creating opportunities that make a lasting difference.
                     </p>
 
                     <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        Stay tuned—because Glaring Cares is more than a foundation, it's a movement of compassion, progress, and commitment to a brighter future. Together, we will make a difference.
+                        Glaring Cares Foundation is more than a nonprofit organization. It reflects our commitment to giving back, serving others, and building stronger communities wherever we work.
                     </p>
                 </div>
 
                 {/* Coming soon - reemplaza al content */}
                 <div className="coming-soon text-center mt-2">
-                    <h3 className='text-6xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-4'>Coming Soon: In 2026, Glaring Cares Arrives in the Dominican Republic</h3>
+                    <h3 className='text-6xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-4'>Now Serving the Dominican Republic: In 2026, Glaring Cares Foundation proudly expanded its mission to the Dominican Republic.</h3>
                     <p className='text-8xl'>🇩🇴</p>
                 </div>
 

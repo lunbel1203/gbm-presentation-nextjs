@@ -148,7 +148,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Real-time Location & Time Tracking</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Real time Location & Time Tracking</h3>
                             </div>
                         </div>
 

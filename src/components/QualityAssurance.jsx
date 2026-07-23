@@ -229,7 +229,7 @@ export default function QaulityAssurance() {
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Support performance-based bonuses and annual incentive programs.
+                                            Support performance based bonuses and annual incentive programs.
                                         </li>
                                     </ul>
                                 </div>

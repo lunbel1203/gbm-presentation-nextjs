@@ -93,7 +93,7 @@ export default function Intro() {
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
                         <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">
-                            At GBM, we prioritize the safety and well-being of your visitors and staff, delivering reliable services that support your goals. Our team operates seven days a week, adapting to your schedule, with on-site supervision and regular inspections to ensure the highest quality standards.
+                            At GBM, we prioritize the safety and well being of your visitors and staff, delivering reliable services that support your goals. Our team operates seven days a week, adapting to your schedule, with on-site supervision and regular inspections to ensure the highest quality standards.
                         </p>
                         <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
                             Please note that due to fluctuations in material, transportation, and labor costs, all estimates remain valid for thirty (30) days from the date of delivery.

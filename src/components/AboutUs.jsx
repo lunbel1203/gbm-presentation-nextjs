@@ -139,13 +139,13 @@ export default function AboutUs() {
                 {/* Description */}
                 <div className="h-60 text-container text-[18px] lg:text-4xl font-bold relative">
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        At Glaring Building Maintenance (GBM), we make your property our priority. As a first-class provider of commercial cleaning services, we set the standard for excellence in our industry. For more than 20 years, we’ve delivered specialized solutions with a focus on quality, accountability, and environmentally responsible practices.
+                        At Glaring Building Maintenance (GBM), we make your property our priority. As a first class provider of commercial cleaning services, we set the standard for excellence in our industry. For more than 20 years, we’ve delivered specialized solutions with a focus on quality, accountability, and environmentally responsible practices.
                     </p>
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        Unlike many others, we never subcontract our work—every service is handled directly by our trained Glaring team, ensuring consistency, reliability, and the highest standards of excellence.
+                        Unlike many others, we never subcontract our work, every service is handled directly by our trained Glaring team, ensuring consistency, reliability, and the highest standards of excellence.
                     </p>
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        Our reputation as one of the best in the business has been built on innovation, technology-driven quality control, and strong management practices. Most importantly, we’ve grown through client referrals—proof of the long-term trust and partnerships we’ve earned with major offices and industrial facilities.
+                        Our reputation as one of the best in the business has been built on innovation, technology driven quality control, and strong management practices. Most importantly, we’ve grown through client referrals, proof of the long term trust and partnerships we’ve earned with major offices and industrial facilities.
                     </p>
                 </div>
 
@@ -156,7 +156,7 @@ export default function AboutUs() {
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <Image
-                                        src="/assets/images/lindsey-meinert.jpg"
+                                        src="/assets/images/lindsey-meinert.png"
                                         alt="Lindsey Meinert"
                                         width={96}
                                         height={96}
@@ -173,7 +173,7 @@ export default function AboutUs() {
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <Image
-                                        src="/assets/images/ceverino-diaz.jpg"
+                                        src="/assets/images/ceverino-diaz.png"
                                         alt="Ceverino Diaz"
                                         width={96}
                                         height={96}
@@ -190,7 +190,7 @@ export default function AboutUs() {
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <Image
-                                        src="/assets/images/rosa-bagaglio.jpg"
+                                        src="/assets/images/rosa-bagaglio.png"
                                         alt="Rosa Bagaglio"
                                         width={96}
                                         height={96}
@@ -207,7 +207,7 @@ export default function AboutUs() {
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <Image
-                                        src="/assets/images/amanda-atchley.jpeg"
+                                        src="/assets/images/amanda-atchley.png"
                                         alt="Amanda Atchley"
                                         width={96}
                                         height={96}
@@ -241,7 +241,7 @@ export default function AboutUs() {
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#194263] to-[#92c13e] p-1 mb-4">
                                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
                                     <Image
-                                        src="/assets/images/silvia-nicola.jpg"
+                                        src="/assets/images/silvia-nicola.png"
                                         alt="Silvia Nicola"
                                         width={96}
                                         height={96}

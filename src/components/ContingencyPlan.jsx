@@ -212,7 +212,7 @@ export default function ContingencyPlan() {
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-right">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">
-                                        We have a specialized support team ready to step in if your primary assigned employee is unavailable, ensuring that all daily tasks are completed seamlessly. Each team member is trained in site-specific safety and security protocols, so your facility's operations continue without disruption and quality standards are consistently met.
+                                        We have a specialized support team ready to step in if your primary assigned employee is unavailable, ensuring that all daily tasks are completed seamlessly. Each team member is trained in site specific safety and security protocols, so your facility's operations continue without disruption and quality standards are consistently met.
                                     </h3>
                                 </div>
                             </div>

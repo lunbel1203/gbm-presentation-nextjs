@@ -84,7 +84,7 @@ export default function Sponsor() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        A sweet moment of gratitude—foundation members enjoying treats from Glaring.
+                                        A sweet moment of gratitude, foundation members enjoying treats from Glaring.
                                     </p>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ export default function Sponsor() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Sharing smiles and support—because caring for our neighbors matters most.
+                                        Sharing smiles and support, because caring for our neighbors matters most.
                                     </p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ export default function Sponsor() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                                     <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Together, we're more than a company—we're a helping hand in our community.
+                                        Together, we're more than a company, we're a helping hand in our community.
                                     </p>
                                 </div>
                             </div>

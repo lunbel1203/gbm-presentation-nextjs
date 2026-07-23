@@ -100,14 +100,6 @@ export default function Fundation () {
         <>
             <section id="fundation" className="fundationTrigger w-full h-screen flex flex-col justify-center items-center text-white relative px-8">
 
-                {/* Primer párrafo - centrado solo */}
-                <div className="fundation-paragraph absolute inset-0 flex justify-center items-center">
-                    <p className="max-w-4xl text-center text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        At Glaring, we believe our responsibility extends far beyond the buildings we maintain. It reaches the people, families, and communities we proudly serve. That commitment led us to create the Glaring Cares Foundation, our nonprofit initiative dedicated to making a lasting impact through community outreach, humanitarian efforts, and meaningful support for those in need. 
-                    </p>
-                    <p>The Glaring Cares Foundation is a reflection of our core values: service, integrity, compassion, and the belief that every business has the power to create positive change beyond its industry.</p>
-                </div>
-
                 {/* Logo - aparece y se mantiene */}
                 <Image
                     src="/assets/images/logo-glaring-cares.png"

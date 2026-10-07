@@ -62,9 +62,9 @@ export default function Intro () {
         <section id="intro" className="introTrigger w-full h-screen bg-[url('/assets/images/bg-building.jpg')] bg-cover bg-center text-white relative">
             <div className="overlay absolute inset-0 w-full h-full">
                 <div className="container h-full mx-auto flex justify-center items-center text-center">
-                    <div className='absolute'>
-                        <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>BIENVENIDO</h1>
-                        <p className='subTitle text-2xl md:text-4xl text-white font-bold'>A nuestra presentación</p>
+                    <div className='absolute w-full lg:w-5/6 px-5'>
+                        <h1 className='welcome text-3xl md:text-5xl lg:text-7xl font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4 leading-tight'>BIENVENIDOS A GLARING BUILDING MAINTENANCE</h1>
+                        <p className='subTitle text-xl md:text-3xl lg:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]'>Soluciones Integrales para Instalaciones</p>
                     </div>
                     <Image
                         className="logo w-5/6 lg:w-1/4 absolute"
@@ -77,18 +77,15 @@ export default function Intro () {
                     />
                     <div className="thank-section w-full lg:w-4/6 text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-5">Gracias por permitir a Glaring Building Maintenance (GBM) la oportunidad de presentar una propuesta.</h2>
+                            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-5">Agradecemos la oportunidad de presentarle Glaring Building Maintenance y mostrarle una mejor forma de gestionar su instalación.</h2>
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
                         <div className="content grid gap-6">
                             <p className="w-full sm:w-5/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
-                                En GBM, la seguridad, el bienestar de sus visitantes y colaboradores constituyen el eje central de nuestras operaciones. Ofrecemos servicios confiables y de alto nivel que respaldan sus objetivos institucionales, garantizando entornos limpios, seguros y en óptimas condiciones.
+                                Durante más de 20 años, hemos ayudado a organizaciones a mantener propiedades más limpias, seguras y de mejor desempeño mediante soluciones de instalaciones confiables con personal propio.
                             </p>
-                            <p className="w-full sm:w-5/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
-                                Nuestro equipo opera los siete días de la semana y se ajusta a sus necesidades operativas, con supervisión constante en sitio e inspecciones programadas que aseguran el cumplimiento de los más altos estándares de calidad.
-                            </p>
-                            <p className="w-full sm:w-5/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
-                                Por favor, tenga en cuenta que, debido a las variaciones en los costos de materiales, transporte y mano de obra, todas las cotizaciones tendrán una validez de treinta (30) días a partir de la fecha de emisión.
+                            <p className="w-full sm:w-5/6 text-base md:text-xl lg:text-3xl font-bold mx-auto leading-relaxed text-white">
+                                Un socio. Un punto de contacto. Un estándar.
                             </p>
                         </div>
                     </div>

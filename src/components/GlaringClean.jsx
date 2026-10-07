@@ -90,8 +90,11 @@ export default function GlaringClean () {
         <>
             <section id="glaring-clean" className="glaringClean-section w-full h-screen flex items-center bg-slate-50 px-20 relative">
                 <div className="glaringclean-title-container w-[45%] text-left">
-                    <h2 className="w-full text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">No es solo limpio, <br /> es limpieza al nivel Glaring.</h2>
-                    <div className="w-24 h-1 bg-gbm-green"></div>
+                    <h2 className="w-full text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-8 leading-tight uppercase">La Diferencia Glaring</h2>
+                    <div className="w-24 h-1 bg-gbm-green mb-8"></div>
+                    <p className="text-3xl font-bold text-[#194263] mb-5">Más que limpio. Cuidado integral de instalaciones.</p>
+                    <p className="text-xl text-gray-700 leading-relaxed mb-5">Desde las operaciones diarias hasta proyectos especializados, cada servicio está respaldado por el mismo compromiso con la calidad, la responsabilidad y la atención al detalle.</p>
+                    <p className="text-2xl font-black text-gbm-green">Ese es el Estándar Glaring.</p>
                 </div>
 
                 <div className="imagesSection w-[55%] flex justify-between items-center gap-6 p-4">

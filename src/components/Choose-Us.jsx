@@ -47,7 +47,7 @@ export default function ChooseUs () {
 
                         <div className="chooseUs-list w-full h-screen flex flex-wrap items-center px-4 md:px-8 lg:px-20 relative">
                             <div className="chooseUs-section w-full lg:w-4/5 text-center mx-auto">
-                                <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">POR QUÉ ELEGIRNOS</h2>
+                                <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">¿POR QUÉ GLARING?</h2>
                                 <div className="w-32 sm:w-40 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
 
@@ -63,9 +63,9 @@ export default function ChooseUs () {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">ASOCIACIÓN</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">UN SOLO PUNTO DE CONTACTO</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Más del 75% de nuestro negocio actual nos llega a través de referidos. Si es importante para nuestros clientes, es importante para nosotros.
+                                                Múltiples necesidades de su instalación gestionadas a través de una sola relación.
                                             </p>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@ export default function ChooseUs () {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">SIEMPRE LISTOS</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Ya que atendemos instalaciones y edificios como el suyo, tenemos el equipo y personal listos para lidiar con cualquier contingencia y brindar continuidad del servicio.
+                                                Personal y equipos disponibles para respaldar las necesidades cambiantes de su instalación.
                                             </p>
                                         </div>
                                     </div>
@@ -95,9 +95,9 @@ export default function ChooseUs () {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EMERGENCIAS</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">RESPUESTA DE EMERGENCIA</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Cuando ocurre un desastre, cada minuto cuenta. Glaring Building Maintenance garantiza una respuesta rápida y comprobada con soluciones viables para cualquier situación inesperada.
+                                                Un equipo de confianza cuando surgen situaciones inesperadas.
                                             </p>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@ export default function ChooseUs () {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">CALIDAD CONSISTENTE</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                La consistencia y la calidad son los pilares de nuestros estándares de servicio.
+                                                Estándares definidos respaldados por inspecciones y supervisión.
                                             </p>
                                         </div>
                                     </div>
@@ -130,9 +130,9 @@ export default function ChooseUs () {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">COMPROMISO</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EQUIPOS PROPIOS</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Prometemos brindar servicios de limpieza de calidad y confianza en todo momento, para que nuestros clientes leales se sientan especiales. Trabajamos arduamente para ser los mejores.
+                                                Sin subcontratación. Mayor control y responsabilidad.
                                             </p>
                                         </div>
                                     </div>
@@ -146,9 +146,9 @@ export default function ChooseUs () {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EXPERIENCIA</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">MÁS DE 20 AÑOS DE EXPERIENCIA</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                A lo largo de los años hemos trabajado duro no solo resolviendo problemas existentes para nuestros clientes, sino que hemos aprendido a predecir y prevenir la mayoría de los desafíos recurrentes.
+                                                Experiencia que nos ayuda a resolver los problemas antes de que se vuelvan más grandes.
                                             </p>
                                         </div>
                                     </div>

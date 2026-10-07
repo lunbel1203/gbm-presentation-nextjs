@@ -92,8 +92,11 @@ export default function OurPeople () {
                 <div className="mission-overlay w-full flex items-center px-20 bg-white absolute inset-0">
                     <div className="ourpeople-title-container w-[30%] text-left">
                         <h2 className="w-full text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent leading-tight">Nuestro Mayor Activo:</h2>
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10 leading-tight">Nuestra Gente</h2>
-                        <div className="w-24 h-1 bg-gbm-green"></div>
+                        <h2 className="w-full text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-6 leading-tight">Nuestra Gente</h2>
+                        <div className="w-24 h-1 bg-gbm-green mb-6"></div>
+                        <p className="text-lg text-gray-700 font-semibold leading-relaxed mb-3">Los equipos importan. La tecnología importa. Los sistemas importan.</p>
+                        <p className="text-xl text-[#194263] font-black leading-relaxed mb-3">Pero son las personas quienes brindan el servicio.</p>
+                        <p className="text-lg text-gray-700 leading-relaxed">Por eso invertimos en capacitación, supervisión, responsabilidad y en el desarrollo continuo de nuestro equipo.</p>
                     </div>
 
                     <div className="imagesSection w-[70%] flex justify-between items-center gap-6 p-4">

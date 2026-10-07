@@ -61,12 +61,11 @@ export default function tasksOrganization () {
                     {/* Header Section - Lado izquierdo */}
                     <div className="task-title w-[40%] text-left pr-8">
                         <h2 className="text-4xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            ORGANIZACIÓN DE TAREAS
+                            SISTEMA DE LIMPIEZA EN EQUIPO
                         </h2>
-                        <h3 className="text-2xl lg:text-4xl font-bold text-gray-600 mb-6">Limpieza en Equipo</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mb-8"></div>
                         <p className="text-lg lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold leading-relaxed">
-                            En el enfoque de limpieza en equipo, a cada personal de limpieza se le asignan tareas especializadas para garantizar la máxima eficiencia y experiencia.
+                            Para instalaciones más grandes, responsabilidades claramente definidas ayudan a mejorar la productividad, la consistencia y la responsabilidad.
                         </p>
                     </div>
 
@@ -87,10 +86,10 @@ export default function tasksOrganization () {
                                         </div>
                                         <div className="flex-1 p-4 flex flex-col justify-center">
                                             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                                Especialista en Tareas Ligeras (LD)
+                                                Especialista en Tareas Ligeras
                                             </h3>
                                             <p className="text-gray-700 text-sm leading-relaxed">
-                                                El personal de limpieza será responsable de realizar el barrido ligero (LD) del área a limpiar, removiendo toda la basura y cualquier objeto grande del piso.
+                                                Retira la basura y los objetos grandes del piso.
                                             </p>
                                         </div>
                                     </div>
@@ -109,10 +108,10 @@ export default function tasksOrganization () {
                                         </div>
                                         <div className="flex-1 p-4 flex flex-col justify-center">
                                             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                                Especialista en Baños (RS)
+                                                Especialista en Baños
                                             </h3>
                                             <p className="text-gray-700 text-sm leading-relaxed">
-                                                El personal de limpieza será responsable de limpiar, sanitizar y reponer los suministros de los baños.
+                                                Limpia, sanitiza y repone los suministros de los baños.
                                             </p>
                                         </div>
                                     </div>
@@ -131,10 +130,10 @@ export default function tasksOrganization () {
                                         </div>
                                         <div className="flex-1 p-4 flex flex-col justify-center">
                                             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                                Especialista en Aspirado (VS)
+                                                Especialista en Aspirado
                                             </h3>
                                             <p className="text-gray-700 text-sm leading-relaxed">
-                                                El personal de limpieza será responsable de aspirar completamente el área asegurándose de que no quedaron objetos del barrido ligero, verificando también todos los zafacones del área.
+                                                Aspira a fondo y verifica todos los zafacones.
                                             </p>
                                         </div>
                                     </div>
@@ -153,10 +152,10 @@ export default function tasksOrganization () {
                                         </div>
                                         <div className="flex-1 p-4 flex flex-col justify-center">
                                             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                                Especialista en Utilidades (US)
+                                                Especialista en Utilidades
                                             </h3>
                                             <p className="text-gray-700 text-sm leading-relaxed">
-                                                El personal de limpieza será responsable de trapear, desinfectar, pulir y fregar automáticamente el piso, así como otras tareas asignadas.
+                                                Trapea, desinfecta, pule y friega automáticamente los pisos.
                                             </p>
                                         </div>
                                     </div>

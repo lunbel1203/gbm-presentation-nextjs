@@ -103,7 +103,7 @@ export default function Fundation () {
                 {/* Primer párrafo - centrado solo */}
                 <div className="fundation-paragraph absolute inset-0 flex justify-center items-center">
                     <p className="max-w-4xl text-center text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        En Glaring, creemos que nuestra responsabilidad va más allá de tus instalaciones: se extiende a las personas y comunidades que nos rodean. Por eso estamos orgullosos de anunciar el próximo lanzamiento de nuestra propia fundación:
+                        Porque las comunidades donde trabajamos también importan.
                     </p>
                 </div>
 
@@ -121,18 +121,14 @@ export default function Fundation () {
 
                 {/* Content fundation - aparece debajo del logo */}
                 <div className="content-fundation max-w-4xl text-center">
-                    <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-6">
-                        Fundada en Estados Unidos en 2025 y ahora expandiéndose a República Dominicana en 2026, Glaring Cares se dedica a apoyar comunidades locales, elevar familias y crear oportunidades que inspiran esperanza y cambios duraderos. Desde programas comunitarios hasta iniciativas caritativas, nuestra misión es demostrar que el cuidado está en el corazón de todo lo que hacemos.
-                    </p>
-
-                    <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        Mantente atento, porque Glaring Cares es más que una fundació, es un movimiento de compasión, progreso y compromiso con un futuro mejor. Juntos haremos la diferencia.
+                    <p className="text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
+                        Glaring Cares Foundation: cuidando a las comunidades donde trabajamos.
                     </p>
                 </div>
 
                 {/* Coming soon - reemplaza al content */}
                 <div className="coming-soon text-center mt-2">
-                    <h3 className='text-6xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-4'>Próximamente: En 2026, Glaring Cares Llega a República Dominicana</h3>
+                    <h3 className='text-4xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-4'>Ahora sirviendo a Estados Unidos y República Dominicana.</h3>
                     <p className='text-8xl'>🇩🇴</p>
                 </div>
 

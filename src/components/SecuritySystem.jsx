@@ -65,8 +65,9 @@ export default function SecuritySystem () {
 
                     {/* Título de la sección */}
                     <div className="security-title-container w-[40%] text-left mb-16" style={{opacity: isClient ? 0 : 1}}>
-                        <h2 className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 leading-tight">SISTEMA DE SEGURIDAD</h2>
-                        <div className="w-24 h-1 bg-gbm-green"></div>
+                        <h2 className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 leading-tight">SEGURIDAD Y RESPONSABILIDAD</h2>
+                        <div className="w-24 h-1 bg-gbm-green mb-6"></div>
+                        <p className="text-xl text-gray-700 leading-relaxed">Su equipo de servicio puede tener acceso a sus instalaciones cuando sus empleados no están. Nos tomamos esa responsabilidad con total seriedad.</p>
                     </div>
 
                     {/* Grid Container */}
@@ -88,7 +89,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Verificaciones de antecedentes penales y evaluaciones</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Verificaciones y Evaluaciones</h3>
                             </div>
                         </div>
 
@@ -108,7 +109,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content mb-6">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Capacitación en todos los Protocolos de seguridad del cliente</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Capacitación en Protocolos de Seguridad del Cliente</h3>
                             </div>
                         </div>
 
@@ -128,7 +129,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Personal Uniformado y con carnet de identificación</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Personal Uniformado y con Carnet de Identificación</h3>
                             </div>
                         </div>
 
@@ -148,7 +149,7 @@ export default function SecuritySystem () {
                                 />
                             </div>
                             <div className="text-content">
-                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Rastreo de ubicación y tareas en tiempo real</h3>
+                                <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">Rastreo de Tiempo y Ubicación en Tiempo Real</h3>
                             </div>
                         </div>
 

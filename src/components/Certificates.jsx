@@ -49,13 +49,8 @@ export default function Certificates () {
             <section id="certificates" className="certificatesTrigger w-full min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white py-20">
                 <div className="certificates-overlay container mx-auto px-6 lg:px-8">
                     
-                    {/* Header Section */}
-                    <div className="text-center my-16">
-                        <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            NUESTRAS CERTIFICACIONES
-                        </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
-                    </div>
+                    {/* TODO(verificar): confirmar con Glaring qué credenciales/membresías posee y puede documentar (OSHA es una agencia, no un certificador; ISSA/IFMA/Edificios Verdes también). Mostrar solo las documentables antes de publicar. */}
+                    <div className="my-16"></div>
 
                     {/* Modern Cards */}
                     <div className="certificates-cards w-full max-w-7xl mx-auto flex justify-center gap-8">

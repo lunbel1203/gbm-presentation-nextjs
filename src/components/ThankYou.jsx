@@ -72,10 +72,22 @@ export default function ThankYou() {
 
                     {/* Thank You Message */}
                     <div className="thank-you-text">
-                        <h1 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide">
-                            Gracias por su tiempo.
+                        <h1 className="text-4xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide mb-8">
+                            Hablemos de Su Propiedad.
                         </h1>
-                        <p className='text-2xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase tracking-wide'>Permitanos cuidar su propiedad con la calidad que solo Glaring puede brindar.</p>
+                        <p className="text-lg lg:text-2xl text-gray-700 leading-relaxed mb-8">
+                            Ya sea que busque un mejor programa de limpieza, servicios especializados para instalaciones o un solo socio capaz de hacer más, estamos listos para ayudarle.
+                        </p>
+                        <a
+                            href="https://glaringmaintenance.com.do/get-estimate"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block px-8 py-4 rounded-lg bg-gradient-to-r from-[#194263] to-gbm-green text-white text-lg lg:text-xl font-black uppercase tracking-wide shadow-lg hover:shadow-xl transition-shadow duration-300 mb-10"
+                        >
+                            Programe una Evaluación de su Instalación
+                        </a>
+                        <p className="text-xl lg:text-3xl font-black text-[#194263]">Su Propiedad Es Nuestra Prioridad.</p>
+                        <p className="text-xl lg:text-3xl font-black text-gbm-green">La Diferencia Es Glaring.</p>
                     </div>
 
                 </div>

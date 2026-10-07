@@ -149,13 +149,12 @@ export default function WorkerCompensation () {
                         </div>
                     </div>
                     <div className="compensation-title-container w-[40%] text-left">
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">COMPENSACIÓN LABORAL</h2>
-                        <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">Todos los trabajadores son remunerados en base a un salario digno.</h3>
-                        <div className="w-24 h-1 bg-gbm-green mb-10"></div>
-                        <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>(Esto representa un 20-30% por encima del salario mínimo del estado Dominicano).</h3>
-                        <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">Tasa de rotación de trabajadores de limpieza:</h3>
-                        <div className="w-24 h-1 bg-gbm-green mb-10"></div>
-                        <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>20% anual (Promedio de la industria = 200%)</h3>
+                        <h2 className="w-full text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-8 uppercase">Invertimos en Nuestra Gente</h2>
+                        <div className="w-24 h-1 bg-gbm-green mb-8"></div>
+                        {/* TODO(verificar): se eliminaron la cifra de rotación (20% vs 200% de la industria) y el "salario digno 20-30% sobre el mínimo" hasta contar con documentación vigente. */}
+                        <p className="text-xl text-gray-700 leading-relaxed mb-4">Creemos que un servicio consistente comienza con empleados que se sienten valorados, apoyados y preparados para tener éxito.</p>
+                        <p className="text-xl text-gray-700 leading-relaxed mb-4">Nuestro enfoque se centra en una compensación competitiva, capacitación, expectativas claras y oportunidades de crecimiento profesional.</p>
+                        <p className="text-2xl font-black text-[#194263] leading-relaxed">Empleados mejor apoyados generan mejores experiencias para los clientes.</p>
                     </div>
                 </div>
 

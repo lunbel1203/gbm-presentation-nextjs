@@ -99,8 +99,9 @@ export default function QaulityAssurance () {
                     
                     {/* Título Principal */}
                     <div className="quality-title text-center mb-16">
-                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4">Control y garantía de calidad</h2>
-                        <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 uppercase">Calidad que Puede Medirse</h2>
+                        <div className="w-24 h-1 bg-gbm-green mx-auto mb-5"></div>
+                        <p className="text-2xl lg:text-3xl font-bold text-gbm-green">El buen servicio no debería depender de la suerte.</p>
                     </div>
 
                     <div className="w-full max-w-7xl mx-auto flex flex-col gap-20">
@@ -176,10 +177,7 @@ export default function QaulityAssurance () {
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
                                             Mantenimiento rutinario y acciones correctivas.
                                         </li>
-                                        <li className="flex items-center">
-                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Inspecciones de estándares de limpieza APPA y CIMS.
-                                        </li>
+                                        {/* TODO(verificar): la referencia a inspecciones APPA y CIMS se retiró hasta confirmar que Glaring sigue formalmente esos estándares. */}
                                     </ul>
                                 </div>
                                 <div className="w-full lg:w-5/12">
@@ -253,6 +251,8 @@ export default function QaulityAssurance () {
                                 </div>
                             </div>
                         </div>
+
+                        <p className="text-center text-2xl lg:text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mt-20">No esperamos a que las quejas nos digan que algo anda mal.</p>
 
                     </div>
                     

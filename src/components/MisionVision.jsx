@@ -113,7 +113,7 @@ export default function MisionVision () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Nuestro objetivo es alcanzar el 100% de satisfacción del cliente, permitiéndoles enfocarse plenamente en la misión de su empresa y alcanzar el éxito con mayor rapidez. Al mismo tiempo, mantenemos el compromiso de brindar un entorno de satisfacción y crecimiento para nuestros empleados, impulsando siempre la excelencia y la mejora continua en cada uno de nuestros servicios.
+                                Nuestra misión es simplificar el cuidado de las instalaciones ofreciendo soluciones confiables y de alta calidad mediante equipos propios capacitados, sistemas sólidos y un único estándar de responsabilidad, permitiendo que nuestros clientes se concentren en lo que mejor hacen.
                             </p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@ export default function MisionVision () {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Ser reconocidos como la empresa líder en la provisión de soluciones de limpieza por la calidad de nuestros servicios y compromiso con nuestros clientes.
+                                Convertirnos en uno de los socios de soluciones para instalaciones más confiables en los mercados que servimos, reconocidos por la calidad, la innovación, la responsabilidad y nuestra capacidad de ofrecer múltiples servicios para propiedades bajo un mismo techo.
                             </p>
                         </div>
                     </div>
@@ -146,10 +146,10 @@ export default function MisionVision () {
                             </div>
                             <div className="w-full flex justify-center">
                                 <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-xl text-left'>
-                                    <li><span className='text-gbm-green font-bold'>Honestidad:</span> Creemos firmemente en la honestidad como uno de los pilares fundamentales que guían todas nuestras acciones. Actuamos con coherencia, transparencia y sinceridad, reflejando siempre los valores de verdad y justicia en cada decisión que tomamos.</li>
-                                    <li><span className='text-gbm-green font-bold'>Compromiso:</span> Valoramos el compromiso de cada integrante de nuestro equipo con sus responsabilidades. Confiamos en la dedicación individual y reconocemos el aporte que cada persona brinda al crecimiento y éxito de la empresa.</li>
-                                    <li><span className='text-gbm-green font-bold'>Responsabilidad:</span> Somos conscientes del impacto de nuestras acciones y asumimos plenamente la responsabilidad de garantizar entornos seguros y saludables para nuestros clientes, manteniendo al mismo tiempo un firme compromiso con la protección del medio ambiente.</li>
-                                    <li><span className='text-gbm-green font-bold'>Innovación:</span> Fomentamos una cultura de mejora continua y búsqueda constante de nuevas soluciones. Adoptamos tecnologías, procesos y prácticas innovadoras que nos permiten optimizar nuestros servicios, anticiparnos a las necesidades de nuestros clientes y mantenernos a la vanguardia del sector.</li>
+<li><span className='text-gbm-green font-bold uppercase'>Honestidad</span> — La transparencia y la integridad guían cada decisión.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Compromiso</span> — Asumimos la responsabilidad de nuestras funciones y de nuestros resultados.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Responsabilidad</span> — Protegemos las propiedades, las personas y los entornos que se nos confían.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Innovación</span> — Mejoramos continuamente nuestra tecnología, nuestros sistemas y nuestros métodos de servicio.</li>
                                 </ul>
                             </div>
                         </div>

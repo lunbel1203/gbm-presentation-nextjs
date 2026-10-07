@@ -50,11 +50,11 @@ export default function Sponsor () {
                 <div className="sponsor-section container h-full mx-auto flex justify-center items-center text-center gap-20">
                     <div className="sponsor-title w-[40%] text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5">Nuestro cuidado va más allá de tus instalaciones.</h2>
+                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-5 uppercase">Nuestro Cuidado Va Más Allá de los Edificios</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto leading-relaxed bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
-                            Apoyando con orgullo a nuestra comunidad, Glaring Building Maintenance colabora con equipos deportivos locales y fundaciones para ayudar a fortalecer y elevar nuestros vecindarios. Juntos, construimos más que espacios limpios, construimos conexiones que impactan.
+                            A través de Glaring Cares Foundation, apoyamos a las comunidades mediante programas de alcance, donaciones, iniciativas médicas y dentales y alianzas comunitarias en Estados Unidos y República Dominicana.
                         </p>
                     </div>
                     <div className="content-section w-[60%]">
@@ -67,11 +67,6 @@ export default function Sponsor () {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Nuestra familia Glaring dando una mano y sirviendo comidas con el corazón en el refugio local.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -82,11 +77,6 @@ export default function Sponsor () {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Un dulce momento de gratitud: miembros de la fundación disfrutando de golosinas de Glaring.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -97,11 +87,6 @@ export default function Sponsor () {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Compartiendo sonrisas y apoyo, porque cuidar de nuestros vecinos es lo más importante.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -112,11 +97,6 @@ export default function Sponsor () {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Cada plato servido es un recordatorio de que la bondad va muy lejos.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -127,11 +107,6 @@ export default function Sponsor () {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Juntos, somos más que una empresa: somos una mano amiga en nuestra comunidad.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -142,11 +117,6 @@ export default function Sponsor () {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Orgullosos de ver al equipo local de softbol en acción.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>

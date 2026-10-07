@@ -114,18 +114,14 @@ export default function Fundation () {
 
                 {/* Content fundation - aparece debajo del logo */}
                 <div className="content-fundation max-w-4xl text-center">
-                    <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-6">
-                        Founded in the United States in 2025 and expanded to the Dominican Republic in 2026, Glaring Cares Foundation is dedicated to supporting local communities, helping families, and creating opportunities that make a lasting difference.
-                    </p>
-
-                    <p className="text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold">
-                        Glaring Cares Foundation is more than a nonprofit organization. It reflects our commitment to giving back, serving others, and building stronger communities wherever we work.
+                    <p className="text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
+                        Because the communities where we work matter too.
                     </p>
                 </div>
 
                 {/* Coming soon - reemplaza al content */}
                 <div className="coming-soon text-center mt-2">
-                    <h3 className='text-6xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-4'>Now Serving the Dominican Republic: In 2026, Glaring Cares Foundation proudly expanded its mission to the Dominican Republic.</h3>
+                    <h3 className='text-4xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-semibold mb-4'>Now serving the United States and the Dominican Republic.</h3>
                     <p className='text-8xl'>🇩🇴</p>
                 </div>
 

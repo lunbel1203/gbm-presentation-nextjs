@@ -169,11 +169,18 @@ export default function WeServe () {
                     <div className="container h-full mx-auto flex flex-wrap justify-center items-center text-center">
                         <div className="weServe-section w-full lg:w-4/5 text-center mx-auto">
                             <div className="w-full mb-10">
-                                <h2 className="w-full text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WE PROUDLY SERVE</h2>
+                                <h2 className="w-full text-2xl lg:text-7xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">OUR REACH</h2>
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
-                            <p className="w-full lg:w-3/5 text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                From New England to the Dominican Republic, we deliver reliable maintenance services that keep your facilities at their best.                            
+                            <p className="w-full lg:w-3/5 text-xl lg:text-4xl mx-auto leading-relaxed text-white font-black mb-8">
+                                Growing Without Lowering Our Standard.
+                            </p>
+                            <div className="w-full lg:w-3/5 mx-auto text-base lg:text-2xl leading-relaxed text-gray-200 font-bold space-y-3 mb-8">
+                                <p><span className="text-gbm-green">UNITED STATES</span> — Massachusetts, New Hampshire, Maine</p>
+                                <p><span className="text-gbm-green">INTERNATIONAL</span> — Dominican Republic</p>
+                            </div>
+                            <p className="w-full lg:w-3/5 text-base lg:text-xl mx-auto leading-relaxed text-gray-200 italic">
+                                Wherever Glaring operates, the standard travels with us.
                             </p>
                         </div>
                     </div>

@@ -47,7 +47,7 @@ export default function ChooseUs() {
 
                         <div className="chooseUs-list w-full h-screen flex flex-wrap items-center px-4 md:px-8 lg:px-20 relative">
                             <div className="chooseUs-section w-full lg:w-4/5 text-center mx-auto">
-                                <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WHY CHOOSE US</h2>
+                                <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5">WHY GLARING?</h2>
                                 <div className="w-32 sm:w-40 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
 
@@ -63,9 +63,9 @@ export default function ChooseUs() {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">PARTNERSHIP</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">ONE POINT OF CONTACT</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Over 75% of our existing business comes to us through referrals. If it's important to our clients, it's important to us.
+                                                Multiple facility needs managed through one relationship.
                                             </p>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@ export default function ChooseUs() {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">ALWAYS READY</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Since we serve facilities and buildings just like yours, we have the equipment and personnel ready to deal with any contingency and provide continuity of service.
+                                                Personnel and equipment available to support changing facility needs.
                                             </p>
                                         </div>
                                     </div>
@@ -95,9 +95,9 @@ export default function ChooseUs() {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EMERGENCY</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EMERGENCY RESPONSE</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                When disaster strikes, every minute counts. Glaring Building Maintenance guarantees rapid and proven response and workable solutions to any unexpected situation.
+                                                A trusted team when unexpected situations occur.
                                             </p>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@ export default function ChooseUs() {
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
                                             <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">CONSISTENT QUALITY</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Consistency and Quality are the pillars of our service standards.
+                                                Defined standards supported by inspections and supervision.
                                             </p>
                                         </div>
                                     </div>
@@ -130,9 +130,9 @@ export default function ChooseUs() {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">COMMITMENT</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">IN-HOUSE TEAMS</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Our commitment is to provide complete facility solutions that exceed expectations through precision, consistency, and unwavering reliability.
+                                                No subcontracting. Greater control and accountability.
                                             </p>
                                         </div>
                                     </div>
@@ -146,9 +146,9 @@ export default function ChooseUs() {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="w-[90%] mx-auto bg-gbm-blue/60 relative z-10 p-3 sm:p-4 md:p-6 flex flex-col justify-end mb-3 sm:mb-4 md:mb-5 rounded-2xl">
-                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">EXPERIENCE</h3>
+                                            <h3 className="text-lg lg:text-3xl font-bold mb-2 sm:mb-3 text-center bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">20+ YEARS OF EXPERIENCE</h3>
                                             <p className="text-sm sm:text-base leading-relaxed text-center text-white font-bold">
-                                                Over the years, we have focused not only on solving existing problems for our clients, but also on predicting and preventing recurring challenges.
+                                                Experience that helps us solve problems before they become bigger problems.
                                             </p>
                                         </div>
                                     </div>

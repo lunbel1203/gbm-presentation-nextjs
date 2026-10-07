@@ -1,406 +1,77 @@
 import React from 'react'
-import Image from 'next/image'
-import { gsap, createOptimizedScrollTrigger } from '../lib/gsap'
-import { useGSAP } from '@gsap/react'
 
-
-
+const categories = [
+    {
+        title: 'Cleaning & Facility Care',
+        image: '/assets/images/offer-janitorial.png',
+        services: ['Janitorial', 'Day Porter', 'Deep Cleaning', 'Disinfection', 'Post-Construction Cleaning', 'Window Cleaning', 'Emergency Cleaning', 'Green Cleaning'],
+    },
+    {
+        title: 'Floor & Surface Care',
+        image: '/assets/images/offer-hard-floor.jpeg',
+        services: ['Carpet Maintenance', 'Carpet Installation', 'Hard Floor Maintenance', 'Tile & Stone Care', 'Concrete Grinding & Polishing', 'Epoxy Flooring', 'Upholstery'],
+    },
+    {
+        title: 'Exterior & Seasonal',
+        image: '/assets/images/offer-snow-removal.png',
+        services: ['Snow & Ice Management', 'Landscaping', 'Pressure Washing', 'Solar Panel Cleaning'],
+    },
+    {
+        title: 'Property Maintenance',
+        image: '/assets/images/offer-maintenance-services.png',
+        services: ['Painting & Drywall', 'Maintenance Services', 'Junk Removal*'],
+    },
+    {
+        title: 'Specialized Environments',
+        image: '/assets/images/offer-data-center.png',
+        services: ['Data Center Cleaning', 'Cleanroom Services', 'Specialized Facility Cleaning'],
+    },
+]
 
 export default function WeOffer() {
-    useGSAP(() => {
-        // Configuración inicial para las cards
-        gsap.set('.weOffer-cards', { y: '100vh', opacity: 0 });
-
-        // ScrollTrigger optimizado para 21 cards
-        createOptimizedScrollTrigger({
-            trigger: '.weOfferTrigger',
-            start: 'top top',
-            end: '+=6000', // Más espacio para las 21 cards
-            scrub: 1,
-            pin: true,
-            pinSpacing: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-
-                // Animación suave de las cards subiendo desde abajo
-                const yPosition = gsap.utils.interpolate(100, -20, progress);
-                const opacity = gsap.utils.interpolate(0, 1, Math.min(progress * 2, 1));
-
-                gsap.set('.weOffer-cards', {
-                    y: `${yPosition}vh`,
-                    opacity: opacity
-                });
-            }
-        });
-
-    }, []);
-
     return (
-        <>
-            <section id="we-offer" className="weOfferTrigger w-full min-h-screen bg-gradient-to-br from-gray-50 to-white py-10">
-                <div className="weOffer-overlay container mx-auto px-6 lg:px-8">
+        <section id="we-offer" className="weOfferTrigger w-full min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+            <div className="weOffer-overlay container mx-auto px-6 lg:px-8">
 
-                    {/* Header Section */}
-                    <div className="weOffer-title w-full text-center">
-                        <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            What we offer
-                        </h2>
-                        <h3 className="text-2xl lg:text-4xl font-bold text-gbm-green mb-6">Our core services</h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
-                    </div>
-
-                    {/* Modern Cards */}
-                    <div className="weOffer-cards w-full mx-auto space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
-
-                        {/* Card 1 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-data-center.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DATA CENTER CLEANING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Safeguard your data with specialized cleaning solutions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 2 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-cleanroom-services.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        CLEANROOM SERVICES
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring a pristine environment for your critical operations.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 3 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-janitorial.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        JANITORIAL
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring glaring cleanliness.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 4 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-day-porter.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DAY PORTER
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Extra hands at your service ensuring a clean and healthy environment for everyone within your facility.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 5 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-deep-cleaning.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DEEP CLEANING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Ensuring that every little corner is glaring for you.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 6 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-green-cleaning.webp')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        GREEN CLEANING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Go green and make the environment clean.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 7 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-windows-cleaning.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        WINDOW CLEANING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Achieve Glaring clarity with our professional window cleaning solutions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 8 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-tile-stone-care.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        TILE & STONE CARE
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Revitalize your surfaces with our Glaring tile & stone care solutions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 9 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-solar-panel.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        SOLAR PANEL CLEANING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Keep your solar panels pristine for optimal energy production.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 10 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-pressure-washing.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        PRESSURE WASHING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Leave the pressure to us for a deep clean that makes your surfaces shine.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 11 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-post-construction.jpg')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        POST CONSTRUCTION
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Leave the mess to us, professional post construction cleaning services.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 12 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-maintenance-services.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        MAINTENANCE SERVICES
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Reliable maintenance services to keep your property in top condition.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 13 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-epoxy-flooring.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        EPOXY FLOORING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Customizable epoxy floors for a sleek, professional finish.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 14 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-concrete.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        CONCRETE GRINDING POLISHING
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Revitalize your floors with precision concrete grinding and polishing.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 15 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-disinfection-services.jpg')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        DISINFECTION SERVICES
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Let's keep your business clean but also healthy and free of germs and bacteria.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 16 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-emergency.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        EMERGENCY CLEANING SERVICES
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Rapid response emergency cleaning services when you need us Most.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 17 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-upholstery.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        UPHOLSTERY
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Whether it's couches, chairs or even cubicles walls, we can get your organization's upholstery back to clean.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 18 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-carpet-maintenance.jpg')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        CARPET MAINTENANCE
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Vacuuming is not enough to keep your carpets clean.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 19 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-hard-floor.jpeg')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        HARD FLOOR MAINTENANCE
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Tailored hard floor maintenance services for every surface type.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 20 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-snow-removal.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        SNOW REMOVAL
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Keep your business safe and accessible all winter long.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 21 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-landscaping.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        LandSCaping Services
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        First impressions start outside. Our professional landscaping services keep your property looking pristine, welcoming, and well maintained year-round.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 22 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-painting.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        Paint and drywall
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Precision in every wall, perfection in every coat.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 23 */}
-                        <div className="group relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-52">
-                            <div className="flex items-center gap-6 h-full">
-                                <div className="relative w-52 h-52 rounded-l-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-[url('/assets/images/offer-junk-removal.png')] bg-cover bg-center"></div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-3">
-                                        Junk Removal
-                                    </h3>
-                                    <p className="text-gray-700 text-base leading-relaxed">
-                                        Fast, efficient, and professional junk removal solutions to declutter commercial spaces, improve safety, and restore productivity.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
+                {/* Header Section */}
+                <div className="weOffer-title w-full text-center">
+                    <h2 className="text-4xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
+                        Complete Facility Solutions
+                    </h2>
+                    <h3 className="text-2xl lg:text-4xl font-bold text-gbm-green mb-6">One Property. One Partner.</h3>
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-12"></div>
                 </div>
-            </section>
-        </>
+
+                {/* Category cards */}
+                <div className="weOffer-cards w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                    {categories.map((category, index) => (
+                        <div
+                            key={category.title}
+                            className={`group bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg:col-span-2 ${index === 3 ? 'lg:col-start-2' : ''}`}
+                        >
+                            <div
+                                className="h-44 bg-cover bg-center relative"
+                                style={{ backgroundImage: `url('${category.image}')` }}
+                            >
+                                <div className="absolute inset-0 bg-[#194263]/55"></div>
+                                <h3 className="absolute bottom-4 left-5 right-5 text-2xl font-black text-white uppercase leading-tight">
+                                    {category.title}
+                                </h3>
+                            </div>
+                            <ul className="p-5 flex flex-wrap gap-2">
+                                {category.services.map((service) => (
+                                    <li
+                                        key={service}
+                                        className="px-3 py-1.5 rounded-full bg-slate-100 text-[#194263] text-sm font-semibold border border-gray-200"
+                                    >
+                                        {service}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     )
 }

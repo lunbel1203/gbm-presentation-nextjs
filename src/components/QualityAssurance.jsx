@@ -99,8 +99,9 @@ export default function QaulityAssurance() {
 
                     {/* Título Principal */}
                     <div className="quality-title text-center mb-16">
-                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 uppercase">Quality Assurance</h2>
-                        <div className="w-24 h-1 bg-gbm-green mx-auto"></div>
+                        <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 uppercase">Quality You Can Measure</h2>
+                        <div className="w-24 h-1 bg-gbm-green mx-auto mb-5"></div>
+                        <p className="text-2xl lg:text-3xl font-bold text-gbm-green">Good service shouldn&apos;t depend on luck.</p>
                     </div>
 
                     <div className="w-full max-w-7xl mx-auto flex flex-col gap-20">
@@ -164,20 +165,17 @@ export default function QaulityAssurance() {
                                     <ul className="space-y-6 text-lg lg:text-xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Cleaning and janitorial inspections.
+                                            Cleaning & Janitorial Inspections.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Safety inspections.
+                                            Safety Inspections.
                                         </li>
                                         <li className="flex items-center">
                                             <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            Routine maintenance and corrective actions.
+                                            Routine Maintenance and Corrective Actions.
                                         </li>
-                                        <li className="flex items-center">
-                                            <span className="w-3 h-3 bg-gbm-green rounded-full mr-4 flex-shrink-0"></span>
-                                            APPA and CIMS cleaning standar inspections.
-                                        </li>
+                                        {/* TODO(verificar): la referencia a inspecciones APPA/CIMS se retiró hasta confirmar que Glaring sigue formalmente esos estándares. */}
                                     </ul>
                                 </div>
                                 <div className="w-full lg:w-5/12">
@@ -249,6 +247,8 @@ export default function QaulityAssurance() {
                                 </div>
                             </div>
                         </div>
+
+                        <p className="text-center text-2xl lg:text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">We don&apos;t wait for complaints to tell us something is wrong.</p>
 
                     </div>
 

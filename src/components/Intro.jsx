@@ -75,8 +75,9 @@ export default function Intro() {
         <section id="intro" className="introTrigger w-full h-screen bg-[url('/assets/images/bg-building.jpg')] bg-cover bg-center text-white relative">
             <div className="overlay absolute inset-0 w-full h-full">
                 <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
-                    <div className='absolute'>
-                        <h1 className='welcome text-4xl md:text-7xl lg:text-[180px] font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4'>WELCOME</h1>
+                    <div className='absolute w-full lg:w-5/6 px-5'>
+                        <h1 className='welcome text-3xl md:text-5xl lg:text-7xl font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4 leading-tight'>WELCOME TO GLARING BUILDING MAINTENANCE</h1>
+                        <p className='subTitle text-xl md:text-3xl lg:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]'>All-In-One Facility Solutions</p>
                     </div>
                     <Image
                         className="logo w-5/6 lg:w-1/4 absolute"
@@ -89,14 +90,14 @@ export default function Intro() {
                     />
                     <div className="thank-section w-full lg:w-5/6 mx-auto text-center px-5 mt-20">
                         <div className="mb-10">
-                            <h2 className="text-xl md:text-3xl lg:text-6xl font-bold text-white mb-5">We appreciate the opportunity to present Glaring Building Maintenance (GBM) and demonstrate how our services can support your facility’s needs.</h2>
+                            <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-white mb-5">We appreciate the opportunity to introduce Glaring Building Maintenance and show you a better way to manage your facility.</h2>
                             <div className="w-32 md:w-52 h-1 bg-gbm-green mx-auto"></div>
                         </div>
                         <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200 mb-5">
-                            At GBM, we prioritize the safety and well being of your visitors and staff, delivering reliable services that support your goals. Our team operates seven days a week, adapting to your schedule, with on-site supervision and regular inspections to ensure the highest quality standards.
+                            For more than 20 years, we've helped organizations maintain cleaner, safer and better-performing properties through reliable in-house facility solutions.
                         </p>
-                        <p className="w-full sm:w-4/6 text-sm md:text-base lg:text-xl mx-auto leading-relaxed text-gray-200">
-                            Please note that due to fluctuations in material, transportation, and labor costs, all estimates remain valid for thirty (30) days from the date of delivery.
+                        <p className="w-full sm:w-4/6 text-base md:text-xl lg:text-3xl font-bold mx-auto leading-relaxed text-white">
+                            One partner. One point of contact. One standard.
                         </p>
                     </div>
                 </div>

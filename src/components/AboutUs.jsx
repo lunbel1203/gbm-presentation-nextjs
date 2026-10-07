@@ -132,20 +132,21 @@ export default function AboutUs() {
         <section id="about-us" className="about-section w-full h-screen py-20 px-8 bg-slate-50 relative">
             <div className="container mx-auto">
                 <div className="text-left mb-16">
-                    <h2 className="text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 uppercase">About Us</h2>
+                    <h2 className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 uppercase">Built For Properties That Demand More</h2>
                     <div className="w-24 h-1 bg-gbm-green"></div>
                 </div>
 
                 {/* Description */}
                 <div className="h-60 text-container text-[18px] lg:text-4xl font-bold relative">
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        At Glaring Building Maintenance (GBM), we make your property our priority. As a first class provider of commercial cleaning services, we set the standard for excellence in our industry. For more than 20 years, we’ve delivered specialized solutions with a focus on quality, accountability, and environmentally responsible practices.
+                        For more than 20 years, Glaring Building Maintenance has helped organizations protect their properties, maintain their standards and simplify facility operations.
                     </p>
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        Unlike many others, we never subcontract our work, every service is handled directly by our trained Glaring team, ensuring consistency, reliability, and the highest standards of excellence.
+                        What began with commercial cleaning has evolved into a complete facility solutions company, providing janitorial, floor care, property maintenance, landscaping, snow and ice management, specialized cleaning and more.
                     </p>
                     <p className="paragraph-animation absolute text-left w-full lg:max-w-6xl mx-auto leading-6 lg:leading-12 bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">
-                        Our reputation as one of the best in the business has been built on innovation, technology driven quality control, and strong management practices. Most importantly, we’ve grown through client referrals, proof of the long term trust and partnerships we’ve earned with major offices and industrial facilities.
+                        Unlike many service providers, we never subcontract our work. Our services are performed by trained Glaring teams, giving our clients greater consistency, accountability and control.
+                        <span className="block mt-4">Your Property Is Our Priority.</span>
                     </p>
                 </div>
 

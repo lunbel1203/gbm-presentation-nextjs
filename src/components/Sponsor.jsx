@@ -54,7 +54,7 @@ export default function Sponsor() {
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto leading-relaxed bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold">
-                            Proudly supporting our community Glaring Building Maintenance partners with local sports teams and foundations to help strengthen and uplift our neighborhoods. Together, we build more than just clean spaces; we build connections that matter.
+                            Through Glaring Cares Foundation, we support communities through outreach, donations, medical and dental initiatives and community partnerships in the United States and Dominican Republic.
                         </p>
                     </div>
                     <div className="content-section w-[60%]">
@@ -67,11 +67,6 @@ export default function Sponsor() {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Glaring Cares proudly brought a free dental outreach campaign to a rural community in the Dominican Republic.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -82,11 +77,6 @@ export default function Sponsor() {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        A sweet moment of gratitude, foundation members enjoying treats from Glaring.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -97,11 +87,6 @@ export default function Sponsor() {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Sharing smiles and support, because caring for our neighbors matters most.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -112,11 +97,6 @@ export default function Sponsor() {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Every plate served is a reminder that kindness goes a long way.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -127,11 +107,6 @@ export default function Sponsor() {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Together, we're more than a company, we're a helping hand in our community.
-                                    </p>
-                                </div>
                             </div>
 
                             <div className="card rounded-lg overflow-hidden shadow-lg h-64 relative">
@@ -142,11 +117,6 @@ export default function Sponsor() {
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                                    <p className="text-white font-bold text-base leading-relaxed p-6">
-                                        Proud to see the local softball team in action.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>

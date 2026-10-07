@@ -149,10 +149,12 @@ export default function WorkerCompensation () {
                         </div>
                     </div>
                     <div className="compensation-title-container w-[40%] text-left">
-                        <h2 className="w-full text-7xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-10">WORKERS COMPENSATION</h2>
-                        <h3 className="w-full text-4xl font-bold text-gbm-green mb-10">All workers are budgeted based on a living wage.</h3>
-                        <div className="w-24 h-1 bg-gbm-green mb-10"></div>
-                        <h3 className='text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent'>(This represents 20-30% above Massachusetts state minimum wage) Cleaning worker turnover rate: 20% annually (Industry average = 200%)</h3>
+                        <h2 className="w-full text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-8 uppercase">Investing In Our People</h2>
+                        <div className="w-24 h-1 bg-gbm-green mb-8"></div>
+                        {/* TODO(verificar): la cifra anterior de rotación (20% vs 200% de la industria) y el "living wage 20-30% sobre el mínimo" se eliminaron hasta contar con documentación vigente. */}
+                        <p className="text-xl text-gray-700 leading-relaxed mb-4">We believe consistent service begins with employees who feel valued, supported and prepared to succeed.</p>
+                        <p className="text-xl text-gray-700 leading-relaxed mb-4">Our approach focuses on competitive compensation, training, clear expectations and opportunities for professional growth.</p>
+                        <p className="text-2xl font-black text-[#194263] leading-relaxed">Better-supported employees create better client experiences.</p>
                     </div>
                 </div>
 

@@ -75,7 +75,15 @@ const GlaringStandard = dynamic(() => import('@/components/GlaringStandard'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
 
-const ReferProgram = dynamic(() => import('@/components/ReferProgram'), {
+const OnePartner = dynamic(() => import('@/components/OnePartner'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const WhyOnePartner = dynamic(() => import('@/components/WhyOnePartner'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
+const Industries = dynamic(() => import('@/components/Industries'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
 
@@ -222,9 +230,15 @@ export default function Home() {
 
             <AboutUs />
 
+            <OnePartner />
+
             <MisionVision />
 
             <WeOffer />
+
+            <WhyOnePartner />
+
+            <Industries />
 
             <GlaringClean />
 
@@ -258,12 +272,9 @@ export default function Home() {
 
             <WeServe />
 
-            <ReferProgram />
-
             <ContactUs />
 
             <ThankYou />
-
         </div>
     )
 }

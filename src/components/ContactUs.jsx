@@ -149,8 +149,9 @@ export default function ContactUs () {
                     {/* Header Section */}
                     <div className="contactus-title-container text-center my-16" style={{perspective: '1000px'}}>
                         <h2 className="text-44xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4 leading-tight" style={{transformStyle: 'preserve-3d'}}>
-                            SPECIALIZED CLEANING SERVICES FOR COMMERCIAL FACILITIES
+                            ALL-IN-ONE FACILITY SOLUTIONS
                         </h2>
+                        <p className="text-lg lg:text-2xl font-bold text-gbm-green mb-6">Janitorial • Floor Care • Property Maintenance • Landscaping • Snow &amp; Ice • Specialized Services</p>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mx-auto mb-8"></div>
                     </div>
 

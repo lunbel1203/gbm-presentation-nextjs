@@ -68,11 +68,14 @@ export default function Equipment() {
                     </div>
                     <div className="w-full lg:w-3/5 text-left mx-auto">
                         <div className="mb-10">
-                            <h2 className="text-2xl lg:text-8xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5 uppercase">Equipment</h2>
+                            <h2 className="text-2xl lg:text-6xl font-black bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent mb-5 uppercase">Equipment &amp; Technology</h2>
                             <div className="w-52 h-1 bg-gbm-green"></div>
                         </div>
                         <p className="text-base lg:text-xl mx-auto font-bold leading-relaxed bg-gradient-to-r from-[#ffffff] to-gbm-green bg-clip-text text-transparent">
-                            Our commitment to excellence begins with the tools we provide our team. We invest in the latest, most reliable equipment in the industry, allowing us to deliver consistently superior results. With state of the art technology (SOTA), we ensure efficiency, safety, and the highest standards of quality in every service we perform.
+                            Professional results require professional equipment.
+                        </p>
+                        <p className="text-base lg:text-xl mx-auto font-bold leading-relaxed text-white mt-5">
+                            We invest in commercial-grade technology and equipment that help our teams work more efficiently, safely and consistently across a wide range of facility services.
                         </p>
                     </div>
                 </div>

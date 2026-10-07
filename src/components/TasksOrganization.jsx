@@ -57,12 +57,11 @@ export default function tasksOrganization() {
                     {/* Header Section - Lado izquierdo */}
                     <div className="task-title w-[40%] text-left pr-8">
                         <h2 className="text-4xl lg:text-6xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-4">
-                            TASK ORGANIZATIONS
+                            TEAM CLEANING SYSTEM
                         </h2>
-                        <h3 className="text-2xl lg:text-4xl font-bold text-gray-600 mb-6">Team Cleaning</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#194263] to-gbm-green mb-8"></div>
                         <p className="text-lg lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold leading-relaxed">
-                            In the team cleaning approach, individual cleaners are assigned specialized tasks to ensure maximum efficiency and expertise.
+                            For larger facilities, clearly defined responsibilities help improve productivity, consistency and accountability.
                         </p>
                     </div>
 
@@ -83,10 +82,10 @@ export default function tasksOrganization() {
                                     </div>
                                     <div className="flex-1 p-4 flex flex-col justify-center">
                                         <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                            Light duty Specialist (LD)
+                                            Light-Duty Specialist
                                         </h3>
                                         <p className="text-gray-700 text-sm leading-relaxed">
-                                            The cleaner will be responsible for doing the light duty (LD) sweep of the area to be cleaned, removing all the trash and any large objects on the floor.
+                                            Clears trash and large objects from the floor.
                                         </p>
                                     </div>
                                 </div>
@@ -105,10 +104,10 @@ export default function tasksOrganization() {
                                     </div>
                                     <div className="flex-1 p-4 flex flex-col justify-center">
                                         <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                            Restrooms Specialist (RS)
+                                            Restroom Specialist
                                         </h3>
                                         <p className="text-gray-700 text-sm leading-relaxed">
-                                            The cleaner will be responsible to clean, sanitize and fill the supplies of the restrooms.
+                                            Cleans, sanitizes and restocks restrooms.
                                         </p>
                                     </div>
                                 </div>
@@ -127,10 +126,10 @@ export default function tasksOrganization() {
                                     </div>
                                     <div className="flex-1 p-4 flex flex-col justify-center">
                                         <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                            Vacuum Specialist (VS)
+                                            Vacuum Specialist
                                         </h3>
                                         <p className="text-gray-700 text-sm leading-relaxed">
-                                            The cleaner will be responsible for thoroughly vacuuming the area while making sure no objects were left behind from the LD sweep, checking all trash bins in the area as well.
+                                            Vacuums thoroughly and checks all trash bins.
                                         </p>
                                     </div>
                                 </div>
@@ -149,10 +148,10 @@ export default function tasksOrganization() {
                                     </div>
                                     <div className="flex-1 p-4 flex flex-col justify-center">
                                         <h3 className="text-2xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent uppercase mb-2">
-                                            Utilities specialist (US)
+                                            Utility Specialist
                                         </h3>
                                         <p className="text-gray-700 text-sm leading-relaxed">
-                                            The cleaner will be responsible for mopping, disinfecting, buffing and auto scrubbing the floor, as well as other tasks, as assigned.
+                                            Mops, disinfects, buffs and auto-scrubs floors.
                                         </p>
                                     </div>
                                 </div>

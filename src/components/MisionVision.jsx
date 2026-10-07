@@ -113,7 +113,7 @@ export default function MisionVision() {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Our mission is to deliver exceptional service that allows our clients to focus on their core business and achieve success faster, while fostering a culture of employee satisfaction, operational excellence, and continuous improvement.
+                                Our mission is to simplify facility care by delivering reliable, high-quality solutions through trained in-house teams, strong systems and one standard of accountability, allowing our clients to focus on what they do best.
                             </p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@ export default function MisionVision() {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                To be recognized as the leading company in the provision of cleaning solutions for the quality of our services and commitment to our customers.
+                                To become one of the most trusted facility solutions partners in the markets we serve, recognized for quality, innovation, accountability and our ability to provide multiple property services under one roof.
                             </p>
                         </div>
                     </div>
@@ -146,10 +146,10 @@ export default function MisionVision() {
                             </div>
                             <div className="w-full flex justify-center">
                                 <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-2xl text-left'>
-                                    <li><span className='text-gbm-green font-bold'>Honesty:</span> We uphold honesty as a core pillar of our organization, guiding every decision and action we take. Our conduct is defined by transparency, integrity, and respect for the principles of truth and justice.</li>
-                                    <li><span className='text-gbm-green font-bold'>Commitment:</span> We foster a culture of dedication and accountability. Each team member is committed to excellence, embracing their responsibilities with professionalism and contributing meaningfully to the collective success of our company.</li>
-                                    <li><span className='text-gbm-green font-bold'>Responsibility:</span> We recognize the significance of our actions and their impact. We are committed to creating safe, healthy environments for our clients while maintaining a strong sense of environmental and social responsibility in everything we do.</li>
-                                    <li><span className='text-gbm-green font-bold'>Innovation:</span> We foster a culture of continuous improvement and constant pursuit of new solutions. We embrace innovative technologies, processes, and practices that allow us to optimize our services, anticipate our clients’ needs, and remain at the forefront of the industry.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Honesty</span> — Transparency and integrity guide every decision.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Commitment</span> — We take ownership of our responsibilities and our results.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Responsibility</span> — We protect the properties, people and environments entrusted to us.</li>
+                                    <li><span className='text-gbm-green font-bold uppercase'>Innovation</span> — We continuously improve our technology, systems and service methods.</li>
                                 </ul>
                             </div>
                         </div>

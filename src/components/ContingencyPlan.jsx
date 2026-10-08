@@ -93,16 +93,12 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
-                                    <h3 className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-8 leading-tight">
+                                    <h3 className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 leading-tight">
                                         Su Instalación No Se Detiene Porque Alguien Falta.
                                     </h3>
-                                    <div className="flex flex-col lg:flex-row items-center gap-3 text-lg font-bold">
-                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Ausencia del Empleado</span>
-                                        <span className="text-gbm-green text-2xl">→</span>
-                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Equipo de Apoyo Glaring</span>
-                                        <span className="text-gbm-green text-2xl">→</span>
-                                        <span className="px-4 py-3 rounded-lg bg-gbm-green text-white">El Servicio Continúa</span>
-                                    </div>
+                                    <p className="text-2xl font-bold text-[#194263] leading-relaxed">
+                                        Cuando un empleado asignado no está disponible, nuestro equipo de apoyo puede intervenir para ayudar a mantener la continuidad del servicio.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -124,9 +120,13 @@ export default function ContingencyPlan () {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-right">
-                                    <p className="text-2xl font-bold text-[#194263] leading-relaxed mb-6">
-                                        Cuando un empleado asignado no está disponible, nuestro equipo de apoyo puede intervenir para ayudar a mantener la continuidad del servicio.
-                                    </p>
+                                    <div className="flex flex-col lg:flex-row items-center lg:justify-end gap-3 mb-6 text-lg font-bold">
+                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Ausencia del Empleado</span>
+                                        <span className="text-gbm-green text-2xl">→</span>
+                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Equipo de Apoyo Glaring</span>
+                                        <span className="text-gbm-green text-2xl">→</span>
+                                        <span className="px-4 py-3 rounded-lg bg-gbm-green text-white">El Servicio Continúa</span>
+                                    </div>
                                     <p className="text-xl text-gray-700 leading-relaxed">
                                         Los miembros del equipo de reemplazo reciben información específica del sitio, incluidos los requisitos de seguridad, protección y servicio.
                                     </p>

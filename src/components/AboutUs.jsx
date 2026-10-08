@@ -27,12 +27,14 @@ export default function AboutUs () {
         createOptimizedScrollTrigger({
             trigger: '.about-section',
             start: 'top top',
-            end: '+=4000',
+            end: '+=6000',
             scrub: 1,
             pin: true,
             pinSpacing: true,
             onUpdate: (self) => {
                 const progress = self.progress;
+                // El texto ocupa el primer 55% del scroll; las tarjetas salen después
+                const textProgress = Math.min(progress / 0.55, 1) * 0.85;
 
                 // Animación de tarjetas apareciendo una por una
                 const employeeCards = picturesRef.current?.querySelectorAll('.employee-card');
@@ -44,8 +46,8 @@ export default function AboutUs () {
 
                     employeeCards.forEach((card, index) => {
                         // Cada tarjeta aparece en diferentes momentos del scroll
-                        const cardStartProgress = (index / totalCards) * 0.75; // Distribuir en el 75% del progress
-                        const cardEndProgress = ((index + 1) / totalCards) * 0.75;
+                        const cardStartProgress = 0.6 + (index / totalCards) * 0.35; // Distribuir en el 75% del progress
+                        const cardEndProgress = 0.6 + ((index + 1) / totalCards) * 0.35;
 
                         if (progress >= cardStartProgress && progress <= cardEndProgress) {
                             // La tarjeta está en su momento de aparecer
@@ -78,34 +80,34 @@ export default function AboutUs () {
 
                 // Animación de párrafos con transiciones suaves
                 // Primer párrafo: visible al inicio, sale suavemente entre 20% y 35%
-                if (progress < 0.20) {
+                if (textProgress < 0.20) {
                     gsap.set(paragraphs[0], {
                         x: '0%',
                         opacity: 1
                     });
                     gsap.set(paragraphs[1], { x: '100%', opacity: 0 });
                     gsap.set(paragraphs[2], { x: '100%', opacity: 0 });
-                } else if (progress >= 0.20 && progress < 0.35) {
+                } else if (textProgress >= 0.20 && textProgress < 0.35) {
                     // Primer párrafo sale suavemente
-                    const localProgress = (progress - 0.20) / 0.15;
+                    const localProgress = (textProgress - 0.20) / 0.15;
                     gsap.set(paragraphs[0], {
                         x: gsap.utils.interpolate(0, -100, localProgress) + '%',
                         opacity: gsap.utils.interpolate(1, 0, localProgress)
                     });
                     gsap.set(paragraphs[1], { x: '100%', opacity: 0 });
                     gsap.set(paragraphs[2], { x: '100%', opacity: 0 });
-                } else if (progress >= 0.35 && progress < 0.65) {
+                } else if (textProgress >= 0.35 && textProgress < 0.65) {
                     // Segundo párrafo entra y sale
-                    const localProgress = (progress - 0.35) / 0.30;
+                    const localProgress = (textProgress - 0.35) / 0.30;
                     gsap.set(paragraphs[0], { x: '-100%', opacity: 0 });
                     gsap.set(paragraphs[1], {
                         x: gsap.utils.interpolate(100, -100, localProgress) + '%',
                         opacity: localProgress < 0.5 ? gsap.utils.interpolate(0, 1, localProgress * 2) : gsap.utils.interpolate(1, 0, (localProgress - 0.5) * 2)
                     });
                     gsap.set(paragraphs[2], { x: '100%', opacity: 0 });
-                } else if (progress >= 0.65) {
+                } else if (textProgress >= 0.65) {
                     // Tercer párrafo entra y se queda
-                    const localProgress = Math.min((progress - 0.65) / 0.20, 1);
+                    const localProgress = Math.min((textProgress - 0.65) / 0.20, 1);
                     gsap.set(paragraphs[0], { x: '-100%', opacity: 0 });
                     gsap.set(paragraphs[1], { x: '-100%', opacity: 0 });
                     gsap.set(paragraphs[2], {

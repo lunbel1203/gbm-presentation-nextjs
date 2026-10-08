@@ -76,7 +76,7 @@ export default function Intro() {
             <div className="overlay absolute inset-0 w-full h-full">
                 <div className="container h-full mx-auto flex flex-col flex-wrap justify-center items-center text-center">
                     <div className='absolute w-full lg:w-5/6 px-5'>
-                        <h1 className='welcome text-3xl md:text-5xl lg:text-7xl font-black bg-gradient-to-r from-gbm-green to-gbm-blue bg-clip-text text-transparent mb-4 leading-tight'>WELCOME TO GLARING BUILDING MAINTENANCE</h1>
+                        <h1 className='welcome text-3xl md:text-5xl lg:text-7xl font-black text-white mb-4 leading-tight'>WELCOME TO GLARING BUILDING MAINTENANCE</h1>
                         <p className='subTitle text-xl md:text-3xl lg:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]'>All-In-One Facility Solutions</p>
                     </div>
                     <Image

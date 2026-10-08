@@ -92,16 +92,12 @@ export default function ContingencyPlan() {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-left">
-                                    <h3 className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-8 leading-tight">
+                                    <h3 className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent mb-4 leading-tight">
                                         Your Facility Doesn&apos;t Stop Because Someone Calls Out.
                                     </h3>
-                                    <div className="flex flex-col lg:flex-row items-center gap-3 text-lg font-bold">
-                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Employee Call-Out</span>
-                                        <span className="text-gbm-green text-2xl">→</span>
-                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Glaring Support Team</span>
-                                        <span className="text-gbm-green text-2xl">→</span>
-                                        <span className="px-4 py-3 rounded-lg bg-gbm-green text-white">Service Continues</span>
-                                    </div>
+                                    <p className="text-2xl font-bold text-[#194263] leading-relaxed">
+                                        When an assigned employee is unavailable, our support team can step in to help maintain continuity of service.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -122,9 +118,13 @@ export default function ContingencyPlan() {
                                     />
                                 </div>
                                 <div className="lg:w-1/2 text-center lg:text-right">
-                                    <p className="text-2xl font-bold text-[#194263] leading-relaxed mb-6">
-                                        When an assigned employee is unavailable, our support team can step in to help maintain continuity of service.
-                                    </p>
+                                    <div className="flex flex-col lg:flex-row items-center lg:justify-end gap-3 mb-6 text-lg font-bold">
+                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Employee Call-Out</span>
+                                        <span className="text-gbm-green text-2xl">→</span>
+                                        <span className="px-4 py-3 rounded-lg bg-slate-100 text-[#194263] border border-gray-200">Glaring Support Team</span>
+                                        <span className="text-gbm-green text-2xl">→</span>
+                                        <span className="px-4 py-3 rounded-lg bg-gbm-green text-white">Service Continues</span>
+                                    </div>
                                     <p className="text-xl text-gray-700 leading-relaxed">
                                         Replacement team members receive site-specific information, including safety, security and service requirements.
                                     </p>

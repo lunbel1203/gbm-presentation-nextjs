@@ -36,6 +36,7 @@ export default function Navigation() {
         { id: 'glaringStandard', label: 'Training & Standards', href: '#glaringStandard' },
         { id: 'certificates', label: 'Credentials', href: '#certificates' },
         { id: 'we-serve', label: 'Our Reach', href: '#we-serve' },
+        { id: 'referral', label: 'Referral Rewards', href: '#referral' },
         { id: 'contact-us', label: 'Facility Solutions Contact', href: '#contact-us' },
         { id: 'thank-you', label: "Let's Talk", href: '#thank-you' }
     ];

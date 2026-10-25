@@ -113,7 +113,10 @@ export default function MisionVision() {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                Our mission is to simplify facility care by delivering reliable, high-quality solutions through trained in-house teams, strong systems and one standard of accountability, allowing our clients to focus on what they do best.
+                                To make facility management simpler by delivering reliable, high-quality services that allow our clients to focus on what they do best.
+                            </p>
+                            <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold mt-6">
+                                We pursue continuous improvement while creating an environment where our clients, employees, and communities can succeed.
                             </p>
                         </div>
                     </div>
@@ -129,7 +132,7 @@ export default function MisionVision() {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <p className="text-base lg:text-2xl mx-auto leading-relaxed text-gray-200 font-bold">
-                                To become one of the most trusted facility solutions partners in the markets we serve, recognized for quality, innovation, accountability and our ability to provide multiple property services under one roof.
+                                To set a higher standard for facility care across every market we serve, becoming the trusted partner organizations rely on for quality, innovation, accountability, and long-term results.
                             </p>
                         </div>
                     </div>
@@ -145,11 +148,11 @@ export default function MisionVision() {
                                 <div className="w-52 h-1 bg-gbm-green mx-auto"></div>
                             </div>
                             <div className="w-full flex justify-center">
-                                <ul className='w-full lg:w-1/2 flex flex-wrap gap-5 text-2xl text-left'>
-                                    <li><span className='text-gbm-green font-bold uppercase'>Honesty</span> — Transparency and integrity guide every decision.</li>
-                                    <li><span className='text-gbm-green font-bold uppercase'>Commitment</span> — We take ownership of our responsibilities and our results.</li>
-                                    <li><span className='text-gbm-green font-bold uppercase'>Responsibility</span> — We protect the properties, people and environments entrusted to us.</li>
-                                    <li><span className='text-gbm-green font-bold uppercase'>Innovation</span> — We continuously improve our technology, systems and service methods.</li>
+                                <ul className='w-full lg:w-4/5 grid grid-cols-2 gap-x-12 gap-y-10 text-left'>
+                                    <li><h3 className='text-gbm-green font-bold uppercase text-3xl mb-2'>Honesty</h3><p className='text-xl text-gray-200'>We communicate openly, act with integrity, and do what's right even when no one is watching.</p></li>
+                                    <li><h3 className='text-gbm-green font-bold uppercase text-3xl mb-2'>Commitment</h3><p className='text-xl text-gray-200'>We take ownership of our work and hold ourselves accountable for the results.</p></li>
+                                    <li><h3 className='text-gbm-green font-bold uppercase text-3xl mb-2'>Responsibility</h3><p className='text-xl text-gray-200'>We care for our clients' properties as if they were our own, with safety and professionalism at the center of every decision.</p></li>
+                                    <li><h3 className='text-gbm-green font-bold uppercase text-3xl mb-2'>Innovation</h3><p className='text-xl text-gray-200'>We continuously improve our equipment, technology, processes, and training to deliver better facility solutions.</p></li>
                                 </ul>
                             </div>
                         </div>

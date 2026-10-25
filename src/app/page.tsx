@@ -87,6 +87,10 @@ const Industries = dynamic(() => import('@/components/Industries'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
 
+const ReferralProgram = dynamic(() => import('@/components/ReferralProgram'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
+})
+
 const ContactUs = dynamic(() => import('@/components/ContactUs'), {
   loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />
 })
@@ -271,6 +275,8 @@ export default function Home() {
             <Certificates />
 
             <WeServe />
+
+            <ReferralProgram />
 
             <ContactUs />
 

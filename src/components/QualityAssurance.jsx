@@ -113,7 +113,7 @@ export default function QaulityAssurance() {
                                     <div className="mr-4">
                                         <RiClipboardLine size={48} className="text-gbm-green" />
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">CONSTANT SUPERVISION</h3>
+                                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent">QUALITY INSPECTIONS</h3>
                                 </div>
                                 <p className="text-xl lg:text-2xl bg-gradient-to-r from-[#194263] to-gbm-green bg-clip-text text-transparent font-bold mb-12 max-w-4xl mx-auto">
                                     Cleaning and maintenance supervisors continuously monitor and inspect work performance to ensure all duties are adequately carried out.
